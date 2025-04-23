@@ -1,6 +1,8 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
-    <section className="bg-white py-20 px-40">
+    <section className=" py-20 px-40">
       <div className="mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
         <div className="flex-1">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight tracking-wide mb-6">
@@ -21,9 +23,7 @@ export default function Hero() {
           </div>
         </div>
         <div className="flex-1">
-          <div className="w-full h-64 bg-[#f0fafa] rounded-xl shadow-inner flex items-center justify-center text-[#09bbc8] text-lg">
-            [ Illustration / Image ]
-          </div>
+          <Image alt="hero_image" width={400} height={400} src="/img5.png" />
         </div>
       </div>
     </section>
