@@ -22,7 +22,7 @@ export default function ProblemSection() {
             <h3 className="text-xl font-semibold">Outdated Tools</h3>
           </div>
           <p className="text-gray-600">
-            Old platforms weren’t built for speed, scale, or flexibility. You
+            Old platforms were not built for speed, scale, or flexibility. You
             end up fighting your tech instead of growing your business.
           </p>
         </div>
