@@ -1,13 +1,11 @@
-import Image from "next/image";
-
 export default function Hero() {
   return (
-    <section className=" py-20 px-40">
+    <section className="py-20 px-40">
       <div className="mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
-        <div className="flex-1">
+        <div className="w-3/5 ">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight tracking-wide mb-6">
             Supercharge Your Business with{" "}
-            <span className="text-[#09bbc8]">AI-Powered Solutions</span>
+            <span className="text-[#09BBc8]">AI-Powered Solutions</span>
           </h1>
           <p className="text-xl text-gray-700 mb-8 max-w-xl">
             Empowering businesses with AI-driven software and innovative digital
@@ -22,8 +20,8 @@ export default function Hero() {
             </button>
           </div>
         </div>
-        <div className="flex-1">
-          <Image alt="hero_image" width={400} height={400} src="/img5.png" />
+        <div className="w-2/5">
+          <img src="/img5.png" alt="hero_image" className="w-[85%] h-140" />
         </div>
       </div>
     </section>
