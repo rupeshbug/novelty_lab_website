@@ -33,7 +33,7 @@ export default function ProblemSection() {
             <h3 className="text-xl font-semibold">One-Size-Fits-All</h3>
           </div>
           <p className="text-gray-600">
-            Cookie-cutter websites don’t capture your brand or adapt to your
+            Cookie-cutter websites will not capture your brand or adapt to your
             evolving business needs.
           </p>
         </div>
