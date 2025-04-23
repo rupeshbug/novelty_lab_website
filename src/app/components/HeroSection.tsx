@@ -1,3 +1,5 @@
+import { Cpu, Settings, BarChart } from "lucide-react";
+
 export default function Hero() {
   return (
     <section className="py-20 px-40">
@@ -11,6 +13,26 @@ export default function Hero() {
             Empowering businesses with AI-driven software and innovative digital
             strategies that deliver real-world impact.
           </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+            <div className="flex items-center gap-3">
+              <Cpu className="text-[#09bbc8] w-6 h-6" />
+              <p className="text-gray-700 text-base font-medium">
+                AI & Automation
+              </p>
+            </div>
+            <div className="flex items-center gap-3">
+              <Settings className="text-[#09bbc8] w-6 h-6" />
+              <p className="text-gray-700 text-base font-medium">
+                Custom IT Solutions
+              </p>
+            </div>
+            <div className="flex items-center gap-3">
+              <BarChart className="text-[#09bbc8] w-6 h-6" />
+              <p className="text-gray-700 text-base font-medium">
+                Digital Marketing
+              </p>
+            </div>
+          </div>
           <div className="flex gap-4">
             <button className="bg-[#09bbc8] text-white px-5 py-3 cursor-pointer rounded-lg text-base font-medium hover:bg-[#07a5b0] transition">
               Get Started
