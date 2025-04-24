@@ -2,7 +2,7 @@ import { AlertTriangle, ShieldX, Wand2 } from "lucide-react";
 
 export default function ProblemSection() {
   return (
-    <section className="py-24 px-6 md:px-40">
+    <section className="py-20 px-6 md:px-40">
       <div className="max-w-5xl mx-auto text-center">
         <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
           Why Traditional Tools Are Holding You Back
