@@ -2,8 +2,8 @@ import { AlertTriangle, ShieldX, Wand2 } from "lucide-react";
 
 export default function ProblemSection() {
   return (
-    <section className="py-20 px-6 md:px-40">
-      <div className="max-w-5xl mx-auto text-center">
+    <section className="py-20 px-6 md:px-40 relative">
+      <div className="max-w-5xl mx-auto text-center z-10 relative">
         <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
           Why Traditional Tools Are Holding You Back
         </h2>
@@ -15,7 +15,15 @@ export default function ProblemSection() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 hidden md:block z-0 pl-40">
+        <img
+          src="/det_bot_3.png"
+          alt="AI detective bot"
+          className="w-[220px] h-auto opacity-90"
+        />
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto relative z-10">
         <div className="bg-white rounded-2xl shadow-md p-8 border-t-4 border-[#09bbc8] hover:shadow-lg transition cursor-pointer">
           <div className="flex items-center gap-4 mb-4 text-[#09bbc8]">
             <AlertTriangle size={28} />
