@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
         <div className="w-3/5 ">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 leading-tight tracking-wide mb-6">
-            Supercharge Your Business with{" "}
+            Supercharge Your Business with Next-Gen{" "}
             <span className="text-[#09BBc8]">AI-Powered Solutions</span>
           </h1>
           <p className="text-xl text-gray-700 mb-8 max-w-xl">
