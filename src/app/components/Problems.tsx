@@ -16,7 +16,7 @@ export default function ProblemSection() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
-        <div className="bg-white rounded-2xl shadow-md p-8 border-t-4 border-[#09bbc8] hover:shadow-lg transition">
+        <div className="bg-white rounded-2xl shadow-md p-8 border-t-4 border-[#09bbc8] hover:shadow-lg transition cursor-pointer">
           <div className="flex items-center gap-4 mb-4 text-[#09bbc8]">
             <AlertTriangle size={28} />
             <h3 className="text-xl font-semibold">Outdated Tools</h3>
@@ -27,7 +27,7 @@ export default function ProblemSection() {
           </p>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-md p-8 border-t-4 border-[#09bbc8] hover:shadow-lg transition">
+        <div className="bg-white rounded-2xl shadow-md p-8 border-t-4 border-[#09bbc8] hover:shadow-lg transition cursor-pointer">
           <div className="flex items-center gap-4 mb-4 text-[#09bbc8]">
             <ShieldX size={28} />
             <h3 className="text-xl font-semibold">One-Size-Fits-All</h3>
@@ -38,7 +38,7 @@ export default function ProblemSection() {
           </p>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-md p-8 border-t-4 border-[#09bbc8] hover:shadow-lg transition">
+        <div className="bg-white rounded-2xl shadow-md p-8 border-t-4 border-[#09bbc8] hover:shadow-lg transition cursor-pointer">
           <div className="flex items-center gap-4 mb-4 text-[#09bbc8]">
             <Wand2 size={28} />
             <h3 className="text-xl font-semibold">Lack of Intelligence</h3>
