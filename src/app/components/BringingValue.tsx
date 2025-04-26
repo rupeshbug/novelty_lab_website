@@ -10,7 +10,7 @@ export default function BringingValue() {
         </h2>
         <p className="text-lg text-gray-700 mb-10 max-w-3xl mx-auto">
           At Novelty Lab, we blend cutting-edge AI with creative digital
-          strategy. Whether it's intelligent automation or brand-building
+          strategy. Whether it is an intelligent automation or brand-building
           content, we make sure your business connects, converts, and grows.
         </p>
 
