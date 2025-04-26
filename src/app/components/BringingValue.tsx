@@ -5,7 +5,6 @@ export default function BringingValue() {
     <section className="py-16 px-8 md:px-20 lg:px-40 bg-white">
       {/* What Novelty Lab Brings to the Table */}
       <div className="relative flex flex-col lg:flex-row items-center gap-15 mb-24">
-        {/* Text Section */}
         <div className="text-center lg:text-left w-full lg:w-4/6">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
             What Novelty Lab Brings to the Table
@@ -58,7 +57,6 @@ export default function BringingValue() {
           </div>
         </div>
 
-        {/* Image Section */}
         <div className="hidden lg:block w-2/6 rounded-xl animate-fade-in">
           <img
             src="/futuristic_ai_lab.png"
