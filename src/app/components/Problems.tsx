@@ -2,7 +2,7 @@ import { AlertTriangle, ShieldX, Wand2 } from "lucide-react";
 
 export default function ProblemSection() {
   return (
-    <section className="py-20 px-6 md:px-40 relative">
+    <section className="py-16 px-8 md:px-20 lg:px-40 relative">
       <div className="max-w-5xl mx-auto text-center z-10 relative">
         <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
           Why Traditional Tools Are Holding You Back
@@ -15,7 +15,7 @@ export default function ProblemSection() {
         </p>
       </div>
 
-      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 hidden md:block z-0 pl-40">
+      <div className="absolute left-0 top-1/2 transform -translate-y-1/2 hidden xl:block z-0 pl-40">
         <img
           src="/det_bot_3.png"
           alt="AI detective bot"
