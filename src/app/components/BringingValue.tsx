@@ -4,9 +4,9 @@ export default function BringingValue() {
   return (
     <section className="py-16 px-8 md:px-20 lg:px-40 bg-white">
       {/* What Novelty Lab Brings to the Table */}
-      <div className="relative flex flex-col lg:flex-row items-center gap-10 mb-24">
+      <div className="relative flex flex-col lg:flex-row items-center gap-15 mb-24">
         {/* Text Section */}
-        <div className="text-center lg:text-left w-3/5">
+        <div className="text-center lg:text-left w-full lg:w-4/6">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
             What Novelty Lab Brings to the Table
           </h2>
@@ -16,7 +16,7 @@ export default function BringingValue() {
             content, we make sure your business connects, converts, and grows.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
             <div className="bg-gray-50 rounded-2xl shadow-md p-6 hover:shadow-lg transition cursor-pointer">
               <div className="flex items-center gap-4 mb-4 text-[#09bbc8]">
                 <Lightbulb size={28} />
@@ -59,11 +59,11 @@ export default function BringingValue() {
         </div>
 
         {/* Image Section */}
-        <div className="hidden lg:block w-2/5">
+        <div className="hidden lg:block w-2/6 rounded-xl animate-fade-in">
           <img
             src="/futuristic_ai_lab.png"
             alt="AI bot in lab coat experimenting"
-            className="w-full max-w-md mx-auto"
+            className="w-100 max-w-md mx-auto"
           />
         </div>
       </div>
@@ -90,7 +90,7 @@ export default function BringingValue() {
                 and customer support while building community.
               </p>
             </div>
-            <button className="text-[#09bbc8] font-medium hover:underline text-sm">
+            <button className="text-[#09bbc8] font-medium hover:underline cursor-pointer text-sm">
               Read More →
             </button>
           </div>
@@ -106,7 +106,7 @@ export default function BringingValue() {
                 software stacks and what that means for businesses.
               </p>
             </div>
-            <button className="text-[#09bbc8] font-medium hover:underline text-sm">
+            <button className="text-[#09bbc8] font-medium hover:underline cursor-pointer text-sm">
               Read More →
             </button>
           </div>
@@ -122,7 +122,7 @@ export default function BringingValue() {
                 they can set your brand apart in a noisy market.
               </p>
             </div>
-            <button className="text-[#09bbc8] font-medium hover:underline text-sm">
+            <button className="text-[#09bbc8] font-medium hover:underline cursor-pointer text-sm">
               Read More →
             </button>
           </div>
