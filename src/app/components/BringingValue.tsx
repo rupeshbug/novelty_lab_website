@@ -12,7 +12,8 @@ export default function BringingValue() {
           <p className="text-lg text-gray-700 mb-10 max-w-3xl mx-auto lg:mx-0">
             At Novelty Lab, we blend cutting-edge AI with creative digital
             strategy. Whether it is intelligent automation or brand-building
-            content, we make sure your business connects, converts, and grows.
+            content, we make sure that your business connects, converts, and
+            grows.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
