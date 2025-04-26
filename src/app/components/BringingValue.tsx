@@ -4,7 +4,7 @@ export default function BringingValue() {
   return (
     <section className="py-16 px-8 md:px-20 lg:px-40 bg-white">
       {/* What Novelty Lab Brings to the Table */}
-      <div className="max-w-6xl mx-auto text-center mb-16">
+      <div className="mx-auto text-center mb-16">
         <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
           What Novelty Lab Brings to the Table
         </h2>
@@ -57,7 +57,7 @@ export default function BringingValue() {
       </div>
 
       {/* From Our Lab */}
-      <div className="max-w-6xl mx-auto text-center">
+      <div className="mx-auto text-center">
         <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
           From Our Lab
         </h2>
