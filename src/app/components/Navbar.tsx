@@ -3,12 +3,12 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center px-40 py-4 shadow-md">
+    <nav className="flex justify-between items-center px-6 md:px-40 py-4 shadow-md">
       <div className="flex items-center justify-center gap-2">
         <Image alt="novelty_lab" width={50} height={50} src="/logo.png" />
         <h1 className="text-2xl tracking-wider text-gray-700">Novelty Lab</h1>
       </div>
-      <div className="flex gap-20">
+      <div className="hidden md:flex gap-20">
         <Link href="/" className="text-md text-gray-900">
           Services
         </Link>
