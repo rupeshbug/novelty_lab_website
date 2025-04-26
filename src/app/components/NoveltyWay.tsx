@@ -44,7 +44,7 @@ export default function NoveltyWay() {
           <div className="mt-10 text-center">
             {/* Optional: put an image of "confused AI" or "frustrated robot" */}
             <img
-              src="/det_bot_3.png"
+              src="/det_bot1.png"
               alt="Frustrated Robot"
               className="w-32 mx-auto"
             />
