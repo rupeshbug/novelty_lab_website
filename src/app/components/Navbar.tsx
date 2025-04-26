@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between items-center px-8 md:px-40 py-4 shadow-md">
+    <nav className="flex justify-between items-center px-8 py-4 shadow-md md:px-20 lg:px-40">
       <div className="flex items-center justify-center gap-2">
         <Image alt="novelty_lab" width={50} height={50} src="/logo.png" />
         <h1 className="text-2xl tracking-wider text-gray-700">Novelty Lab</h1>
