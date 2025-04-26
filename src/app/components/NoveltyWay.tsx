@@ -5,7 +5,7 @@ export default function NoveltyWay() {
     <section className="py-16 px-8 md:px-20 lg:px-40 bg-[#f0fbfc]">
       <div className="text-center mb-16">
         <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
-          The "Old Way" of growing online is holding you back
+          The &quot;Old Way&quot; of growing online is holding you back
         </h2>
         <p className="text-lg text-gray-700 max-w-3xl mx-auto">
           Many businesses waste months juggling disconnected tools, slow content
