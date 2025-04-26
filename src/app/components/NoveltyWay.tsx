@@ -77,7 +77,6 @@ export default function NoveltyWay() {
             </ul>
           </div>
           <div className="mt-10 text-center">
-            {/* Optional: put an image of "happy AI" or "innovative robot" */}
             <img src="/img4.png" alt="Happy Robot" className="w-32 mx-auto" />
           </div>
         </div>
