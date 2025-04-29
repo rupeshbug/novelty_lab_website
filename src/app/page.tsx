@@ -3,6 +3,7 @@ import HeroSection from "./components/HeroSection";
 import ProblemSection from "./components/Problems";
 import BringingValue from "./components/BringingValue";
 import GetInTouch from "./components/GetInTouch";
+import Team from "./components/Team";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <ProblemSection />
       <BringingValue />
       <GetInTouch />
+      <Team />
     </div>
   );
 }
