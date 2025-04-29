@@ -11,7 +11,7 @@ export default function GetInTouch() {
           <p className="text-lg text-gray-700 mb-8 max-w-xl">
             Whether you have a specific idea or just want to explore what is
             possible with AI and digital strategy — we would love to hear from
-            you. Let’s create something novel together.
+            you. Let us create something novel together.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
