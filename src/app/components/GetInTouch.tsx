@@ -2,17 +2,16 @@ import { Mail, Rocket } from "lucide-react";
 
 export default function GetInTouch() {
   return (
-    <section className="py-20 px-8 md:px-20 lg:px-40 bg-white relative overflow-hidden">
-      <div className="bg-[#09bbc8]/10 rounded-3xl shadow-xl p-10 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-12">
-        {/* Left Text Content */}
+    <section className="py-16 px-8 md:px-20 md:py-20 lg:px-40 relative overflow-hidden">
+      <div className="bg-yellow-200 rounded-3xl shadow-xl p-10 md:p-16 flex flex-col lg:flex-row items-center justify-between gap-12">
         <div className="w-full lg:w-2/3">
           <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
             Ready to build something bold?
           </h2>
           <p className="text-lg text-gray-700 mb-8 max-w-xl">
-            Whether you have a specific idea or just want to explore what's
-            possible with AI and digital strategy — we’d love to hear from you.
-            Let’s create something novel together.
+            Whether you have a specific idea or just want to explore what is
+            possible with AI and digital strategy — we would love to hear from
+            you. Let’s create something novel together.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -33,7 +32,6 @@ export default function GetInTouch() {
           </div>
         </div>
 
-        {/* Right Illustration */}
         <div className="w-full lg:w-1/3 flex justify-center">
           <img
             src="/det_bot_2.png"
