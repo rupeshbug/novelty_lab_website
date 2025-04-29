@@ -20,7 +20,7 @@ export default function GetInTouch() {
               className="inline-flex items-center gap-2 bg-[#09bbc8] text-white px-6 py-3 rounded-full font-semibold shadow-md hover:shadow-lg transition"
             >
               <Mail size={20} />
-              Email Us
+              Email us
             </a>
             <a
               href="#contact"
