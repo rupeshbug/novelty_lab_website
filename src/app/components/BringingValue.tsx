@@ -16,41 +16,38 @@ export default function BringingValue() {
             grows.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
-            <div className="bg-gray-50 rounded-2xl shadow-md p-6 hover:shadow-lg transition cursor-pointer">
-              <div className="flex items-center gap-4 mb-4 text-[#09bbc8]">
-                <Lightbulb size={28} />
-                <h3 className="text-xl font-semibold text-gray-800">
-                  Smart AI Solutions
-                </h3>
-              </div>
-              <p className="text-gray-600">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-gray-200 divide-y md:divide-y-0 md:divide-x divide-gray-200 text-center">
+            {/* Card 1 */}
+            <div className="px-6 py-10 flex flex-col items-center">
+              <Lightbulb size={60} className="text-[#09bbc8] mb-4" />
+              <h3 className="text-2xl font-semibold text-gray-800 mb-2">
+                Smart AI Solutions
+              </h3>
+              <p className="text-gray-600 text-md max-w-xs">
                 From chatbots to full-blown AI agents, we craft intelligent
                 systems that solve real business challenges.
               </p>
             </div>
 
-            <div className="bg-gray-50 rounded-2xl shadow-md p-6 hover:shadow-lg transition cursor-pointer">
-              <div className="flex items-center gap-4 mb-4 text-[#09bbc8]">
-                <PenTool size={28} />
-                <h3 className="text-xl font-semibold text-gray-800">
-                  Creative Content
-                </h3>
-              </div>
-              <p className="text-gray-600">
+            {/* Card 2 */}
+            <div className="px-6 py-10 flex flex-col items-center">
+              <PenTool size={60} className="text-[#09bbc8] mb-4" />
+              <h3 className="text-2xl font-semibold text-gray-800 mb-2">
+                Creative Content
+              </h3>
+              <p className="text-gray-600 text-md max-w-xs">
                 Blogs, videos, and visuals that resonate with your audience and
                 turn followers into fans.
               </p>
             </div>
 
-            <div className="bg-gray-50 rounded-2xl shadow-md p-6 hover:shadow-lg transition cursor-pointer">
-              <div className="flex items-center gap-4 mb-4 text-[#09bbc8]">
-                <MessageCircle size={28} />
-                <h3 className="text-xl font-semibold text-gray-800">
-                  Authentic Engagement
-                </h3>
-              </div>
-              <p className="text-gray-600">
+            {/* Card 3 */}
+            <div className="px-6 py-10 flex flex-col items-center">
+              <MessageCircle size={60} className="text-[#09bbc8] mb-4" />
+              <h3 className="text-2xl font-semibold text-gray-800 mb-2">
+                Authentic Engagement
+              </h3>
+              <p className="text-gray-600 text-md max-w-xs">
                 Digital strategies that spark conversations, build trust, and
                 grow your brand organically.
               </p>
