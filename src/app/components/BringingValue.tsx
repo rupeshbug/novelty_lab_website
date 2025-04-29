@@ -1,5 +1,3 @@
-import { Lightbulb, PenTool, MessageCircle } from "lucide-react";
-
 export default function BringingValue() {
   return (
     <section className="py-16 px-8 md:px-20 lg:px-40 bg-white">
@@ -16,10 +14,14 @@ export default function BringingValue() {
             grows.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-gray-200 divide-y md:divide-y-0 md:divide-x divide-gray-200 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-b border-x border-gray-300 divide-y md:divide-y-0 md:divide-x divide-gray-300 text-center">
             {/* Card 1 */}
             <div className="px-6 py-10 flex flex-col items-center">
-              <Lightbulb size={60} className="text-[#09bbc8] mb-4" />
+              <img
+                src="/one.png"
+                alt="Futuristic AI robot with glowing circuitry working on a laptop"
+                className="w-30 h-30 mb-4 object-contain"
+              />
               <h3 className="text-2xl font-semibold text-gray-800 mb-2">
                 Smart AI Solutions
               </h3>
@@ -31,7 +33,11 @@ export default function BringingValue() {
 
             {/* Card 2 */}
             <div className="px-6 py-10 flex flex-col items-center">
-              <PenTool size={60} className="text-[#09bbc8] mb-4" />
+              <img
+                src="/two.png"
+                alt="Creative workspace with a laptop, drawing tablet, and art supplies"
+                className="w-30 h-30 mb-4 object-contain"
+              />
               <h3 className="text-2xl font-semibold text-gray-800 mb-2">
                 Creative Content
               </h3>
@@ -43,7 +49,11 @@ export default function BringingValue() {
 
             {/* Card 3 */}
             <div className="px-6 py-10 flex flex-col items-center">
-              <MessageCircle size={60} className="text-[#09bbc8] mb-4" />
+              <img
+                src="/three.png"
+                alt="Person typing on smartphone, engaging on social media"
+                className="w-30 h-30 mb-4 object-contain"
+              />
               <h3 className="text-2xl font-semibold text-gray-800 mb-2">
                 Authentic Engagement
               </h3>
