@@ -34,9 +34,9 @@ export default function GetInTouch() {
 
         <div className="w-full lg:w-1/3 flex justify-center">
           <img
-            src="/det_bot_2.png"
+            src="/bot_human_handshake.png"
             alt="AI and human shaking hands"
-            className="w-72 max-w-full drop-shadow-lg"
+            className="w-72 h-72 drop-shadow-lg rounded-full bg-slate-100"
           />
         </div>
       </div>
