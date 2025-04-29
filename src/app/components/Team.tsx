@@ -31,7 +31,7 @@ const teamMembers = [
     image: "/three.png",
     linkedin: "https://www.linkedin.com/in/ethan-kim",
     description:
-      "Ethan designs intelligent automation pipelines that boost productivity. His solutions reduce manual effort and enhance workflows.",
+      "Ethan designs intelligent automation pipelines that boost productivity. His solutions reduce manual effort and enhance the workflows.",
   },
   {
     name: "Isabella Lopez",
@@ -63,7 +63,7 @@ const teamMembers = [
     image: "/three.png",
     linkedin: "https://www.linkedin.com/in/raj-mehta",
     description:
-      "Raj ensures our technology infrastructure runs smoothly and scales efficiently. He leads DevOps and performance optimization efforts.",
+      "Raj ensures our technology infrastructure runs smoothly and scales efficiently. He leads DevOps and other performance optimization efforts.",
   },
 ];
 
