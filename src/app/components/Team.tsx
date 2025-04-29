@@ -97,7 +97,7 @@ export default function MeetTheTeam() {
                 rel="noopener noreferrer"
                 className="inline-block mt-1 text-[#09bbc8] hover:text-[#078a95] transition"
               >
-                <Linkedin className="w-5 h-5" />
+                <Linkedin className="w-6 h-6" />
               </a>
             </div>
           </div>
