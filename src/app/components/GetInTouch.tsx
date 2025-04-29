@@ -16,7 +16,7 @@ export default function GetInTouch() {
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a
-              href="mailto:hello@noveltylab.xyz"
+              href="mailto:hello@noveltylab10.xyz"
               className="inline-flex items-center gap-2 bg-[#09bbc8] text-white px-6 py-3 rounded-full font-semibold shadow-md hover:shadow-lg transition"
             >
               <Mail size={20} />
