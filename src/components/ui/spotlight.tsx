@@ -11,7 +11,7 @@ type SpotlightProps = {
 
 export function Spotlight({
   className,
-  size = 200,
+  size = 150,
   springOptions = { bounce: 0 },
 }: SpotlightProps) {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -65,8 +65,7 @@ export function Spotlight({
     <motion.div
       ref={containerRef}
       className={cn(
-        "pointer-events-none absolute rounded-full bg-[radial-gradient(circle_at_center,var(--tw-gradient-stops),transparent_80%)] blur-xl transition-opacity duration-200",
-        "from-zinc-50 via-zinc-100 to-zinc-200",
+        "pointer-events-none absolute rounded-full blur-xl transition-opacity duration-200",
         isHovered ? "opacity-100" : "opacity-0",
         className
       )}
@@ -75,6 +74,8 @@ export function Spotlight({
         height: size,
         left: spotlightLeft,
         top: spotlightTop,
+        background:
+          "radial-gradient(circle at center, rgba(255,255,255,0.9), transparent 90%)",
       }}
     />
   );
