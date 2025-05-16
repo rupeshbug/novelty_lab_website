@@ -1,3 +1,5 @@
+import { TextParticle } from "@/components/ui/text-particle";
+
 export default function BringingValue() {
   return (
     <section className="py-16 px-8 md:px-20 lg:px-40 bg-white">
@@ -76,8 +78,14 @@ export default function BringingValue() {
 
       {/* From Our Lab */}
       <div className="text-center">
-        <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
-          From Our Lab
+        <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-3">
+          <TextParticle
+            text="From Our Lab"
+            fontSize={80}
+            particleColor="#09bbc8"
+            particleSize={1}
+            particleDensity={3}
+          />
         </h2>
         <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
           We love to share what we are learning. Check out a few recent ideas
