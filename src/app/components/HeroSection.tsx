@@ -5,8 +5,8 @@ import { Spotlight } from "@/components/ui/spotlight";
 export default function Hero() {
   return (
     <>
-      <Spotlight className="z-0" size={150} />
       <section className="py-16 px-6 md:px-20 md:py-32 lg:px-40 bg-gradient-to-br from-[#899fd4] to-[#023549]">
+        <Spotlight className="z-0" size={150} />
         {/* Wrapping everything in a relative div to allow spotlight to track properly */}
         <div className="relative overflow-hidden">
           {/* Spotlight follows mouse inside this wrapper */}
