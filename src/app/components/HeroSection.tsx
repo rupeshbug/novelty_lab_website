@@ -4,7 +4,7 @@ import { Spotlight } from "@/components/ui/spotlight";
 
 export default function Hero() {
   return (
-    <section className="py-16 px-6 md:px-20 md:py-20 lg:px-40 bg-gradient-to-br from-[#899fd4] to-[#023549]">
+    <section className="py-16 px-6 md:px-20 md:py-32 lg:px-40 bg-gradient-to-br from-[#899fd4] to-[#023549]">
       {/* Wrapping everything in a relative div to allow spotlight to track properly */}
       <div className="relative overflow-hidden">
         {/* Spotlight follows mouse inside this wrapper */}
@@ -46,7 +46,7 @@ export default function Hero() {
               <button className="bg-[#09bbc8] text-white px-5 py-3 cursor-pointer rounded-lg text-base font-medium hover:bg-[#07a5b0] transition">
                 Get Started
               </button>
-              <button className="text-white border border-yellow-400 px-5 py-3 cursor-pointer rounded-lg text-base font-medium hover:bg-[#07191a] transition">
+              <button className="text-white border border-yellow-400 px-5 py-3 cursor-pointer rounded-lg text-base font-medium hover:bg-yellow-400 transition">
                 Learn More
               </button>
             </div>
