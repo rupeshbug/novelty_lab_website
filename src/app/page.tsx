@@ -4,6 +4,7 @@ import ProblemSection from "./components/Problems";
 import BringingValue from "./components/BringingValue";
 import GetInTouch from "./components/GetInTouch";
 import Team from "./components/Team";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <BringingValue />
       <GetInTouch />
       <Team />
+      <Footer />
     </div>
   );
 }
