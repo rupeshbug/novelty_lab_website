@@ -37,6 +37,7 @@ export function TextParticle({
 }: TextParticleAnimationProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [particles, setParticles] = useState<Particle[]>([]);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
   const [mouse, setMouse] = useState({
     x: null as number | null,
@@ -70,6 +71,7 @@ export function TextParticle({
 
       // Measure text width to center it properly
       const textMetrics = ctx.measureText(text);
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const textWidth = textMetrics.width;
 
       // Calculate position to center text
