@@ -3,7 +3,7 @@ export default function FooterExperiment() {
     <footer className="relative overflow-hidden bg-gradient-to-br from-[#899fd4] to-[#023549] text-gray-800 py-16 px-6 md:px-20 md:py-16 mt-40">
       {/* Large, faint lab wordmark in background */}
       <span className="pointer-events-none select-none absolute inset-0 flex justify-center items-center md:justify-start md:pl-24 overflow-hidden">
-        <span className="whitespace-nowrap font-extrabold text-[14vw] sm:text-[12vw] md:text-[10vw] leading-none text-gray-100 opacity-40 uppercase mx-auto">
+        <span className="whitespace-nowrap font-extrabold text-[14vw] sm:text-[12vw] md:text-[10vw] leading-none text-gray-100 opacity-30 uppercase mx-auto">
           NOVELTY LAB
         </span>
       </span>
@@ -12,8 +12,8 @@ export default function FooterExperiment() {
       <div className="relative mx-auto grid grid-cols-1 md:grid-cols-4 gap-14 text-slate-100">
         {/* Brand */}
         <div className="space-y-4">
-          <h2 className="text-2xl font-black">Novelty Lab</h2>
-          <p className="text-sm max-w-xs">Contact Us so we can help you grow</p>
+          <h2 className="text-3xl font-black">Novelty Lab</h2>
+          <p className="text-md max-w-xs">Contact Us so we can help you grow</p>
           <div className="flex">
             <input
               className="bg-white rounded-md py-3 px-2"
@@ -25,8 +25,8 @@ export default function FooterExperiment() {
           </div>
         </div>
 
-        <ul className="space-y-2 text-sm">
-          <li className="font-semibold">About</li>
+        <ul className="space-y-2 text-md">
+          <li className="font-bold">About</li>
           <li>
             <a className="hover:text-[#09bbc8]" href="#features">
               Features
@@ -49,8 +49,8 @@ export default function FooterExperiment() {
           </li>
         </ul>
 
-        <ul className="space-y-2 text-sm">
-          <li className="font-semibold">Resources</li>
+        <ul className="space-y-2 text-md">
+          <li className="font-bold">Resources</li>
           <li>
             <a className="hover:text-[#09bbc8]" href="#docs">
               Documentation
@@ -68,8 +68,8 @@ export default function FooterExperiment() {
           </li>
         </ul>
 
-        <ul className="space-y-2 text-sm">
-          <li className="font-semibold">Social</li>
+        <ul className="space-y-2 text-md">
+          <li className="font-bold">Social</li>
           <li>
             <a className="hover:text-[#09bbc8]" href="https://twitter.com">
               X
