@@ -51,7 +51,12 @@ export default function Navbar() {
           ))}
         </div>
         <div>
-          <button className="text-white border border-[#09bbc8] px-5 py-3 cursor-pointer rounded-lg text-base font-medium hover:bg-[#09bbc8] transition">
+          <button
+            className={clsx(
+              "border border-[#09bbc8] px-5 py-3 cursor-pointer rounded-lg text-base font-medium hover:bg-[#09bbc8] transition",
+              isScrolled ? "text-gray-900" : "text-white"
+            )}
+          >
             Connect With Us
           </button>
         </div>
