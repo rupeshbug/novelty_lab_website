@@ -1,9 +1,9 @@
 export default function FooterExperiment() {
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-br from-[#899fd4] to-[#023549] text-gray-800 py-16 px-6 md:px-20 md:py-16 mt-40">
-      {/* Large, faint lab wordmark in background */}
-      <span className="pointer-events-none select-none absolute inset-0 flex justify-center items-center md:justify-start md:pl-24 overflow-hidden">
-        <span className="whitespace-nowrap font-extrabold text-[14vw] sm:text-[12vw] md:text-[10vw] leading-none text-gray-100 opacity-30 uppercase mx-auto">
+    <footer className="relative overflow-hidden bg-gradient-to-br from-[#899fd4] to-[#023549] text-gray-800 py-16 px-6 md:px-20 lg:px-40 mt-40">
+      {/* Large, faint background label - hidden on small screens */}
+      <span className="pointer-events-none select-none absolute inset-0 hidden sm:flex justify-center items-center md:justify-start md:pl-24 overflow-hidden">
+        <span className="whitespace-nowrap font-extrabold text-[14vw] sm:text-[12vw] md:text-[10vw] leading-none text-gray-100 opacity-20 uppercase mx-auto">
           NOVELTY LAB
         </span>
       </span>
@@ -13,18 +13,28 @@ export default function FooterExperiment() {
         {/* Brand */}
         <div className="space-y-4">
           <h2 className="text-3xl font-black">Novelty Lab</h2>
-          <p className="text-md max-w-xs">Contact Us so we can help you grow</p>
-          <div className="flex">
+          <p className="text-md max-w-xs">
+            Contact us so we can help you grow.
+          </p>
+
+          {/* Email Subscribe */}
+          <form className="flex flex-col sm:flex-row items-stretch max-w-md">
             <input
-              className="bg-white rounded-md py-3 px-2"
+              type="email"
+              required
+              className="flex-1 px-4 py-3 rounded-l-md text-gray-800 placeholder:text-gray-500 bg-white focus:outline-none focus:ring-2 focus:ring-[#09bbc8]"
               placeholder="Work Email*"
             />
-            <button className="px-5 py-3 cursor-pointer rounded-md border border-yellow-400">
+            <button
+              type="submit"
+              className="bg-yellow-400 text-slate-50 px-5 py-3 cursor-pointer font-semibold rounded-r-md"
+            >
               Subscribe
             </button>
-          </div>
+          </form>
         </div>
 
+        {/* About Links */}
         <ul className="space-y-2 text-md">
           <li className="font-bold">About</li>
           <li>
@@ -49,6 +59,7 @@ export default function FooterExperiment() {
           </li>
         </ul>
 
+        {/* Resources Links */}
         <ul className="space-y-2 text-md">
           <li className="font-bold">Resources</li>
           <li>
@@ -68,6 +79,7 @@ export default function FooterExperiment() {
           </li>
         </ul>
 
+        {/* Social Links */}
         <ul className="space-y-2 text-md">
           <li className="font-bold">Social</li>
           <li>
@@ -91,11 +103,10 @@ export default function FooterExperiment() {
         </ul>
       </div>
 
-      <div className="max-w-7xl mx-auto mt-12 flex flex-col md:flex-row items-center justify-between text-sm gap-4">
-        <p className="text-slate-300">
-          © {new Date().getFullYear()} Novelty Lab. All rights reserved.
-        </p>
-        <div className="flex gap-6 text-slate-300">
+      {/* Bottom copyright & policies */}
+      <div className="max-w-7xl mx-auto mt-12 flex flex-col md:flex-row items-center justify-between text-sm gap-4 text-slate-200">
+        <p>© {new Date().getFullYear()} Novelty Lab. All rights reserved.</p>
+        <div className="flex gap-6">
           <a href="#privacy" className="hover:text-[#09bbc8]">
             Privacy Policy
           </a>
