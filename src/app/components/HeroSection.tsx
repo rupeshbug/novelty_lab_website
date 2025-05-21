@@ -24,19 +24,19 @@ export default function Hero() {
           </p>
           <div className="flex flex-col sm:flex-row flex-wrap gap-6 mb-10 lg:justify-start justify-center">
             <div className="flex items-center gap-3">
-              <Cpu className="text-[#09bbc8] w-6 h-6" />
+              <Cpu className="text-yellow-400 w-6 h-6" />
               <p className="text-gray-100 text-base font-medium">
                 AI & Automation
               </p>
             </div>
             <div className="flex items-center gap-3">
-              <Settings className="text-[#09bbc8] w-6 h-6" />
+              <Settings className="text-yellow-400 w-6 h-6" />
               <p className="text-gray-100 text-base font-medium">
                 Custom IT Solutions
               </p>
             </div>
             <div className="flex items-center gap-3">
-              <BarChart className="text-[#09bbc8] w-6 h-6" />
+              <BarChart className="text-yellow-400 w-6 h-6" />
               <p className="text-gray-100 text-base font-medium">
                 Digital Marketing
               </p>
