@@ -59,7 +59,6 @@ export default function Hero() {
                 scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
                 className="w-full h-full"
               />
-              <div className="absolute bottom-[-20] left-1/2 -translate-x-1/2 w-60 h-10 bg-gray-500 rounded-full blur-md" />
             </div>
           </div>
         </div>
