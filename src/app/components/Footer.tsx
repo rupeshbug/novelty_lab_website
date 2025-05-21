@@ -25,7 +25,6 @@ export default function FooterExperiment() {
           </div>
         </div>
 
-        {/* Column 1 */}
         <ul className="space-y-2 text-sm">
           <li className="font-semibold">About</li>
           <li>
@@ -50,7 +49,6 @@ export default function FooterExperiment() {
           </li>
         </ul>
 
-        {/* Column 2 */}
         <ul className="space-y-2 text-sm">
           <li className="font-semibold">Resources</li>
           <li>
@@ -70,7 +68,6 @@ export default function FooterExperiment() {
           </li>
         </ul>
 
-        {/* Column 3 */}
         <ul className="space-y-2 text-sm">
           <li className="font-semibold">Social</li>
           <li>
@@ -94,7 +91,6 @@ export default function FooterExperiment() {
         </ul>
       </div>
 
-      {/* Bottom bar */}
       <div className="max-w-7xl mx-auto mt-12 flex flex-col md:flex-row items-center justify-between text-sm gap-4">
         <p className="text-slate-300">
           © {new Date().getFullYear()} Novelty Lab. All rights reserved.
