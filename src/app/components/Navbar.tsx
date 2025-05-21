@@ -51,7 +51,7 @@ export default function Navbar() {
           ))}
         </div>
         <div>
-          <button className="bg-[#09BBc8] text-white px-4 py-3 rounded-lg font-medium cursor-pointer">
+          <button className="text-white border border-[#09bbc8] px-5 py-3 cursor-pointer rounded-lg text-base font-medium hover:bg-[#09bbc8] transition">
             Connect With Us
           </button>
         </div>
