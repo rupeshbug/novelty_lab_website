@@ -87,7 +87,7 @@ export default function BringingValue() {
             particleDensity={3}
           />
         </h2>
-        <p className="text-lg text-gray-700 mb-12 max-w-3xl mx-auto">
+        <p className="text-lg text-slate-100 mb-12 max-w-3xl mx-auto">
           We love to share what we are learning. Check out a few recent ideas
           and insights straight from our lab notebooks.
         </p>
