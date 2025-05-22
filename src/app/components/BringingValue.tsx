@@ -1,4 +1,6 @@
 import Image from "next/image";
+import { Sparkles, Pencil, MessageCircle } from "lucide-react";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 export default function BringingValue() {
   return (
@@ -6,7 +8,8 @@ export default function BringingValue() {
       <div className="flex flex-col lg:flex-row items-center gap-15">
         <div className="text-center lg:text-left w-full lg:w-4/6">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            What Novelty Lab Brings to the Table
+            What <span className="text-[#09bbc8]">Novelty Lab</span> Brings to
+            the Table
           </h2>
           <p className="text-lg text-slate-100 mb-10 max-w-3xl mx-auto lg:mx-0">
             At Novelty Lab, we blend cutting-edge AI with creative digital
@@ -15,59 +18,71 @@ export default function BringingValue() {
             grows.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-gray-300 divide-y md:divide-y-0 md:divide-x divide-gray-300 text-center">
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 mt-10">
             {/* Card 1 */}
-            <div className="px-6 py-10 flex flex-col items-center">
-              <Image
-                src="/one.png"
-                alt="Futuristic AI robot with glowing circuitry working on a laptop"
-                width={90}
-                height={90}
-                className="mb-4 object-contain"
+            <div className="relative rounded-xl border border-white/20 bg-black text-white p-6 shadow-md cursor-pointer">
+              <GlowingEffect
+                spread={50}
+                glow={true}
+                disabled={false}
+                proximity={64}
+                inactiveZone={0.01}
+                borderWidth={5}
               />
-              <h3 className="text-2xl font-semibold text-slate-100 mb-2">
-                Smart AI Solutions
-              </h3>
-              <p className="text-slate-200 max-w-xs">
-                From chatbots to full-blown AI agents, we craft intelligent
-                systems that solve real business challenges.
-              </p>
+              <div className="relative z-10 flex flex-col items-center text-center">
+                <Sparkles className="w-10 h-10 mb-4 text-yellow-400" />
+                <h3 className="text-2xl font-semibold mb-2">
+                  Smart AI Solutions
+                </h3>
+                <p className="text-slate-300 max-w-xs">
+                  From chatbots to full-blown AI agents, we craft intelligent
+                  systems that solve real business challenges.
+                </p>
+              </div>
             </div>
 
             {/* Card 2 */}
-            <div className="px-6 py-10 flex flex-col items-center">
-              <Image
-                src="/two.png"
-                alt="Creative workspace with a laptop, drawing tablet, and art supplies"
-                width={90}
-                height={90}
-                className="mb-4 object-contain"
+            <div className="relative rounded-xl border border-white/20 bg-black text-white p-6 shadow-md cursor-pointer">
+              <GlowingEffect
+                spread={50}
+                glow={true}
+                disabled={false}
+                proximity={64}
+                inactiveZone={0.01}
+                borderWidth={3}
               />
-              <h3 className="text-2xl font-semibold text-slate-100 mb-2">
-                Creative Content
-              </h3>
-              <p className="text-slate-200 text-md max-w-xs">
-                Blogs, videos, and visuals that resonate with your audience and
-                turn followers into fans.
-              </p>
+              <div className="relative z-10 flex flex-col items-center text-center">
+                <Pencil className="w-10 h-10 mb-4 text-yellow-400" />
+                <h3 className="text-2xl font-semibold mb-2">
+                  Creative Content
+                </h3>
+                <p className="text-slate-300 max-w-xs">
+                  Blogs, videos, and visuals that resonate with your audience
+                  and turn followers into fans.
+                </p>
+              </div>
             </div>
 
             {/* Card 3 */}
-            <div className="px-6 py-10 flex flex-col items-center">
-              <Image
-                src="/three.png"
-                alt="Person typing on smartphone, engaging on social media"
-                width={90}
-                height={90}
-                className="mb-4 object-contain"
+            <div className="relative rounded-xl border border-white/20 bg-black text-white p-6 shadow-md cursor-pointer">
+              <GlowingEffect
+                spread={50}
+                glow={true}
+                disabled={false}
+                proximity={64}
+                inactiveZone={0.01}
+                borderWidth={3}
               />
-              <h3 className="text-2xl font-semibold text-slate-100 mb-2">
-                Authentic Engagement
-              </h3>
-              <p className="text-slate-200 text-md max-w-xs">
-                Digital strategies that spark conversations, build trust, and
-                grow your brand organically.
-              </p>
+              <div className="relative z-10 flex flex-col items-center text-center">
+                <MessageCircle className="w-10 h-10 mb-4 text-yellow-400" />
+                <h3 className="text-2xl font-semibold mb-2">
+                  Authentic Engagement
+                </h3>
+                <p className="text-slate-300 max-w-xs">
+                  Digital strategies that spark conversations, build trust, and
+                  grow your brand organically.
+                </p>
+              </div>
             </div>
           </div>
         </div>
