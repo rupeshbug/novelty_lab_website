@@ -6,10 +6,10 @@ export default function BringingValue() {
       {/* What Novelty Lab Brings to the Table */}
       <div className="relative flex flex-col lg:flex-row items-center gap-15 mb-24">
         <div className="text-center lg:text-left w-full lg:w-4/6">
-          <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             What Novelty Lab Brings to the Table
           </h2>
-          <p className="text-lg text-gray-700 mb-10 max-w-3xl mx-auto lg:mx-0">
+          <p className="text-lg text-slate-100 mb-10 max-w-3xl mx-auto lg:mx-0">
             At Novelty Lab, we blend cutting-edge AI with creative digital
             strategy. Whether it is intelligent automation or brand-building
             content, we make sure that your business connects, converts, and
@@ -24,10 +24,10 @@ export default function BringingValue() {
                 alt="Futuristic AI robot with glowing circuitry working on a laptop"
                 className="w-30 h-30 mb-4 object-contain"
               />
-              <h3 className="text-2xl font-semibold text-gray-800 mb-2">
+              <h3 className="text-2xl font-semibold text-slate-100 mb-2">
                 Smart AI Solutions
               </h3>
-              <p className="text-gray-600 text-md max-w-xs">
+              <p className="text-slate-200 max-w-xs">
                 From chatbots to full-blown AI agents, we craft intelligent
                 systems that solve real business challenges.
               </p>
@@ -40,10 +40,10 @@ export default function BringingValue() {
                 alt="Creative workspace with a laptop, drawing tablet, and art supplies"
                 className="w-30 h-30 mb-4 object-contain"
               />
-              <h3 className="text-2xl font-semibold text-gray-800 mb-2">
+              <h3 className="text-2xl font-semibold text-slate-100 mb-2">
                 Creative Content
               </h3>
-              <p className="text-gray-600 text-md max-w-xs">
+              <p className="text-slate-200 text-md max-w-xs">
                 Blogs, videos, and visuals that resonate with your audience and
                 turn followers into fans.
               </p>
@@ -56,10 +56,10 @@ export default function BringingValue() {
                 alt="Person typing on smartphone, engaging on social media"
                 className="w-30 h-30 mb-4 object-contain"
               />
-              <h3 className="text-2xl font-semibold text-gray-800 mb-2">
+              <h3 className="text-2xl font-semibold text-slate-100 mb-2">
                 Authentic Engagement
               </h3>
-              <p className="text-gray-600 text-md max-w-xs">
+              <p className="text-slate-200 text-md max-w-xs">
                 Digital strategies that spark conversations, build trust, and
                 grow your brand organically.
               </p>
