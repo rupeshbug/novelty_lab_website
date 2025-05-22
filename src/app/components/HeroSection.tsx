@@ -1,17 +1,15 @@
 import { Cpu, Settings, BarChart } from "lucide-react";
 import { SplineScene } from "@/components/ui/splite";
-import { HeroBackground } from "@/components/ui/HeroBackground";
 import { Spotlight } from "@/components/ui/spotlight";
 
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center px-6 md:px-20 lg:px-40 overflow-hidden bg-[#030303]">
-      <Spotlight className="z-0" size={100} />
+      <Spotlight className="z-50" size={100} />
       {/* Background Layer */}
-      <HeroBackground />
 
       {/* Content Layer */}
-      <div className="relative z-10 mx-auto flex flex-col md:flex-row items-center justify-between gap-10 w-full">
+      <div className="relative z-99 mx-auto flex flex-col md:flex-row items-center justify-between gap-10 w-full">
         {/* LEFT SIDE */}
         <div className="text-center w-full lg:w-3/5 lg:text-left">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight tracking-wide mb-6">
@@ -54,10 +52,10 @@ export default function Hero() {
         </div>
 
         {/* RIGHT SIDE */}
-        <div className="hidden lg:block lg:w-2/5 h-[520px] relative z-10">
+        <div className="hidden lg:block lg:w-2/5 h-[520px] relative z-50">
           <SplineScene
             scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-            className="w-full h-full"
+            className="w-full h-full pointer-events-auto"
           />
         </div>
       </div>
