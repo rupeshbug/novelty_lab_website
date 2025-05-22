@@ -2,7 +2,7 @@ import { TextParticle } from "@/components/ui/text-particle";
 
 export default function BringingValue() {
   return (
-    <section className="py-16 px-8 md:px-20 lg:px-40 bg-white">
+    <section className="py-16 px-8 md:px-20 lg:px-40">
       {/* What Novelty Lab Brings to the Table */}
       <div className="relative flex flex-col lg:flex-row items-center gap-15 mb-24">
         <div className="text-center lg:text-left w-full lg:w-4/6">

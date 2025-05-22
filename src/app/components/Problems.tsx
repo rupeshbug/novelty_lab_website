@@ -4,10 +4,10 @@ export default function ProblemSection() {
   return (
     <section className="py-16 px-8 md:px-20 lg:px-40 relative">
       <div className="max-w-5xl mx-auto text-center z-10 relative">
-        <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-6">
+        <h2 className="text-3xl md:text-5xl font-bold text-[#f5f5f5] mb-6">
           Why Traditional Tools Are Holding You Back
         </h2>
-        <p className="text-lg text-gray-700 mb-10 mx-auto">
+        <p className="text-lg text-slate-100 mb-10 mx-auto">
           Older platforms like WordPress and generic website builders were never
           built for scale. As your business grows, these tools create
           bottlenecks— from bloated plugins and poor performance to limited
