@@ -5,26 +5,25 @@ export default function ProblemSection() {
   return (
     <section className="py-16 px-8 md:px-20 lg:px-40 relative">
       <div className="mx-auto text-center z-10 relative">
-        <h2 className="text-3xl md:text-5xl font-bold text-[#f5f5f5] mb-6">
-          Why Traditional Tools Are Holding You Back
-        </h2>
+        <div className="flex items-center justify-center">
+          <Image
+            src="/det_bot_1.png"
+            alt="AI detective bot"
+            width={120}
+            height={120}
+            className="opacity-90"
+            priority
+          />
+          <h2 className="text-3xl md:text-5xl font-bold text-[#f5f5f5] mt-7">
+            Why Traditional Tools Are Holding You Back
+          </h2>
+        </div>
         <p className="text-lg text-slate-100 mb-10 mx-auto w-full xl:w-[60%]">
           Older platforms like WordPress and generic website builders were never
           built for scale. As your business grows, these tools create
           bottlenecks— from bloated plugins and poor performance to limited
           automation and disjointed branding.
         </p>
-      </div>
-
-      <div className="absolute left-[160px] top-1/2 transform -translate-y-1/2 hidden xl:block z-0">
-        <Image
-          src="/det_bot_3.png"
-          alt="AI detective bot"
-          width={220}
-          height={220}
-          className="opacity-90 mr-10"
-          priority
-        />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto relative z-10">
