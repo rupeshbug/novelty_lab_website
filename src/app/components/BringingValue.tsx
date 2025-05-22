@@ -1,6 +1,23 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { TextParticle } from "@/components/ui/text-particle";
 
 export default function BringingValue() {
+  const [fontSize, setFontSize] = useState(80);
+
+  useEffect(() => {
+    const updateFontSize = () => {
+      const width = window.innerWidth;
+      setFontSize(width < 768 ? 60 : 80); // 768px is Tailwind's md breakpoint
+    };
+
+    updateFontSize(); // set on mount
+    window.addEventListener("resize", updateFontSize);
+
+    return () => window.removeEventListener("resize", updateFontSize);
+  }, []);
+
   return (
     <section className="py-16 px-8 md:px-20 lg:px-40">
       {/* What Novelty Lab Brings to the Table */}
@@ -81,7 +98,7 @@ export default function BringingValue() {
         <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-3">
           <TextParticle
             text="From Our Lab"
-            fontSize={80}
+            fontSize={fontSize}
             particleColor="#09bbc8"
             particleSize={1}
             particleDensity={3}
