@@ -1,8 +1,9 @@
+import Image from "next/image";
+
 export default function BringingValue() {
   return (
     <section className="py-16 px-8 md:px-20 lg:px-40">
-      {/* What Novelty Lab Brings to the Table */}
-      <div className="relative flex flex-col lg:flex-row items-center gap-15">
+      <div className="flex flex-col lg:flex-row items-center gap-15">
         <div className="text-center lg:text-left w-full lg:w-4/6">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             What Novelty Lab Brings to the Table
@@ -14,13 +15,15 @@ export default function BringingValue() {
             grows.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-b border-x border-gray-300 divide-y md:divide-y-0 md:divide-x divide-gray-300 text-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border border-gray-300 divide-y md:divide-y-0 md:divide-x divide-gray-300 text-center">
             {/* Card 1 */}
             <div className="px-6 py-10 flex flex-col items-center">
-              <img
+              <Image
                 src="/one.png"
                 alt="Futuristic AI robot with glowing circuitry working on a laptop"
-                className="w-30 h-30 mb-4 object-contain"
+                width={90}
+                height={90}
+                className="mb-4 object-contain"
               />
               <h3 className="text-2xl font-semibold text-slate-100 mb-2">
                 Smart AI Solutions
@@ -33,10 +36,12 @@ export default function BringingValue() {
 
             {/* Card 2 */}
             <div className="px-6 py-10 flex flex-col items-center">
-              <img
+              <Image
                 src="/two.png"
                 alt="Creative workspace with a laptop, drawing tablet, and art supplies"
-                className="w-30 h-30 mb-4 object-contain"
+                width={90}
+                height={90}
+                className="mb-4 object-contain"
               />
               <h3 className="text-2xl font-semibold text-slate-100 mb-2">
                 Creative Content
@@ -49,10 +54,12 @@ export default function BringingValue() {
 
             {/* Card 3 */}
             <div className="px-6 py-10 flex flex-col items-center">
-              <img
+              <Image
                 src="/three.png"
                 alt="Person typing on smartphone, engaging on social media"
-                className="w-30 h-30 mb-4 object-contain"
+                width={90}
+                height={90}
+                className="mb-4 object-contain"
               />
               <h3 className="text-2xl font-semibold text-slate-100 mb-2">
                 Authentic Engagement
@@ -66,15 +73,15 @@ export default function BringingValue() {
         </div>
 
         <div className="hidden lg:block w-2/6 rounded-xl animate-fade-in">
-          <img
+          <Image
             src="/futuristic_ai_lab.png"
             alt="AI bot in lab coat experimenting"
-            className="w-100 max-w-md mx-auto"
+            width={400}
+            height={400}
+            className="w-full max-w-md mx-auto"
           />
         </div>
       </div>
-
-      {/* From Our Lab */}
     </section>
   );
 }
