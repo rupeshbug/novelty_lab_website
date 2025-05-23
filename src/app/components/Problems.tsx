@@ -35,7 +35,7 @@ export default function ProblemSection() {
             </div>
             <div className="w-0.5 h-40 md:h-32 bg-yellow-400"></div>
           </div>
-          <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="mt-[-5]">
               <h3 className="text-2xl font-bold text-[#f5f5f5] mb-4 flex items-center gap-3">
                 <AlertTriangle size={28} className="text-[#09bbc8]" />
@@ -46,7 +46,7 @@ export default function ProblemSection() {
                 You end up fighting your tech instead of growing your business.
               </p>
             </div>
-            <div className="relative rounded-2xl overflow-hidden h-48 w-full bg-gray-100">
+            <div className="relative rounded-2xl overflow-hidden h-55 w-full bg-gray-100">
               <Image
                 src="/step1.png"
                 alt="Outdated Tools illustration"
@@ -66,7 +66,7 @@ export default function ProblemSection() {
             </div>
             <div className="w-0.5 h-40 md:h-32 bg-yellow-400"></div>
           </div>
-          <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="mt-[-5] md:mt-[-3rem]">
               <h3 className="text-2xl font-bold text-[#f5f5f5] mb-4 flex items-center gap-3">
                 <ShieldX size={28} className="text-[#09bbc8]" />
@@ -77,7 +77,7 @@ export default function ProblemSection() {
                 your evolving business needs.
               </p>
             </div>
-            <div className="rounded-2xl overflow-hidden h-48 flex items-center justify-center bg-gray-100">
+            <div className="rounded-2xl overflow-hidden h-55 flex items-center justify-center bg-gray-100">
               <Image
                 src="/step2.png"
                 alt="One-size-fits-all illustration"
@@ -96,7 +96,7 @@ export default function ProblemSection() {
               3
             </div>
           </div>
-          <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="mt-[-5] md:mt-[-3rem]">
               <h3 className="text-2xl font-bold text-[#f5f5f5] mb-4 flex items-center gap-3">
                 <Wand2 size={28} className="text-[#09bbc8]" />
@@ -107,7 +107,7 @@ export default function ProblemSection() {
                 time to focus on growth.
               </p>
             </div>
-            <div className="rounded-2xl overflow-hidden h-48 flex items-center justify-center bg-gray-100">
+            <div className="rounded-2xl overflow-hidden h-55 flex items-center justify-center bg-gray-100">
               <Image
                 src="/step3.png"
                 alt="Lack of AI illustration"
