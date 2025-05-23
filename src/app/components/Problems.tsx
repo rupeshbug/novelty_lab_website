@@ -26,38 +26,88 @@ export default function ProblemSection() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto relative z-10">
-        <div className="bg-white rounded-2xl shadow-md p-8 border-t-4 border-[#09bbc8] hover:shadow-lg transition cursor-pointer">
-          <div className="flex items-center gap-4 mb-4 text-[#09bbc8]">
-            <AlertTriangle size={28} />
-            <h3 className="text-xl font-semibold">Outdated Tools</h3>
+      <div className="max-w-5xl mx-auto relative z-10">
+        {/* Step 1 */}
+        <div className="flex items-start gap-8 mb-12">
+          <div className="flex flex-col items-center pt-8">
+            <div className="w-12 h-12 bg-[#09bbc8] text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
+              1
+            </div>
+            <div className="w-0.5 h-32 bg-gray-300"></div>
           </div>
-          <p className="text-gray-600">
-            Old platforms were not built for speed, scale, or flexibility. You
-            end up fighting your tech instead of growing your business.
-          </p>
+          <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 className="text-2xl font-bold text-[#f5f5f5] mb-4 flex items-center gap-3">
+                <AlertTriangle size={28} className="text-[#09bbc8]" />
+                Outdated Tools
+              </h3>
+              <p className="text-slate-100 text-lg">
+                Old platforms were not built for speed, scale, or flexibility.
+                You end up fighting your tech instead of growing your business.
+              </p>
+            </div>
+            <div className="bg-gray-100 rounded-2xl p-8 flex items-center justify-center h-48">
+              <div className="w-20 h-20 bg-black rounded-lg flex items-center justify-center">
+                <div className="w-12 h-12 bg-white rounded transform rotate-12"></div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-md p-8 border-t-4 border-[#09bbc8] hover:shadow-lg transition cursor-pointer">
-          <div className="flex items-center gap-4 mb-4 text-[#09bbc8]">
-            <ShieldX size={28} />
-            <h3 className="text-xl font-semibold">One-Size-Fits-All</h3>
+        {/* Step 2 */}
+        <div className="flex items-start gap-8 mb-12">
+          <div className="flex flex-col items-center pt-8">
+            <div className="w-12 h-12 bg-[#09bbc8] text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
+              2
+            </div>
+            <div className="w-0.5 h-32 bg-gray-300"></div>
           </div>
-          <p className="text-gray-600">
-            Cookie-cutter websites will not capture your brand or adapt to your
-            evolving business needs.
-          </p>
+          <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 className="text-2xl font-bold text-[#f5f5f5] mb-4 flex items-center gap-3">
+                <ShieldX size={28} className="text-[#09bbc8]" />
+                One-Size-Fits-All
+              </h3>
+              <p className="text-slate-100 text-lg">
+                Cookie-cutter websites will not capture your brand or adapt to
+                your evolving business needs.
+              </p>
+            </div>
+            <div className="bg-gray-100 rounded-2xl p-8 flex items-center justify-center h-48">
+              <div className="relative">
+                <div className="w-16 h-16 bg-black rounded border-4 border-gray-800"></div>
+                <div className="absolute -top-2 -right-2 w-6 h-6 bg-white rounded border-2 border-black"></div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="bg-white rounded-2xl shadow-md p-8 border-t-4 border-[#09bbc8] hover:shadow-lg transition cursor-pointer">
-          <div className="flex items-center gap-4 mb-4 text-[#09bbc8]">
-            <Wand2 size={28} />
-            <h3 className="text-xl font-semibold">Lack of Intelligence</h3>
+        {/* Step 3 */}
+        <div className="flex items-start gap-8">
+          <div className="flex flex-col items-center pt-8">
+            <div className="w-12 h-12 bg-[#09bbc8] text-white rounded-full flex items-center justify-center font-bold text-lg">
+              3
+            </div>
           </div>
-          <p className="text-gray-600">
-            No built-in AI or automation means more manual work and less time to
-            focus on growth.
-          </p>
+          <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div>
+              <h3 className="text-2xl font-bold text-[#f5f5f5] mb-4 flex items-center gap-3">
+                <Wand2 size={28} className="text-[#09bbc8]" />
+                Lack of Intelligence
+              </h3>
+              <p className="text-slate-100 text-lg">
+                No built-in AI or automation means more manual work and less
+                time to focus on growth.
+              </p>
+            </div>
+            <div className="bg-gray-100 rounded-2xl p-8 flex items-center justify-center h-48">
+              <div className="relative">
+                <div className="w-18 h-16 bg-black rounded-lg"></div>
+                <div className="absolute inset-2 bg-white rounded border-l-4 border-black"></div>
+                <div className="absolute top-4 right-4 w-2 h-2 bg-black rounded-full"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
