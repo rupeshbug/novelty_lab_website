@@ -30,13 +30,13 @@ export default function ProblemSection() {
         {/* Step 1 */}
         <div className="flex items-start gap-8 mb-12">
           <div className="flex flex-col items-center pt-8">
-            <div className="w-12 h-12 bg-[#09bbc8] text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
+            <div className="w-12 h-12 border-2 border-[#09bbc8] text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
               1
             </div>
-            <div className="w-0.5 h-32 bg-gray-300"></div>
+            <div className="w-0.5 h-40 md:h-32 bg-yellow-400"></div>
           </div>
           <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
+            <div className="mt-[-5]">
               <h3 className="text-2xl font-bold text-[#f5f5f5] mb-4 flex items-center gap-3">
                 <AlertTriangle size={28} className="text-[#09bbc8]" />
                 Outdated Tools
@@ -57,13 +57,13 @@ export default function ProblemSection() {
         {/* Step 2 */}
         <div className="flex items-start gap-8 mb-12">
           <div className="flex flex-col items-center pt-8">
-            <div className="w-12 h-12 bg-[#09bbc8] text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
+            <div className="w-12 h-12 border-2 border-[#09bbc8] text-white rounded-full flex items-center justify-center font-bold text-lg mb-4">
               2
             </div>
-            <div className="w-0.5 h-32 bg-gray-300"></div>
+            <div className="w-0.5 h-40 md:h-32 bg-yellow-400"></div>
           </div>
           <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
+            <div className="mt-[-5] md:mt-[-3rem]">
               <h3 className="text-2xl font-bold text-[#f5f5f5] mb-4 flex items-center gap-3">
                 <ShieldX size={28} className="text-[#09bbc8]" />
                 One-Size-Fits-All
@@ -85,12 +85,12 @@ export default function ProblemSection() {
         {/* Step 3 */}
         <div className="flex items-start gap-8">
           <div className="flex flex-col items-center pt-8">
-            <div className="w-12 h-12 bg-[#09bbc8] text-white rounded-full flex items-center justify-center font-bold text-lg">
+            <div className="w-12 h-12 border-2 border-[#09bbc8] text-white rounded-full flex items-center justify-center font-bold text-lg">
               3
             </div>
           </div>
           <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div>
+            <div className="mt-[-5] md:mt-[-3rem]">
               <h3 className="text-2xl font-bold text-[#f5f5f5] mb-4 flex items-center gap-3">
                 <Wand2 size={28} className="text-[#09bbc8]" />
                 Lack of Intelligence
