@@ -46,10 +46,14 @@ export default function ProblemSection() {
                 You end up fighting your tech instead of growing your business.
               </p>
             </div>
-            <div className="bg-gray-100 rounded-2xl p-8 flex items-center justify-center h-48">
-              <div className="w-20 h-20 bg-black rounded-lg flex items-center justify-center">
-                <div className="w-12 h-12 bg-white rounded transform rotate-12"></div>
-              </div>
+            <div className="relative rounded-2xl overflow-hidden h-48 w-full bg-gray-100">
+              <Image
+                src="/step1.png"
+                alt="Outdated Tools illustration"
+                width={200}
+                height={200}
+                className="h-full w-full"
+              />
             </div>
           </div>
         </div>
@@ -73,11 +77,14 @@ export default function ProblemSection() {
                 your evolving business needs.
               </p>
             </div>
-            <div className="bg-gray-100 rounded-2xl p-8 flex items-center justify-center h-48">
-              <div className="relative">
-                <div className="w-16 h-16 bg-black rounded border-4 border-gray-800"></div>
-                <div className="absolute -top-2 -right-2 w-6 h-6 bg-white rounded border-2 border-black"></div>
-              </div>
+            <div className="rounded-2xl overflow-hidden h-48 flex items-center justify-center bg-gray-100">
+              <Image
+                src="/step2.png"
+                alt="One-size-fits-all illustration"
+                width={400}
+                height={200}
+                className="h-full w-full"
+              />
             </div>
           </div>
         </div>
@@ -100,12 +107,14 @@ export default function ProblemSection() {
                 time to focus on growth.
               </p>
             </div>
-            <div className="bg-gray-100 rounded-2xl p-8 flex items-center justify-center h-48">
-              <div className="relative">
-                <div className="w-18 h-16 bg-black rounded-lg"></div>
-                <div className="absolute inset-2 bg-white rounded border-l-4 border-black"></div>
-                <div className="absolute top-4 right-4 w-2 h-2 bg-black rounded-full"></div>
-              </div>
+            <div className="rounded-2xl overflow-hidden h-48 flex items-center justify-center bg-gray-100">
+              <Image
+                src="/step3.png"
+                alt="Lack of AI illustration"
+                width={400}
+                height={200}
+                className="h-full w-full"
+              />
             </div>
           </div>
         </div>
