@@ -176,23 +176,17 @@ export default function BlogSection() {
           <div className="flex gap-2 mt-2">
             <button
               onClick={prevSlide}
-              className="w-12 h-12 bg-white/5 hover:bg-white/10 border border-gray-200/20 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-105 disabled:opacity-50"
+              className="w-12 h-12 bg-white/5 hover:bg-white/10 cursor-pointer border border-gray-200/20 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-105 disabled:opacity-50"
               disabled={currentIndex === 0}
             >
-              <ChevronLeft
-                size={20}
-                className="text-slate-300 cursor-pointer"
-              />
+              <ChevronLeft size={20} className="text-slate-300" />
             </button>
             <button
               onClick={nextSlide}
-              className="w-12 h-12 bg-white/5 hover:bg-white/10 border border-gray-200/20 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-105 disabled:opacity-50"
+              className="w-12 h-12 bg-white/5 hover:bg-white/10 cursor-pointer border border-gray-200/20 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-105 disabled:opacity-50"
               disabled={currentIndex >= maxIndex}
             >
-              <ChevronRight
-                size={20}
-                className="text-slate-300 cursor-pointer"
-              />
+              <ChevronRight size={20} className="text-slate-300" />
             </button>
           </div>
         </div>
