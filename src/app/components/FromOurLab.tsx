@@ -107,7 +107,7 @@ export default function BlogSection() {
       const card = container.querySelector(".blog-card") as HTMLDivElement;
       if (!card) return;
 
-      const fullCardWidth = card.offsetWidth + 24; // card + gap
+      const fullCardWidth = card.offsetWidth + 24;
       setCardWidth(fullCardWidth);
 
       const containerWidth = container.offsetWidth;
@@ -128,6 +128,18 @@ export default function BlogSection() {
 
     return () => resizeObserver.disconnect();
   }, [blogPosts.length]);
+
+  useEffect(() => {
+    const updateFontSize = () => {
+      const width = window.innerWidth;
+      setFontSize(width < 768 ? 60 : 80);
+    };
+
+    updateFontSize();
+    window.addEventListener("resize", updateFontSize);
+
+    return () => window.removeEventListener("resize", updateFontSize);
+  }, []);
 
   const nextSlide = () => {
     setCurrentIndex((prev) => Math.min(prev + 1, maxIndex));
@@ -167,19 +179,25 @@ export default function BlogSection() {
               className="w-12 h-12 bg-white/5 hover:bg-white/10 border border-gray-200/20 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-105 disabled:opacity-50"
               disabled={currentIndex === 0}
             >
-              <ChevronLeft size={20} className="text-slate-300" />
+              <ChevronLeft
+                size={20}
+                className="text-slate-300 cursor-pointer"
+              />
             </button>
             <button
               onClick={nextSlide}
               className="w-12 h-12 bg-white/5 hover:bg-white/10 border border-gray-200/20 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-105 disabled:opacity-50"
               disabled={currentIndex >= maxIndex}
             >
-              <ChevronRight size={20} className="text-slate-300" />
+              <ChevronRight
+                size={20}
+                className="text-slate-300 cursor-pointer"
+              />
             </button>
           </div>
         </div>
 
-        <div className="overflow-hidden" ref={containerRef}>
+        <div className="overflow-hidden cursor-pointer" ref={containerRef}>
           <div
             className="flex gap-6 transition-transform duration-500 ease-in-out"
             style={{
