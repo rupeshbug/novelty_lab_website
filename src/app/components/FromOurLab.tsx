@@ -9,24 +9,16 @@ import {
   Zap,
   Brain,
 } from "lucide-react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { TextParticle } from "@/components/ui/text-particle";
 
 export default function BlogSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fontSize, setFontSize] = useState(80);
-
-  useEffect(() => {
-    const updateFontSize = () => {
-      const width = window.innerWidth;
-      setFontSize(width < 768 ? 60 : 80);
-    };
-
-    updateFontSize();
-    window.addEventListener("resize", updateFontSize);
-
-    return () => window.removeEventListener("resize", updateFontSize);
-  }, []);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [cardWidth, setCardWidth] = useState(0);
+  const [visibleCards, setVisibleCards] = useState(1);
+  const [maxIndex, setMaxIndex] = useState(0);
 
   const blogPosts = [
     {
@@ -107,21 +99,42 @@ export default function BlogSection() {
     },
   ];
 
+  useEffect(() => {
+    const updateLayout = () => {
+      if (!containerRef.current) return;
+
+      const container = containerRef.current;
+      const card = container.querySelector(".blog-card") as HTMLDivElement;
+      if (!card) return;
+
+      const fullCardWidth = card.offsetWidth + 24; // card + gap
+      setCardWidth(fullCardWidth);
+
+      const containerWidth = container.offsetWidth;
+      const visible = Math.floor(containerWidth / fullCardWidth) || 1;
+      setVisibleCards(visible);
+
+      const max = Math.max(0, blogPosts.length - visible);
+      setMaxIndex(max);
+      setCurrentIndex((i) => Math.min(i, max));
+    };
+
+    updateLayout();
+
+    const resizeObserver = new ResizeObserver(updateLayout);
+    if (containerRef.current) {
+      resizeObserver.observe(containerRef.current);
+    }
+
+    return () => resizeObserver.disconnect();
+  }, [blogPosts.length]);
+
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % Math.ceil(blogPosts.length / 2));
+    setCurrentIndex((prev) => Math.min(prev + 1, maxIndex));
   };
 
   const prevSlide = () => {
-    setCurrentIndex(
-      (prev) =>
-        (prev - 1 + Math.ceil(blogPosts.length / 2)) %
-        Math.ceil(blogPosts.length / 2)
-    );
-  };
-
-  const getVisiblePosts = () => {
-    const startIndex = currentIndex * 2;
-    return blogPosts.slice(startIndex, startIndex + 2);
+    setCurrentIndex((prev) => Math.max(prev - 1, 0));
   };
 
   return (
@@ -137,7 +150,6 @@ export default function BlogSection() {
       </h2>
 
       <div className="mx-auto border border-gray-600 px-4 py-10 md:px-12 md:py-12 rounded-lg">
-        {/* Header */}
         <div className="flex items-start justify-between mb-12">
           <div>
             <h2 className="text-4xl md:text-5xl font-bold text-[#f5f5f5] mb-4">
@@ -149,93 +161,67 @@ export default function BlogSection() {
             </p>
           </div>
 
-          {/* Navigation arrows */}
           <div className="flex gap-2 mt-2">
             <button
               onClick={prevSlide}
               className="w-12 h-12 bg-white/5 hover:bg-white/10 border border-gray-200/20 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-105 disabled:opacity-50"
               disabled={currentIndex === 0}
             >
-              <ChevronLeft
-                size={20}
-                className="text-slate-300 cursor-pointer"
-              />
+              <ChevronLeft size={20} className="text-slate-300" />
             </button>
             <button
               onClick={nextSlide}
               className="w-12 h-12 bg-white/5 hover:bg-white/10 border border-gray-200/20 rounded-full flex items-center justify-center transition-all duration-200 hover:scale-105 disabled:opacity-50"
-              disabled={currentIndex === Math.ceil(blogPosts.length / 2) - 1}
+              disabled={currentIndex >= maxIndex}
             >
-              <ChevronRight
-                size={20}
-                className="text-slate-300 cursor-pointer"
-              />
+              <ChevronRight size={20} className="text-slate-300" />
             </button>
           </div>
         </div>
 
-        {/* Blog cards container */}
-        <div className="overflow-hidden">
+        <div className="overflow-hidden" ref={containerRef}>
           <div
-            className="flex transition-transform duration-500 ease-in-out gap-6"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            className="flex gap-6 transition-transform duration-500 ease-in-out"
+            style={{
+              transform: `translateX(-${currentIndex * cardWidth}px)`,
+            }}
           >
-            {Array.from({ length: Math.ceil(blogPosts.length / 2) }).map(
-              (_, slideIndex) => (
-                <div
-                  key={slideIndex}
-                  className="w-full flex-shrink-0 grid grid-cols-1 lg:grid-cols-2 gap-6"
-                >
-                  {blogPosts
-                    .slice(slideIndex * 2, slideIndex * 2 + 2)
-                    .map((post) => (
-                      <div
-                        key={post.id}
-                        className="group bg-white/5 border border-gray-200/20 rounded-2xl overflow-hidden backdrop-blur-sm hover:bg-white/10 transition-all duration-300 hover:border-gray-200/40 hover:transform hover:scale-[1.02]"
-                      >
-                        {/* Image/Visual area */}
-                        <div className="relative h-48 bg-gradient-to-br overflow-hidden">
-                          {post.image}
-                        </div>
-
-                        {/* Content */}
-                        <div className="p-6 space-y-4">
-                          <div className="flex items-center justify-between">
-                            <span className="text-sm text-[#09bbc8] font-medium bg-[#09bbc8]/10 px-3 py-1 rounded-full">
-                              {post.category}
-                            </span>
-                            <span className="text-sm text-slate-400">
-                              {post.readTime}
-                            </span>
-                          </div>
-
-                          <h3 className="text-xl font-bold text-[#f5f5f5] group-hover:text-white transition-colors">
-                            {post.title}
-                          </h3>
-
-                          <p className="text-slate-300 text-sm leading-relaxed">
-                            {post.description}
-                          </p>
-
-                          <button className="inline-flex items-center gap-2 text-[#09bbc8] hover:text-[#07a3af] font-medium group/btn transition-colors pt-2">
-                            Read more
-                            <ArrowRight
-                              size={16}
-                              className="group-hover/btn:translate-x-1 transition-transform"
-                            />
-                          </button>
-                        </div>
-                      </div>
-                    ))}
+            {blogPosts.map((post) => (
+              <div
+                key={post.id}
+                className="blog-card w-full sm:w-[90%] md:w-[400px] flex-shrink-0 group bg-white/5 border border-gray-200/20 rounded-2xl overflow-hidden backdrop-blur-sm transition-all duration-300 transform hover:scale-[1.03] hover:bg-white/10 hover:border-gray-200/40"
+              >
+                <div className="relative h-48">{post.image}</div>
+                <div className="p-6 space-y-4">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-[#09bbc8] font-medium bg-[#09bbc8]/10 px-3 py-1 rounded-full">
+                      {post.category}
+                    </span>
+                    <span className="text-sm text-slate-400">
+                      {post.readTime}
+                    </span>
+                  </div>
+                  <h3 className="text-xl font-bold text-[#f5f5f5] group-hover:text-white transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-slate-300 text-sm leading-relaxed">
+                    {post.description}
+                  </p>
+                  <button className="inline-flex items-center gap-2 text-[#09bbc8] hover:text-[#07a3af] font-medium group/btn transition-colors pt-2">
+                    Read more
+                    <ArrowRight
+                      size={16}
+                      className="group-hover/btn:translate-x-1 transition-transform"
+                    />
+                  </button>
                 </div>
-              )
-            )}
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Pagination dots */}
         <div className="flex justify-center gap-2 mt-8">
-          {Array.from({ length: Math.ceil(blogPosts.length / 2) }).map(
+          {Array.from({ length: blogPosts.length - visibleCards + 1 }).map(
             (_, index) => (
               <button
                 key={index}
