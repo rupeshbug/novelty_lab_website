@@ -14,7 +14,7 @@ export default function ProblemSection() {
             className="opacity-90"
             priority
           />
-          <h2 className="text-3xl md:text-5xl font-bold text-[#f5f5f5] mt-7">
+          <h2 className="text-2xl md:text-5xl font-bold text-[#f5f5f5] mt-7">
             Why Traditional Tools Are Holding You Back
           </h2>
         </div>
@@ -55,7 +55,7 @@ export default function ProblemSection() {
         ].map((step, index) => (
           <div key={index} className="relative flex gap-6 mb-16">
             {/* Step number */}
-            <div className="relative z-10 w-12 min-w-[3rem] h-12 rounded-full border-2 border-[#09bbc8] text-white bg-black flex items-center justify-center font-bold text-lg">
+            <div className="relative z-10 w-10 md:w-12 h-10 md:h-12 rounded-full border-2 border-[#09bbc8] text-white bg-black flex items-center justify-center font-bold text-lg">
               {step.number}
             </div>
 
