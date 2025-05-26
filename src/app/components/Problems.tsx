@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function ProblemSection() {
   return (
-    <section className="py-16 px-8 md:px-20 lg:px-40 relative">
+    <section className="py-12 px-8 md:px-20 lg:px-40 lg:py-16 relative">
       <div className="mx-auto text-center z-10 relative">
         <div className="flex items-center justify-center">
           <Image
@@ -53,7 +53,7 @@ export default function ProblemSection() {
             image: "/step3.png",
           },
         ].map((step, index) => (
-          <div key={index} className="relative flex gap-6 mb-16">
+          <div key={index} className="relative flex gap-4 md:gap-6 mb-16">
             {/* Step number */}
             <div className="relative z-10 w-10 md:w-12 h-10 md:h-12 rounded-full border-2 border-[#09bbc8] text-white bg-black flex items-center justify-center font-bold text-lg">
               {step.number}

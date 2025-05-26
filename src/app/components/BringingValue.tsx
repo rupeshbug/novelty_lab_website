@@ -4,7 +4,7 @@ import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 export default function BringingValue() {
   return (
-    <section className="py-16 px-8 md:px-20 lg:px-40">
+    <section className="py-12 px-8 md:px-20 lg:px-40 lg:py-16">
       <div className="flex flex-col lg:flex-row items-center gap-15">
         <div className="text-center lg:text-left w-full lg:w-4/6">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">

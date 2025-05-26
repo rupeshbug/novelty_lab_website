@@ -19,7 +19,7 @@ export default function FromOurLab() {
     return () => window.removeEventListener("resize", updateFontSize);
   }, []);
   return (
-    <div className="text-center mt-10 py-16 px-8 md:px-20 lg:px-40">
+    <div className="text-center mt-10 py-12 px-8 md:px-20 lg:px-40 lg:py-16">
       <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-3">
         <TextParticle
           text="From Our Lab"
