@@ -132,7 +132,7 @@ export default function BlogSection() {
   useEffect(() => {
     const updateFontSize = () => {
       const width = window.innerWidth;
-      setFontSize(width < 768 ? 60 : 80);
+      setFontSize(width < 768 ? 50 : 80);
     };
 
     updateFontSize();
