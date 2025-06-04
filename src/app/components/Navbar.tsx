@@ -21,7 +21,7 @@ export default function Navbar() {
     <nav
       className={clsx(
         "fixed top-0 left-0 w-full transition-colors duration-500 z-100",
-        isScrolled ? "bg-[#0f1115] shadow-md" : "bg-transparent"
+        isScrolled ? "bg-[#0f1115] shadow-xl" : "bg-transparent"
       )}
     >
       <div className="flex justify-between items-center px-8 py-4 md:px-20 lg:px-40 transition-all duration-500">
@@ -30,7 +30,7 @@ export default function Navbar() {
           <h1
             className={clsx(
               "text-2xl tracking-wider font-semibold transition-colors duration-500",
-              isScrolled ? "text-gray-800" : "text-white"
+              isScrolled ? "text-white" : "text-white"
             )}
           >
             Novelty Lab
@@ -43,7 +43,7 @@ export default function Navbar() {
               href="/"
               className={clsx(
                 "text-md font-medium transition-colors duration-500",
-                isScrolled ? "text-gray-900" : "text-white"
+                isScrolled ? "text-white" : "text-white"
               )}
             >
               {label}
@@ -54,7 +54,7 @@ export default function Navbar() {
           <button
             className={clsx(
               "border border-[#09bbc8] px-5 py-3 cursor-pointer rounded-lg text-base font-medium hover:bg-[#09bbc8] transition",
-              isScrolled ? "text-gray-900" : "text-white"
+              isScrolled ? "text-white" : "text-white"
             )}
           >
             Connect With Us
