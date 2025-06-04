@@ -20,7 +20,7 @@ export default function Hero() {
             Empowering businesses with AI-driven software and innovative digital
             strategies that deliver real-world impact.
           </p>
-          <div className="flex flex-col sm:flex-row flex-wrap gap-6 mb-10 lg:justify-start justify-center">
+          <div className="flex flex-col justify-center items-center sm:flex-row flex-wrap gap-6 mb-10 lg:justify-start">
             <div className="flex items-center gap-3">
               <Cpu className="text-yellow-400 w-6 h-6" />
               <p className="text-gray-100 text-base font-medium">
