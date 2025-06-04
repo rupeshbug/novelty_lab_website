@@ -238,7 +238,7 @@ export default function BlogSection() {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 rounded-full transition-all duration-200 ${
+                className={`w-2 h-2 rounded-full transition-all duration-200 cursor-pointer ${
                   index === currentIndex
                     ? "bg-[#09bbc8] w-8"
                     : "bg-gray-400/30 hover:bg-gray-400/50"
