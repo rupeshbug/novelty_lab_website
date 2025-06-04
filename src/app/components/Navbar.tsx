@@ -20,8 +20,8 @@ export default function Navbar() {
   return (
     <nav
       className={clsx(
-        "fixed top-0 left-0 w-full z-50 transition-colors duration-500",
-        isScrolled ? "bg-white shadow-md" : "bg-transparent"
+        "fixed top-0 left-0 w-full transition-colors duration-500 z-100",
+        isScrolled ? "bg-[#0f1115] shadow-md" : "bg-transparent"
       )}
     >
       <div className="flex justify-between items-center px-8 py-4 md:px-20 lg:px-40 transition-all duration-500">

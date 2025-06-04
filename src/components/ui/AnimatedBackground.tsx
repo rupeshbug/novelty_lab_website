@@ -74,7 +74,7 @@ export function ElegantShape({
 // 🔷 The global wrapper with animated background
 export function AnimatedBackground({ children }: { children: ReactNode }) {
   return (
-    <div className="relative min-h-screen bg-[#030303] overflow-hidden">
+    <div className="relative min-h-screen bg-[#0f1115] overflow-hidden">
       {/* Glowy radial blend */}
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" />
 
@@ -118,7 +118,7 @@ export function AnimatedBackground({ children }: { children: ReactNode }) {
       <div className="relative z-20">{children}</div>
 
       {/* Optional dark overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#030303] via-transparent to-[#030303]/80 pointer-events-none z-0" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#0f1115] via-transparent to-[#0f1115]/80 pointer-events-none z-0" />
     </div>
   );
 }
