@@ -1,7 +1,14 @@
 "use client";
 
 import Navbar from "../components/Navbar";
-import { Briefcase, Rocket, Users } from "lucide-react";
+import {
+  Briefcase,
+  Rocket,
+  Users,
+  CheckCircle,
+  Sparkles,
+  ArrowRight,
+} from "lucide-react";
 
 export default function ServicesPage() {
   return (
@@ -36,15 +43,21 @@ export default function ServicesPage() {
             </p>
             <div className="space-y-4 text-gray-300">
               <div className="flex items-start gap-3">
-                <span className="text-indigo-400">✔</span>
+                <span>
+                  <CheckCircle className="w-5 h-5 text-indigo-400 mt-1 animate-pulse" />
+                </span>
                 <span>AI-managed social media integration</span>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-indigo-400">✔</span>
+                <span>
+                  <CheckCircle className="w-5 h-5 text-indigo-400 mt-1 animate-pulse" />
+                </span>
                 <span>SEO-optimized by design</span>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-indigo-400">✔</span>
+                <span>
+                  <CheckCircle className="w-5 h-5 text-indigo-400 mt-1 animate-pulse" />
+                </span>
                 <span>
                   On-demand video, animation, and written content generation
                 </span>
@@ -70,19 +83,25 @@ export default function ServicesPage() {
             </p>
             <div className="space-y-4 text-gray-300">
               <div className="flex items-start gap-3">
-                <span className="text-teal-400">•</span>
+                <span>
+                  <Sparkles className="w-5 h-5 text-teal-400 mt-1 animate-pulse" />
+                </span>
                 <span>
                   Custom application development tailored to your business
                 </span>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-teal-400">•</span>
+                <span>
+                  <Sparkles className="w-5 h-5 text-teal-400 mt-1 animate-pulse" />
+                </span>
                 <span>
                   Automate manual processes to save time and resources
                 </span>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-teal-400">•</span>
+                <span>
+                  <Sparkles className="w-5 h-5 text-teal-400 mt-1 animate-pulse" />
+                </span>
                 <span>CRM, eCommerce, and enterprise-grade platforms</span>
               </div>
             </div>
@@ -106,15 +125,21 @@ export default function ServicesPage() {
             </p>
             <div className="space-y-4 text-gray-300">
               <div className="flex items-start gap-3">
-                <span className="text-yellow-400">→</span>
+                <span>
+                  <ArrowRight className="w-5 h-5 text-yellow-400 mt-1 animate-pulse" />
+                </span>
                 <span>Dedicated software engineering teams</span>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-yellow-400">→</span>
+                <span>
+                  <ArrowRight className="w-5 h-5 text-yellow-400 mt-1 animate-pulse" />
+                </span>
                 <span>QA engineers and product/project managers</span>
               </div>
               <div className="flex items-start gap-3">
-                <span className="text-yellow-400">→</span>
+                <span>
+                  <ArrowRight className="w-5 h-5 text-yellow-400 mt-1 animate-pulse" />
+                </span>
                 <span>
                   AI engineers and data scientists for intelligent solutions
                 </span>
