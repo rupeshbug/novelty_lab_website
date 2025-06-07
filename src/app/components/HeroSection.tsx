@@ -12,6 +12,11 @@ export default function Hero() {
       <div className="relative z-99 mx-auto flex flex-col md:flex-row items-center justify-between gap-10 w-full">
         {/* LEFT SIDE */}
         <div className="text-center w-full lg:w-3/5 lg:text-left">
+          <div className="inline-flex items-center px-3 py-1 rounded-full bg-[#09bbc8]/10 border border-[#09bbc8]/20 mb-4">
+            <span className="text-[#09bbc8] text-sm font-medium">
+              Next-Gen Solutions
+            </span>
+          </div>
           <h1 className="text-4xl md:text-5xl lg:text-[54px] font-bold text-white leading-tight tracking-wide mb-6">
             Supercharge Your Business with Next-Gen Smart{" "}
             <span className="text-[#09bbc8]">AI-Powered Solutions</span>
