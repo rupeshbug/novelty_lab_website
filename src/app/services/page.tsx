@@ -13,7 +13,7 @@ export default function ServicesPage() {
           <h1 className="text-4xl md:text-5xl font-extrabold mb-6">
             Our <span className="text-[#09bbc8]">Services</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto">
             Supercharge your business with intelligent solutions, custom
             applications, and a world-class team—ready on demand.
           </p>
