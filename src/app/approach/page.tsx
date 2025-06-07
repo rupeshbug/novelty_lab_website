@@ -277,16 +277,16 @@ export default function OurApproachPage() {
         {/* Process Section */}
         <section className="max-w-6xl mx-auto px-6 md:px-12 pb-24">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-4 ">
               Our 4-Step Innovation Process
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <p className="text-gray-300 max-w-2xl mx-auto">
               From initial discovery to final delivery, every step is crafted to
               maximize impact and minimize uncertainty.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+          <div className="cursor-pointer grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {steps.map((step, index) => (
               <StepCard key={step.step} {...step} index={index} />
             ))}
