@@ -86,7 +86,7 @@ export function AnimatedBackground({ children }: { children: ReactNode }) {
           height={40}
           rotate={20}
           gradient="from-rose-500/[0.15]"
-          className="right-[5%] md:right-[15%] top-[2%] md:top-[3%]"
+          className="right-[5%] md:right-[15%] top-[8vh] md:top-[12vh]"
         />
         <ElegantShape
           delay={0.5}
@@ -94,7 +94,7 @@ export function AnimatedBackground({ children }: { children: ReactNode }) {
           height={40}
           rotate={-20}
           gradient="from-violet-500/[0.15]"
-          className="left-[5%] md:left-[15%] top-[2%] md:top-[3%]"
+          className="left-[5%] md:left-[15%] top-[8vh] md:top-[12vh]"
         />
         <ElegantShape
           delay={0.6}
