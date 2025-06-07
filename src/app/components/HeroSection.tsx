@@ -20,27 +20,32 @@ export default function Hero() {
             Empowering businesses with AI-driven software and innovative digital
             strategies that deliver real-world impact.
           </p>
-          <div className="flex flex-col justify-center items-center sm:flex-row flex-wrap gap-5 mb-10 lg:justify-start">
-            <div className="flex items-center gap-2">
-              <Cpu className="text-yellow-400 w-6 h-6" />
+          <div className="flex flex-col justify-center items-center sm:flex-row flex-wrap gap-6 mb-10 lg:justify-start">
+            <div className="flex items-center gap-3 group">
+              <div className="p-2 rounded-lg cursor-pointer bg-yellow-400/10 group-hover:bg-yellow-400/20 transition-colors">
+                <Cpu className="text-yellow-400 w-5 h-5" />
+              </div>
               <p className="text-gray-300 text-base font-medium">
                 AI & Automation
               </p>
             </div>
-            <div className="flex items-center gap-2">
-              <Settings className="text-emerald-400 w-6 h-6" />
+            <div className="flex items-center gap-3 group">
+              <div className="p-2 rounded-lg cursor-pointer bg-emerald-400/10 group-hover:bg-emerald-400/20 transition-colors">
+                <Settings className="text-emerald-400 w-5 h-5" />
+              </div>
               <p className="text-gray-300 text-base font-medium">
                 Custom IT Solutions
               </p>
             </div>
-            <div className="flex items-center gap-2">
-              <BarChart className="text-purple-400 w-6 h-6" />
+            <div className="flex items-center gap-3 group">
+              <div className="p-2 rounded-lg cursor-pointer bg-purple-400/10 group-hover:bg-purple-400/20 transition-colors">
+                <BarChart className="text-purple-400 w-5 h-5" />
+              </div>
               <p className="text-gray-300 text-base font-medium">
                 Digital Marketing
               </p>
             </div>
           </div>
-
           <div className="flex gap-4 justify-center items-center lg:justify-start">
             <button className="bg-[#08a4af] text-white px-5 py-3 cursor-pointer rounded-lg text-base font-medium hover:bg-[#07a5b0] transition">
               Get Started
