@@ -42,10 +42,10 @@ export default function Hero() {
           </div>
 
           <div className="flex gap-4 justify-center items-center lg:justify-start">
-            <button className="bg-[#09bbc8] text-white px-5 py-3 cursor-pointer rounded-lg text-base font-medium hover:bg-[#07a5b0] transition">
+            <button className="bg-[#08a4af] text-white px-5 py-3 cursor-pointer rounded-lg text-base font-medium hover:bg-[#07a5b0] transition">
               Get Started
             </button>
-            <button className="text-white border border-yellow-400 px-5 py-3 cursor-pointer rounded-lg text-base font-medium hover:bg-yellow-400 transition">
+            <button className="text-white border border-gray-600 hover:border-yellow-400 px-6 py-3.5 cursor-pointer rounded-lg text-base font-medium hover:bg-yellow-400/10 transition-all duration-200">
               Learn More
             </button>
           </div>
