@@ -4,7 +4,7 @@ import { Spotlight } from "@/components/ui/spotlight";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center px-6 md:px-20 lg:px-40 overflow-hidden bg-[#0f1115]">
+    <section className="relative min-h-screen flex items-center mt-16 md:mt-0 px-6 py-12 md:px-20 lg:px-40 lg:py-16 overflow-hidden bg-[#0f1115]">
       <Spotlight className="z-50" size={100} />
       {/* Background Layer */}
 

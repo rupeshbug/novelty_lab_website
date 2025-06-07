@@ -79,7 +79,7 @@ export function AnimatedBackground({ children }: { children: ReactNode }) {
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/[0.05] via-transparent to-rose-500/[0.05] blur-3xl" />
 
       {/* Floating shapes */}
-      <div className="absolute inset-0 overflow-hidden z-30 pointer-events-none">
+      <div className="hidden md:block md:absolute inset-0 overflow-hidden z-30 pointer-events-none">
         <ElegantShape
           delay={0.5}
           width={150}
