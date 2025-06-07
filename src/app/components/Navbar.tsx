@@ -35,7 +35,7 @@ export default function Navbar() {
 
           {/* Spacer to push center links to center */}
           <div className="hidden md:flex flex-1 justify-center gap-10">
-            {["Services", "About", "Contact"].map((label) => (
+            {["Our Approach", "Services", "About"].map((label) => (
               <Link
                 key={label}
                 href="/"
@@ -69,7 +69,7 @@ export default function Navbar() {
         {menuOpen && (
           <div className="md:hidden bg-[#0f1115] shadow-xl z-50 px-6 py-5 animate-slideDown">
             <div className="flex flex-col gap-4">
-              {["Services", "About", "Contact"].map((label) => (
+              {["Our Approach", "Services", "About"].map((label) => (
                 <Link
                   key={label}
                   href="/"
