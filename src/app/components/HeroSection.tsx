@@ -21,7 +21,7 @@ export default function Hero() {
             Supercharge Your Business with Next-Gen Smart{" "}
             <span className="text-[#09bbc8]">AI-Powered Solutions</span>
           </h1>
-          <p className="text-xl text-white mb-8">
+          <p className="text-xl text-gray-200 mb-8">
             Empowering businesses with AI-driven software and innovative digital
             strategies that deliver real-world impact.
           </p>
