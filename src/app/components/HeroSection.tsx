@@ -20,22 +20,22 @@ export default function Hero() {
             Empowering businesses with AI-driven software and innovative digital
             strategies that deliver real-world impact.
           </p>
-          <div className="flex flex-col justify-center items-center sm:flex-row flex-wrap gap-6 mb-10 lg:justify-start">
-            <div className="flex items-center gap-3">
+          <div className="flex flex-col justify-center items-center sm:flex-row flex-wrap gap-5 mb-10 lg:justify-start">
+            <div className="flex items-center gap-2">
               <Cpu className="text-yellow-400 w-6 h-6" />
-              <p className="text-gray-100 text-base font-medium">
+              <p className="text-gray-300 text-base font-medium">
                 AI & Automation
               </p>
             </div>
-            <div className="flex items-center gap-3">
-              <Settings className="text-yellow-400 w-6 h-6" />
-              <p className="text-gray-100 text-base font-medium">
+            <div className="flex items-center gap-2">
+              <Settings className="text-emerald-400 w-6 h-6" />
+              <p className="text-gray-300 text-base font-medium">
                 Custom IT Solutions
               </p>
             </div>
-            <div className="flex items-center gap-3">
-              <BarChart className="text-yellow-400 w-6 h-6" />
-              <p className="text-gray-100 text-base font-medium">
+            <div className="flex items-center gap-2">
+              <BarChart className="text-purple-400 w-6 h-6" />
+              <p className="text-gray-300 text-base font-medium">
                 Digital Marketing
               </p>
             </div>
