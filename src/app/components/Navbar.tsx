@@ -35,10 +35,14 @@ export default function Navbar() {
 
           {/* Spacer to push center links to center */}
           <div className="hidden md:flex flex-1 justify-center gap-10">
-            {["Our Approach", "Services", "About"].map((label) => (
+            {[
+              { label: "Our Approach", href: "/approach" },
+              { label: "Services", href: "/services" },
+              { label: "About", href: "/about" },
+            ].map(({ label, href }) => (
               <Link
                 key={label}
-                href="/"
+                href={href}
                 className="text-md font-medium text-white hover:text-[#09bbc8] transition"
               >
                 {label}
@@ -69,10 +73,14 @@ export default function Navbar() {
         {menuOpen && (
           <div className="md:hidden bg-[#0f1115] shadow-xl z-50 px-6 py-5 animate-slideDown">
             <div className="flex flex-col gap-4">
-              {["Our Approach", "Services", "About"].map((label) => (
+              {[
+                { label: "Our Approach", href: "/approach" },
+                { label: "Services", href: "/services" },
+                { label: "About", href: "/about" },
+              ].map(({ label, href }) => (
                 <Link
                   key={label}
-                  href="/"
+                  href={href}
                   onClick={() => setMenuOpen(false)}
                   className="text-white text-lg font-medium hover:text-[#09bbc8] transition"
                 >
