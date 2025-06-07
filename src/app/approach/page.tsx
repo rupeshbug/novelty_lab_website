@@ -82,7 +82,7 @@ const StepCard = ({
   index,
 }: {
   step: number;
-  icon: never;
+  icon: React.ComponentType<{ className?: string }>;
   title: string;
   description: string;
   color: "cyan" | "purple" | "emerald" | "yellow";
@@ -288,7 +288,12 @@ export default function OurApproachPage() {
 
           <div className="cursor-pointer grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             {steps.map((step, index) => (
-              <StepCard key={step.step} {...step} index={index} />
+              <StepCard
+                key={step.step}
+                {...step}
+                index={index}
+                color={step.color as "cyan" | "purple" | "emerald" | "yellow"}
+              />
             ))}
           </div>
 
