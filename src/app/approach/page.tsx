@@ -228,7 +228,7 @@ export default function OurApproachPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden relative">
+    <div className="min-h-screen text-white overflow-hidden relative">
       <Navbar />
       <AnimatedGrid />
 
