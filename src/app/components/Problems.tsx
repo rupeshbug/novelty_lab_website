@@ -15,7 +15,9 @@ export default function ProblemSection() {
             priority
           />
           <h2 className="text-2xl md:text-5xl font-bold text-[#f5f5f5] mt-7">
-            Why Traditional Tools Are Holding You Back
+            Why{" "}
+            <span className="text-[#09bbc8] animate-pulse">Traditional</span>{" "}
+            Tools Are Holding You Back
           </h2>
         </div>
         <p className="text-lg text-slate-100 mb-10 mx-auto w-full xl:w-[60%]">
