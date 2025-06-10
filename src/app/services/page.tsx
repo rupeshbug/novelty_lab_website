@@ -9,6 +9,7 @@ import {
   Zap,
   Lightbulb,
   Rocket,
+  HandPlatter,
 } from "lucide-react";
 
 export default function ServicesPage() {
@@ -34,7 +35,7 @@ export default function ServicesPage() {
         </div>
 
         {/* Hero Section with Experimental Design */}
-        <section className="max-w-7xl mx-auto px-6 py-24 md:px-12 text-center relative z-10">
+        <section className="max-w-7xl mx-auto px-6 py-20 md:px-12 text-center relative z-10">
           <div className="relative">
             {/* Floating Lab Elements */}
             <div className="absolute -top-8 left-1/4 animate-float">
@@ -76,9 +77,9 @@ export default function ServicesPage() {
         </section>
 
         {/* Service Cards with Experimental Layout */}
-        <div className="relative z-10">
+        <div className="relative z-10 mt-[-10]">
           {/* Service 1 - Tilted Card */}
-          <section className="relative px-6 md:px-12 max-w-6xl mx-auto mb-32 cursor-pointer">
+          <section className="relative px-6 md:px-12 max-w-6xl mx-auto mb-16 md:mb-24 cursor-pointer">
             <div className="transform hover:scale-105 transition-all duration-700 hover:-rotate-1">
               <div className="bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-md rounded-3xl border border-white/20 shadow-2xl relative z-20 p-8 md:p-16 overflow-hidden">
                 {/* Animated Border Glow */}
@@ -144,7 +145,7 @@ export default function ServicesPage() {
           </section>
 
           {/* Service 2 - Floating Card */}
-          <section className="relative px-6 md:px-12 max-w-6xl mx-auto mb-32 cursor-pointer">
+          <section className="relative px-6 md:px-12 max-w-6xl mx-auto mb-16 md:mb-24 cursor-pointer">
             <div className="transform hover:scale-105 transition-all duration-700 hover:rotate-1">
               <div className="bg-gradient-to-bl from-white/10 via-white/5 to-transparent backdrop-blur-md rounded-3xl border border-white/20 shadow-2xl relative z-20 p-8 md:p-16 overflow-hidden">
                 {/* Animated Border Glow */}
@@ -243,7 +244,7 @@ export default function ServicesPage() {
                   <div className="w-full md:w-1/2">
                     <div className="flex items-center gap-4 mb-8">
                       <div className="p-3 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-xl">
-                        <ArrowRight className="w-8 h-8 text-white" />
+                        <HandPlatter className="w-8 h-8 text-white" />
                       </div>
                       <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-rose-400 bg-clip-text text-transparent">
                         Human Resource as a Service (HRaaS)
