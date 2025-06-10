@@ -26,11 +26,13 @@ export default function Navbar() {
       >
         <div className="flex items-center px-6 py-4 md:px-20 lg:px-40 bg-[#0f1115]">
           {/* Left: Logo */}
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 cursor-pointer">
             <Image alt="novelty_lab" width={40} height={40} src="/logo.png" />
-            <h1 className="text-2xl font-semibold text-white tracking-wide">
-              Novelty Lab
-            </h1>
+            <Link href="/">
+              <h1 className="text-2xl font-semibold text-white tracking-wide">
+                Novelty Lab
+              </h1>
+            </Link>
           </div>
 
           {/* Spacer to push center links to center */}

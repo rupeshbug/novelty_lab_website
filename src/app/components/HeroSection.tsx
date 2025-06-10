@@ -17,7 +17,7 @@ export default function Hero() {
               Next-Gen Solutions
             </span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-[54px] font-bold text-white leading-tight tracking-wide mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-[52px] font-bold text-white leading-tight tracking-wide mb-6">
             Supercharge Your Business with Next-Gen Smart{" "}
             <span className="text-[#09bbc8]">AI-Powered Solutions</span>
           </h1>
