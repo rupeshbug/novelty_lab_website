@@ -104,9 +104,9 @@ export default function ServicesPage() {
                   <div className="w-full md:w-1/2">
                     <div className="flex items-center gap-4 mb-8">
                       <div className="p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl">
-                        <Rocket className="w-8 h-8 text-white" />
+                        <Rocket className="w-6 h-6 text-white" />
                       </div>
-                      <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                      <h2 className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                         Next-Generation Business Website
                       </h2>
                     </div>
@@ -175,9 +175,9 @@ export default function ServicesPage() {
                   <div className="w-full md:w-1/2">
                     <div className="flex items-center gap-4 mb-8">
                       <div className="p-3 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-xl">
-                        <Sparkles className="w-8 h-8 text-white" />
+                        <Sparkles className="w-6 h-6 text-white" />
                       </div>
-                      <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-teal-400 via-cyan-400 to-sky-400 bg-clip-text text-transparent">
+                      <h2 className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-teal-400 via-cyan-400 to-sky-400 bg-clip-text text-transparent">
                         On-Demand Tailored Solutions
                       </h2>
                     </div>
@@ -244,9 +244,9 @@ export default function ServicesPage() {
                   <div className="w-full md:w-1/2">
                     <div className="flex items-center gap-4 mb-8">
                       <div className="p-3 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-xl">
-                        <HandPlatter className="w-8 h-8 text-white" />
+                        <HandPlatter className="w-6 h-6 text-white" />
                       </div>
-                      <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-rose-400 bg-clip-text text-transparent">
+                      <h2 className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-rose-400 bg-clip-text text-transparent">
                         Human Resource as a Service (HRaaS)
                       </h2>
                     </div>
@@ -282,25 +282,6 @@ export default function ServicesPage() {
             </div>
           </section>
         </div>
-
-        {/* Experimental CTA Section */}
-        <section className="relative z-10 max-w-4xl mx-auto px-6 py-16 text-center">
-          <div className="bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 backdrop-blur-lg rounded-3xl border border-white/10 p-12 relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 via-pink-500/10 to-cyan-500/10 animate-pulse"></div>
-            <div className="relative z-10">
-              <h3 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-                Ready to Experiment with Excellence?
-              </h3>
-              <p className="text-gray-300 text-lg mb-8">
-                Let&apos;s collaborate and create something extraordinary
-                together.
-              </p>
-              <button className="px-8 py-4 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full text-white font-semibold hover:scale-105 transition-transform duration-300 shadow-lg hover:shadow-purple-500/25">
-                Start Your Project
-              </button>
-            </div>
-          </div>
-        </section>
       </main>
 
       <style jsx>{`
