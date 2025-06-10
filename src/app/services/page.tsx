@@ -144,7 +144,7 @@ export default function ServicesPage() {
           </section>
 
           {/* Service 2 - Floating Card */}
-          <section className="relative px-6 md:px-12 max-w-6xl mx-auto mb-32">
+          <section className="relative px-6 md:px-12 max-w-6xl mx-auto mb-32 cursor-pointer">
             <div className="transform hover:scale-105 transition-all duration-700 hover:rotate-1">
               <div className="bg-gradient-to-bl from-white/10 via-white/5 to-transparent backdrop-blur-md rounded-3xl border border-white/20 shadow-2xl relative z-20 p-8 md:p-16 overflow-hidden">
                 {/* Animated Border Glow */}
@@ -213,7 +213,7 @@ export default function ServicesPage() {
           </section>
 
           {/* Service 3 - Morphing Card */}
-          <section className="relative px-6 md:px-12 max-w-6xl mx-auto mb-20">
+          <section className="relative px-6 md:px-12 max-w-6xl mx-auto mb-8 md:mb-16 cursor-pointer">
             <div className="transform hover:scale-105 transition-all duration-700 hover:-rotate-1">
               <div className="bg-gradient-to-tr from-white/10 via-white/5 to-transparent backdrop-blur-md rounded-3xl border border-white/20 shadow-2xl relative z-20 p-8 md:p-16 overflow-hidden">
                 {/* Animated Border Glow */}
