@@ -1,4 +1,6 @@
-import { AlertTriangle, ShieldX, Wand2 } from "lucide-react";
+"use client";
+
+import { AlertTriangle, ShieldX, Wand2, Lightbulb, Zap } from "lucide-react";
 import Image from "next/image";
 
 export default function ProblemSection() {
@@ -14,11 +16,30 @@ export default function ProblemSection() {
             className="opacity-90"
             priority
           />
-          <h2 className="text-2xl md:text-5xl font-bold text-[#f5f5f5] mt-7">
-            Why{" "}
-            <span className="text-[#09bbc8] animate-pulse">Traditional</span>{" "}
-            Tools Are Holding You Back
-          </h2>
+          <div className="relative">
+            {/* Floating elements around the heading */}
+            <div className="absolute -top-8 left-1/4 animate-float">
+              <div className="w-8 h-8 bg-gradient-to-r from-red-400 to-orange-400 rounded-full opacity-60"></div>
+            </div>
+            <div
+              className="absolute -top-12 right-1/3 animate-float"
+              style={{ animationDelay: "1s" }}
+            >
+              <Lightbulb className="w-6 h-6 text-emerald-400 opacity-70" />
+            </div>
+            <div
+              className="absolute -bottom-10 left-1/5 animate-float"
+              style={{ animationDelay: "1.5s" }}
+            >
+              <Zap className="w-8 h-8 text-yellow-400 opacity-50" />
+            </div>
+
+            <h2 className="text-2xl md:text-5xl font-bold text-[#f5f5f5] mt-7">
+              Why{" "}
+              <span className="text-[#09bbc8] animate-pulse">Traditional</span>{" "}
+              Tools Are Holding You Back
+            </h2>
+          </div>
         </div>
         <p className="text-lg text-slate-100 mb-10 mx-auto w-full xl:w-[60%]">
           Older platforms like WordPress and generic website builders were never
@@ -82,6 +103,21 @@ export default function ProblemSection() {
           </div>
         ))}
       </div>
+
+      <style jsx>{`
+        @keyframes float {
+          0%,
+          100% {
+            transform: translateY(0px) rotate(0deg);
+          }
+          50% {
+            transform: translateY(-20px) rotate(180deg);
+          }
+        }
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+      `}</style>
     </section>
   );
 }
