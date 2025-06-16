@@ -51,9 +51,8 @@ export default function ProblemSection() {
             </div>
 
             <h2 className="text-2xl md:text-5xl font-bold text-[#f5f5f5] mt-7">
-              Why{" "}
-              <span className="text-[#09bbc8] animate-pulse">Traditional</span>{" "}
-              Tools Are Holding You Back
+              Why <span className="text-[#09bbc8]">Traditional</span> Tools Are
+              Holding You Back
             </h2>
           </div>
 
