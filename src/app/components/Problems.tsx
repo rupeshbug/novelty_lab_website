@@ -56,12 +56,12 @@ export default function ProblemSection() {
               <div className="absolute -bottom-2 -left-2 w-2 h-2 bg-yellow-400 rounded-full opacity-50 animate-pulse" />
             </div>
             <div className="text-center sm:text-left">
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+              <h2 className="text-2xl md:text-5xl font-bold text-[#f5f5f5] mt-7">
                 Why{" "}
                 <span className="text-[#09bbc8] animate-pulse">
                   Traditional
                 </span>{" "}
-                Tools Hold You Back
+                Tools Are Holding You Back
               </h2>
             </div>
           </div>
