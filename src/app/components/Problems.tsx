@@ -4,125 +4,165 @@ import { AlertTriangle, ShieldX, Wand2, Lightbulb, Zap } from "lucide-react";
 import Image from "next/image";
 
 export default function ProblemSection() {
+  const problems = [
+    {
+      number: "01",
+      icon: <AlertTriangle size={28} className="text-red-400" />,
+      title: "Outdated Tools",
+      desc: "Legacy platforms were never designed to handle today’s performance, personalization, or scalability demands. You end up constantly battling limitations, technical debt, and outdated UI patterns that drag your growth instead of enabling it.",
+      image: "/step1.png",
+      color: "red",
+    },
+    {
+      number: "02",
+      icon: <ShieldX size={28} className="text-orange-400" />,
+      title: "One-Size-Fits-All",
+      desc: "Generic solutions try to force every business into the same mold. This kills uniqueness, limits flexibility, and makes it nearly impossible to tailor your digital experience to what your audience actually needs and expects.",
+      image: "/step2.png",
+      color: "orange",
+    },
+    {
+      number: "03",
+      icon: <Wand2 size={28} className="text-yellow-400" />,
+      title: "Lack of Intelligence",
+      desc: "Without automation, AI, or insight-driven features, your platform becomes a digital burden—requiring constant manual effort, repetitive tasks, and missed opportunities to convert, optimize, or personalize in real time.",
+      image: "/step3.png",
+      color: "yellow",
+    },
+  ];
+
   return (
-    <section className="py-12 px-8 md:px-20 lg:px-40 lg:py-16 relative">
-      <div className="mx-auto text-center z-10 relative">
-        <div className="flex items-center justify-center">
-          <Image
-            src="/det_bot_1.png"
-            alt="AI detective bot"
-            width={120}
-            height={120}
-            className="opacity-90"
-            priority
-          />
-          <div className="relative">
-            {/* Icons + Badge Container */}
-            <div className="flex items-center justify-center gap-2 mb-6 relative">
-              {/* Left icon */}
-              <div className="animate-float-rotate">
-                <Lightbulb className="w-5 h-5 text-emerald-400 opacity-70" />
-              </div>
+    <section className="px-6 py-12 md:px-20 lg:px-40 lg:py-16 relative overflow-hidden">
+      {/* Subtle Gradient Effects */}
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <div className="absolute top-32 right-20 w-96 h-96 bg-red-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-32 left-20 w-80 h-80 bg-orange-400/10 rounded-full blur-3xl" />
+      </div>
 
-              {/* Badge */}
-              <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20">
-                <AlertTriangle className="w-4 h-4 text-red-400 mr-2" />
-                <span className="text-red-400 text-sm font-medium">
-                  Business Bottlenecks Detected
-                </span>
-              </div>
-
-              {/* Right icon */}
-              <div className="animate-float-rotate">
-                <Zap className="w-5 h-5 text-yellow-400 opacity-70" />
-              </div>
+      <div className="relative z-10 max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-20 lg:mb-24">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-8 mb-10">
+            <div className="relative">
+              <Image
+                src="/det_bot_1.png"
+                alt="AI detective bot"
+                width={110}
+                height={110}
+                className="opacity-90 drop-shadow-2xl"
+                priority
+              />
+              <div className="absolute -top-2 -right-2 w-3 h-3 bg-red-400 rounded-full opacity-60 animate-pulse" />
+              <div className="absolute -bottom-2 -left-2 w-2 h-2 bg-yellow-400 rounded-full opacity-50 animate-pulse" />
             </div>
-
-            <h2 className="text-2xl md:text-5xl font-bold text-[#f5f5f5] mt-7">
-              Why{" "}
-              <span className="text-[#09bbc8] animate-pulse">Traditional</span>{" "}
-              Tools Are Holding You Back
-            </h2>
+            <div className="text-center sm:text-left">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                Why{" "}
+                <span className="text-[#09bbc8] animate-pulse">
+                  Traditional
+                </span>{" "}
+                Tools Hold You Back
+              </h2>
+            </div>
           </div>
+          <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
+            Legacy platforms weren't built for modern business needs. They
+            create{" "}
+            <span className="text-red-400 font-semibold">
+              critical bottlenecks
+            </span>{" "}
+            that slow growth, hurt performance, and waste your valuable time.
+          </p>
         </div>
 
-        <p className="text-lg text-slate-100 mb-10 mx-auto w-full xl:w-[60%]">
-          Older platforms like WordPress and generic website builders were never
-          built for scale. As your business grows, these tools create
-          bottlenecks— from bloated plugins and poor performance to limited
-          automation and disjointed branding.
-        </p>
-      </div>
+        {/* Problem List */}
+        <div className="space-y-20 lg:space-y-28">
+          {problems.map((problem, index) => (
+            <div key={index} className="group">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                {/* Problem Text */}
+                <div
+                  className={`space-y-8 ${index % 2 === 1 ? "lg:order-2" : ""}`}
+                >
+                  <div className="flex items-center gap-6">
+                    <div
+                      className={`w-16 h-16 rounded-2xl flex items-center justify-center font-bold text-xl backdrop-blur-sm bg-${problem.color}-500/10 border border-${problem.color}-500/20 text-${problem.color}-400`}
+                    >
+                      {problem.number}
+                    </div>
+                    <div
+                      className={`p-4 rounded-xl bg-${problem.color}-500/10 border border-${problem.color}-500/20`}
+                    >
+                      {problem.icon}
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6 group-hover:text-slate-100 transition-colors">
+                      {problem.title}
+                    </h3>
+                    <p className="text-lg text-slate-300 leading-relaxed">
+                      {problem.desc}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div
+                      className={`w-3 h-3 bg-${problem.color}-400 rounded-full animate-pulse`}
+                    />
+                    <span
+                      className={`text-${problem.color}-400 text-sm font-semibold uppercase tracking-wider`}
+                    >
+                      Critical Issue
+                    </span>
+                  </div>
+                </div>
 
-      <div className="max-w-5xl mx-auto relative z-10">
-        {/* Vertical timeline line */}
-        <div className="absolute left-6 top-0 bottom-0 w-0.5 bg-yellow-400 z-0 hidden md:block" />
-
-        {[
-          {
-            number: "1",
-            icon: <AlertTriangle size={28} className="text-[#09bbc8]" />,
-            title: "Outdated Tools",
-            desc: "Old platforms were not built for speed, scale, or flexibility. You end up fighting your tech instead of growing your business.",
-            image: "/step1.png",
-          },
-          {
-            number: "2",
-            icon: <ShieldX size={28} className="text-[#09bbc8]" />,
-            title: "One-Size-Fits-All",
-            desc: "Cookie-cutter websites will not capture your brand or adapt to your evolving business needs.",
-            image: "/step2.png",
-          },
-          {
-            number: "3",
-            icon: <Wand2 size={28} className="text-[#09bbc8]" />,
-            title: "Lack of Intelligence",
-            desc: "No built-in AI or automation means more manual work and less time to focus on growth.",
-            image: "/step3.png",
-          },
-        ].map((step, index) => (
-          <div key={index} className="relative flex gap-4 md:gap-6 mb-16">
-            {/* Step number */}
-            <div className="relative z-10 w-10 md:w-12 h-10 md:h-12 rounded-full border-2 border-[#09bbc8] text-white bg-black flex items-center justify-center font-bold text-lg">
-              {step.number}
-            </div>
-
-            {/* Step content */}
-            <div className="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-              <div>
-                <h3 className="text-2xl font-bold text-[#f5f5f5] mb-3 flex items-center gap-3">
-                  {step.icon}
-                  {step.title}
-                </h3>
-                <p className="text-slate-100 text-lg">{step.desc}</p>
+                {/* Problem Image */}
+                <div className={`${index % 2 === 1 ? "lg:order-1" : ""}`}>
+                  <div className="relative group-hover:scale-105 transition-all duration-700 ease-out">
+                    <div
+                      className={`relative h-80 lg:h-96 w-full rounded-2xl overflow-hidden bg-gradient-to-br from-slate-800 to-slate-900 ring-1 ring-white/10 shadow-2xl shadow-${problem.color}-500/10`}
+                    >
+                      <Image
+                        src={problem.image || "/placeholder.svg"}
+                        alt={problem.title}
+                        fill
+                        className="object-cover opacity-85 group-hover:opacity-95 transition-opacity duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent" />
+                      <div
+                        className={`absolute top-4 right-4 p-3 rounded-xl bg-black/40 backdrop-blur-sm border border-white/10`}
+                      >
+                        {problem.icon}
+                      </div>
+                    </div>
+                    <div
+                      className={`absolute -top-3 -right-3 w-6 h-6 bg-${problem.color}-400 rounded-full shadow-lg shadow-${problem.color}-400/50 animate-pulse`}
+                    />
+                  </div>
+                </div>
               </div>
-              <div className="relative h-48 w-full bg-gray-100 rounded-2xl overflow-hidden">
-                <Image
-                  src={step.image}
-                  alt={step.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
             </div>
+          ))}
+        </div>
+
+        {/* CTA Box */}
+        <div className="mt-28 text-center">
+          <div className="inline-block bg-gradient-to-r from-cyan-500/10 to-teal-500/10 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 lg:p-10">
+            <div className="flex items-center justify-center gap-4 mb-6">
+              <Lightbulb className="w-7 h-7 text-cyan-400 animate-pulse" />
+              <h3 className="text-2xl lg:text-3xl font-bold text-white">
+                Ready for a <span className="text-cyan-400">Modern</span>{" "}
+                Solution?
+              </h3>
+              <Zap className="w-7 h-7 text-yellow-400 animate-pulse" />
+            </div>
+            <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
+              Discover how AI-powered, purpose-built solutions eliminate these
+              bottlenecks and unlock your business potential.
+            </p>
           </div>
-        ))}
+        </div>
       </div>
-
-      <style jsx>{`
-        @keyframes float-rotate {
-          0%,
-          100% {
-            transform: translateY(0) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-10px) rotate(360deg);
-          }
-        }
-        .animate-float-rotate {
-          animation: float-rotate 5s ease-in-out infinite;
-        }
-      `}</style>
     </section>
   );
 }
