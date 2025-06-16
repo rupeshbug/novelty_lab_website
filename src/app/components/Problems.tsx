@@ -135,15 +135,15 @@ export default function ProblemSection() {
         {/* Bottom CTA */}
         <div className="mt-24 text-center">
           <div className="inline-block bg-gradient-to-r from-cyan-500/10 to-teal-500/10 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8 lg:p-10">
-            <div className="flex items-center justify-center gap-4 mb-6">
-              <Lightbulb className="w-7 h-7 text-cyan-400 animate-pulse" />
+            <div className="flex items-center justify-center gap-2 mb-6">
+              <Lightbulb className="w-10 h-10 md:w-7 md:h-7 text-cyan-400 animate-pulse" />
               <h3 className="text-2xl lg:text-3xl font-bold text-white">
                 Ready for a <span className="text-cyan-400">Modern</span>{" "}
                 Solution?
               </h3>
-              <Zap className="w-7 h-7 text-yellow-400 animate-spin" />
+              <Zap className="w-10 h-10 md:w-7 md:h-7 text-yellow-400 animate-spin" />
             </div>
-            <p className="text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-slate-300 w-full md:max-w-3xl mx-auto leading-relaxed">
               Discover how AI-powered, purpose-built solutions eliminate these
               bottlenecks and unlock your business potential.
             </p>
