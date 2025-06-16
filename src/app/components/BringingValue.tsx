@@ -21,7 +21,7 @@ export default function BringingValue() {
         </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Card 1 */}
           <div className="relative rounded-xl border border-white/20 bg-black text-white p-6 shadow-md cursor-pointer">
             <GlowingEffect
@@ -33,13 +33,16 @@ export default function BringingValue() {
               inactiveZone={0.01}
             />
             <div className="relative z-10 flex flex-col items-center text-center">
-              <Sparkles className="w-10 h-10 mb-4 text-yellow-400" />
+              <div className="w-12 h-12 rounded-lg bg-yellow-400/15 flex items-center justify-center mb-4">
+                <Sparkles className="w-8 h-8 text-yellow-400" />
+              </div>
               <h3 className="text-2xl font-semibold mb-2">
                 Smart AI Solutions
               </h3>
-              <p className="text-slate-300 max-w-xs">
-                From chatbots to full-blown AI agents, we craft intelligent
-                systems that solve real business challenges.
+              <p className="text-slate-300 max-w-sm">
+                From intelligent chatbots to advanced autonomous agents, we
+                build tailored AI systems that automate, optimize, and innovate
+                real business operations.
               </p>
             </div>
           </div>
@@ -55,11 +58,14 @@ export default function BringingValue() {
               inactiveZone={0.01}
             />
             <div className="relative z-10 flex flex-col items-center text-center">
-              <Pencil className="w-10 h-10 mb-4 text-yellow-400" />
+              <div className="w-12 h-12 rounded-lg bg-yellow-400/15 flex items-center justify-center mb-4">
+                <Pencil className="w-8 h-8 text-yellow-400" />
+              </div>
               <h3 className="text-2xl font-semibold mb-2">Creative Content</h3>
-              <p className="text-slate-300 max-w-xs">
-                Blogs, videos, and visuals that resonate with your audience and
-                turn followers into fans.
+              <p className="text-slate-300 max-w-sm">
+                Engaging blogs, viral videos, and eye-catching visuals designed
+                to capture attention, build brand voice, and keep your audience
+                coming back.
               </p>
             </div>
           </div>
@@ -75,13 +81,15 @@ export default function BringingValue() {
               inactiveZone={0.01}
             />
             <div className="relative z-10 flex flex-col items-center text-center">
-              <MessageCircle className="w-10 h-10 mb-4 text-yellow-400" />
+              <div className="w-12 h-12 rounded-lg bg-yellow-400/15 flex items-center justify-center mb-4">
+                <MessageCircle className="w-8 h-8 text-yellow-400" />
+              </div>
               <h3 className="text-2xl font-semibold mb-2">
                 Authentic Engagement
               </h3>
-              <p className="text-slate-300 max-w-xs">
-                Digital strategies that spark conversations, build trust, and
-                grow your brand organically.
+              <p className="text-slate-300 max-w-sm">
+                We craft digital strategies that drive real conversations and
+                build trust—turning passive audiences into loyal advocates.
               </p>
             </div>
           </div>
@@ -97,11 +105,14 @@ export default function BringingValue() {
               inactiveZone={0.01}
             />
             <div className="relative z-10 flex flex-col items-center text-center">
-              <BarChart2 className="w-10 h-10 mb-4 text-yellow-400" />
+              <div className="w-12 h-12 rounded-lg bg-yellow-400/15 flex items-center justify-center mb-4">
+                <BarChart2 className="w-8 h-8 text-yellow-400" />
+              </div>
               <h3 className="text-2xl font-semibold mb-2">Results Driven</h3>
-              <p className="text-slate-300 max-w-xs">
-                Every solution we create is designed to deliver measurable
-                results and real business impact.
+              <p className="text-slate-300 max-w-sm">
+                Every initiative is built for impact. We focus on tangible
+                outcomes—whether it&apos;s conversions, engagement, or
+                operational savings.
               </p>
             </div>
           </div>
