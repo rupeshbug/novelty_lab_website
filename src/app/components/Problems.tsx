@@ -17,21 +17,25 @@ export default function ProblemSection() {
             priority
           />
           <div className="relative">
-            {/* Floating elements around the heading */}
-            <div className="absolute -top-8 left-1/4 animate-float">
-              <div className="w-8 h-8 bg-gradient-to-r from-red-400 to-orange-400 rounded-full opacity-60"></div>
-            </div>
-            <div
-              className="absolute -top-12 right-1/3 animate-float"
-              style={{ animationDelay: "1s" }}
-            >
-              <Lightbulb className="w-6 h-6 text-emerald-400 opacity-70" />
-            </div>
-            <div
-              className="absolute -bottom-10 left-1/5 animate-float"
-              style={{ animationDelay: "1.5s" }}
-            >
-              <Zap className="w-8 h-8 text-yellow-400 opacity-50" />
+            {/* Icons + Badge Container */}
+            <div className="flex items-center justify-center gap-2 mb-6 relative">
+              {/* Left icon */}
+              <div className="animate-float-rotate">
+                <Lightbulb className="w-5 h-5 text-emerald-400 opacity-70" />
+              </div>
+
+              {/* Badge */}
+              <div className="inline-flex items-center px-4 py-2 rounded-full bg-red-500/10 border border-red-500/20">
+                <AlertTriangle className="w-4 h-4 text-red-400 mr-2" />
+                <span className="text-red-400 text-sm font-medium">
+                  Business Bottlenecks Detected
+                </span>
+              </div>
+
+              {/* Right icon */}
+              <div className="animate-float-rotate">
+                <Zap className="w-5 h-5 text-yellow-400 opacity-70" />
+              </div>
             </div>
 
             <h2 className="text-2xl md:text-5xl font-bold text-[#f5f5f5] mt-7">
@@ -41,6 +45,7 @@ export default function ProblemSection() {
             </h2>
           </div>
         </div>
+
         <p className="text-lg text-slate-100 mb-10 mx-auto w-full xl:w-[60%]">
           Older platforms like WordPress and generic website builders were never
           built for scale. As your business grows, these tools create
@@ -105,17 +110,17 @@ export default function ProblemSection() {
       </div>
 
       <style jsx>{`
-        @keyframes float {
+        @keyframes float-rotate {
           0%,
           100% {
-            transform: translateY(0px) rotate(0deg);
+            transform: translateY(0) rotate(0deg);
           }
           50% {
-            transform: translateY(-20px) rotate(180deg);
+            transform: translateY(-10px) rotate(360deg);
           }
         }
-        .animate-float {
-          animation: float 6s ease-in-out infinite;
+        .animate-float-rotate {
+          animation: float-rotate 5s ease-in-out infinite;
         }
       `}</style>
     </section>
