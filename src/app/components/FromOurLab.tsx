@@ -150,8 +150,8 @@ export default function BlogSection() {
   };
 
   return (
-    <section className="py-12 px-8 md:px-20 lg:px-40 lg:py-16 relative">
-      <h2 className="text-3xl md:text-5xl font-bold text-gray-800 mb-3">
+    <section className="py-12 px-6 md:px-20 lg:px-40 lg:py-16 relative">
+      <h2 className="text-3xl md:text-5xl font-bold text-gray-800">
         <TextParticle
           text="From Our Lab"
           fontSize={fontSize}
@@ -167,7 +167,7 @@ export default function BlogSection() {
             <h2 className="text-4xl md:text-5xl font-bold text-[#f5f5f5] mb-4">
               Latest Insights
             </h2>
-            <p className="text-lg text-slate-300 max-w-2xl">
+            <p className="text-lg text-slate-300 w-full md:max-w-2xl">
               We love to share what we are learning. Check out a few recent
               ideas and insights straight from our lab notebooks.
             </p>
