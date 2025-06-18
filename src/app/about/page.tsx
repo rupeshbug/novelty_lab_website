@@ -12,7 +12,7 @@ const chapters = [
     title: "Our Origin",
     icon: <Lightbulb className="text-yellow-400 w-6 h-6" />,
     content:
-      "It started with frustration — watching businesses get bogged down by bloated tools and generic solutions. We knew there had to be a smarter, faster, more intelligent way.",
+      "It all began with a simple realization — most digital tools are over-engineered for flash and under-engineered for utility. We kept watching businesses pay more for clunkier solutions that didn’t quite fit. We knew there had to be a smarter, leaner way — something tailor-made, AI-powered, and human-aware. So we stopped waiting and started building.",
     image: "/step3.png",
     color: "from-yellow-500/20 to-orange-500/20",
   },
@@ -21,7 +21,7 @@ const chapters = [
     title: "Our Mission",
     icon: <Target className="text-red-400 w-6 h-6" />,
     content:
-      "We build AI-powered, purpose-built digital experiences that help businesses scale with speed, intelligence, and custom precision.",
+      "Our mission is to strip away the clutter and replace it with clarity. We help modern businesses scale intelligently — with tech that feels like a teammate, not a tangle of dashboards. Every experience we build is laser-focused on speed, intuition, and purpose. Because success today demands velocity — not just vision.",
     image: "/step3.png",
     color: "from-red-500/20 to-pink-500/20",
   },
@@ -30,7 +30,7 @@ const chapters = [
     title: "Our People",
     icon: <User className="text-cyan-400 w-6 h-6" />,
     content:
-      "We're a small, focused team of builders, designers, and engineers — working in sync to deliver elegant solutions that just work.",
+      "We’re a tight-knit group of software engineers, QA specialists, product managers, AI engineers, and data scientists — united by a shared obsession: turning complex ideas into elegant systems. We don’t just build for you — we build with you. From brainstorm to deployment, we sweat the small stuff, because the small stuff shapes the experience. We believe that a few people with a shared vision can outpace teams ten times their size.",
     image: "/step3.png",
     color: "from-cyan-500/20 to-blue-500/20",
   },
@@ -39,7 +39,7 @@ const chapters = [
     title: "Our Future",
     icon: <Rocket className="text-green-400 w-6 h-6" />,
     content:
-      "We're not just chasing trends — we're building the next generation of tools that empower modern brands to own their identity and velocity.",
+      "We’re not here to chase the next shiny thing. We’re here to build tools that last. Our future is rooted in responsible AI, design that empowers, and software that scales quietly in the background — while your brand moves boldly forward. Tomorrow’s companies won’t need more tools — they’ll need smarter ones. We’re already working on those.",
     image: "/step3.png",
     color: "from-green-500/20 to-emerald-500/20",
   },
@@ -58,15 +58,33 @@ export default function AboutPage() {
   const y1 = useTransform(scrollYProgress, [0, 0.25], [0, -50]);
   const s1 = useTransform(scrollYProgress, [0, 0.25], [1, 0.95]);
 
-  // Other cards start partially visible from bottom, become fully visible when active
-  const y2 = useTransform(scrollYProgress, [0, 0.25, 0.5], [350, 0, -50]);
-  const s2 = useTransform(scrollYProgress, [0.15, 0.25, 0.5], [0.8, 1, 0.95]);
+  // Second card: starts as small preview, becomes active at 0.25
+  const y2 = useTransform(scrollYProgress, [0, 0.25, 0.5], [420, 0, -50]);
+  const s2 = useTransform(scrollYProgress, [0, 0.25, 0.5], [0.6, 1, 0.95]);
 
-  const y3 = useTransform(scrollYProgress, [0, 0.5, 0.75], [400, 0, -50]);
-  const s3 = useTransform(scrollYProgress, [0.4, 0.5, 0.75], [0.8, 1, 0.95]);
+  // Third card: hidden initially, shows as preview at 0.25, active at 0.5
+  const y3 = useTransform(
+    scrollYProgress,
+    [0, 0.25, 0.5, 0.75],
+    [500, 420, 0, -50]
+  );
+  const s3 = useTransform(
+    scrollYProgress,
+    [0, 0.25, 0.5, 0.75],
+    [0.4, 0.6, 1, 0.95]
+  );
 
-  const y4 = useTransform(scrollYProgress, [0, 0.75, 1], [450, 0, -50]);
-  const s4 = useTransform(scrollYProgress, [0.65, 0.75, 1], [0.8, 1, 0.95]);
+  // Fourth card: hidden until 0.5, shows as preview, active at 0.75
+  const y4 = useTransform(
+    scrollYProgress,
+    [0, 0.5, 0.75, 1],
+    [500, 420, 0, -50]
+  );
+  const s4 = useTransform(
+    scrollYProgress,
+    [0, 0.5, 0.75, 1],
+    [0.4, 0.6, 1, 0.95]
+  );
 
   const yArray = [y1, y2, y3, y4];
   const sArray = [s1, s2, s3, s4];
@@ -87,9 +105,7 @@ export default function AboutPage() {
         {/* Sidebar */}
         <div className="fixed top-1/2 -translate-y-1/2 left-6 md:left-20 lg:left-40 z-40 hidden lg:block">
           <div className="space-y-6 max-w-xs">
-            <h3 className="text-2xl font-semibold text-white mb-8">
-              Our Story
-            </h3>
+            <h3 className="text-xl font-semibold text-white mb-8">Our Story</h3>
             {chapters.map((chapter, index) => (
               <motion.div
                 key={chapter.id}
