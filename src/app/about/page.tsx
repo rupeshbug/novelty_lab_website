@@ -162,7 +162,7 @@ export default function AboutPage() {
                   className="absolute"
                 >
                   <div
-                    className={`relative w-[600px] min-h-[500px] max-w-[90vw] max-h-[80vh] bg-gradient-to-br ${chapter.color} 
+                    className={`relative mt-12 md:mt-0 w-[600px] min-h-[500px] max-w-[90vw] max-h-[80vh] bg-gradient-to-br ${chapter.color} 
                       backdrop-blur-sm border border-white/20 rounded-2xl 
                       shadow-2xl overflow-hidden bg-gray-900/95
                     `}
