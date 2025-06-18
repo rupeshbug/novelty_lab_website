@@ -301,7 +301,7 @@ export default function BringingValue() {
   ];
 
   return (
-    <section className="py-16 px-6 md:px-20 lg:px-40 xl:px-40">
+    <section className="py-12 px-6 md:px-20 lg:px-40 lg:py-16">
       <div className="max-w-screen-2xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
