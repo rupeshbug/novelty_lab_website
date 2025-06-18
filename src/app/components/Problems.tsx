@@ -91,7 +91,7 @@ export default function ProblemSection() {
                 <h3 className="text-3xl lg:text-4xl font-bold text-white">
                   {problem.title}
                 </h3>
-                <p className="text-lg text-slate-300 leading-relaxed">
+                <p className="text-lg text-gray-200 leading-relaxed">
                   {problem.desc}
                 </p>
 
