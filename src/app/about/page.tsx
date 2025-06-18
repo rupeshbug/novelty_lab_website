@@ -105,7 +105,9 @@ export default function AboutPage() {
         {/* Sidebar */}
         <div className="fixed top-1/2 -translate-y-1/2 left-6 md:left-20 lg:left-40 z-40 hidden lg:block">
           <div className="space-y-6 max-w-xs">
-            <h3 className="text-xl font-semibold text-white mb-8">Our Story</h3>
+            <h3 className="text-2xl font-semibold text-white mb-8">
+              Our Story
+            </h3>
             {chapters.map((chapter, index) => (
               <motion.div
                 key={chapter.id}
@@ -160,7 +162,7 @@ export default function AboutPage() {
                   className="absolute"
                 >
                   <div
-                    className={`relative w-[600px] h-[500px] max-w-[90vw] max-h-[80vh] bg-gradient-to-br ${chapter.color} 
+                    className={`relative w-[600px] min-h-[500px] max-w-[90vw] max-h-[80vh] bg-gradient-to-br ${chapter.color} 
                       backdrop-blur-sm border border-white/20 rounded-2xl 
                       shadow-2xl overflow-hidden bg-gray-900/95
                     `}
@@ -190,7 +192,7 @@ export default function AboutPage() {
                         </div>
                       </div>
 
-                      <div className="space-y-6">
+                      <div className="space-y-6 mt-8">
                         <h2 className="text-3xl md:text-4xl font-bold text-white">
                           {chapter.title}
                         </h2>
@@ -200,11 +202,11 @@ export default function AboutPage() {
                       </div>
 
                       <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2 text-sm text-gray-400">
+                        <div className="flex items-center gap-2 text-sm text-gray-400 mt-8">
                           <div className="w-8 h-0.5 bg-gradient-to-r from-white/50 to-transparent" />
                           <span>Continue scrolling</span>
                         </div>
-                        <div className="text-xs text-gray-500">
+                        <div className="text-xs text-gray-500 mt-8">
                           {index + 1} of {chapters.length}
                         </div>
                       </div>
