@@ -13,7 +13,7 @@ const chapters = [
     icon: <Lightbulb className="text-yellow-400 w-6 h-6" />,
     content:
       "It all began with a simple realization — most digital tools are over-engineered for flash and under-engineered for utility. We kept watching businesses pay more for clunkier solutions that didn’t quite fit. We knew there had to be a smarter, leaner way — something tailor-made, AI-powered, and human-aware. So we stopped waiting and started building.",
-    image: "/step3.png",
+    image: "/our-origin.png",
     color: "from-yellow-500/20 to-orange-500/20",
   },
   {
@@ -22,7 +22,7 @@ const chapters = [
     icon: <Target className="text-red-400 w-6 h-6" />,
     content:
       "Our mission is to strip away the clutter and replace it with clarity. We help modern businesses scale intelligently — with tech that feels like a teammate, not a tangle of dashboards. Every experience we build is laser-focused on speed, intuition, and purpose. Because success today demands velocity — not just vision.",
-    image: "/step3.png",
+    image: "/our-mission.png",
     color: "from-red-500/20 to-pink-500/20",
   },
   {
@@ -31,7 +31,7 @@ const chapters = [
     icon: <User className="text-cyan-400 w-6 h-6" />,
     content:
       "We’re a tight-knit group of software engineers, QA specialists, product managers, AI engineers, and data scientists — united by a shared obsession: turning complex ideas into elegant systems. We don’t just build for you — we build with you. From brainstorm to deployment, we sweat the small stuff, because the small stuff shapes the experience. We believe that a few people with a shared vision can outpace teams ten times their size.",
-    image: "/step3.png",
+    image: "/our-people.png",
     color: "from-cyan-500/20 to-blue-500/20",
   },
   {
@@ -40,7 +40,7 @@ const chapters = [
     icon: <Rocket className="text-green-400 w-6 h-6" />,
     content:
       "We’re not here to chase the next shiny thing. We’re here to build tools that last. Our future is rooted in responsible AI, design that empowers, and software that scales quietly in the background — while your brand moves boldly forward. Tomorrow’s companies won’t need more tools — they’ll need smarter ones. We’re already working on those.",
-    image: "/step3.png",
+    image: "/our-future.png",
     color: "from-green-500/20 to-emerald-500/20",
   },
 ];
