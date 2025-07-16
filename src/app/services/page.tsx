@@ -5,7 +5,6 @@ import Navbar from "../components/Navbar";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
   Rocket,
-  ArrowRight,
   Zap,
   Smartphone,
   Search,
@@ -120,7 +119,7 @@ export default function ServicesPage() {
       <Navbar />
       <main
         ref={containerRef}
-        className="min-h-screen text-white mt-15 relative overflow-hidden bg-gradient-to-br from-slate-950 to-slate-900"
+        className="min-h-screen text-white mt-16 relative overflow-hidden bg-gradient-to-br from-slate-950 to-slate-900"
       >
         {/* Heading Section */}
         <section className="max-w-7xl mx-auto px-6 py-20 md:px-12 text-center relative z-10">
@@ -148,7 +147,7 @@ export default function ServicesPage() {
               transition={{ duration: 0.8 }}
               className="relative inline-block"
             >
-              <h1 className="text-4xl md:text-6xl font-extrabold mb-6">
+              <h1 className="text-4xl md:text-6xl font-extrabold mb-7">
                 <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent animate-gradient-x">
                   Our Laboratory of
                 </span>
@@ -158,7 +157,7 @@ export default function ServicesPage() {
                   <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#09bbc8] to-transparent animate-pulse"></div>
                 </span>
               </h1>
-              <p className="max-w-xl mx-auto text-gray-300 text-lg leading-relaxed">
+              <p className="max-w-xl mx-auto text-gray-200 text-xl leading-relaxed">
                 From intelligent websites to custom software solutions and
                 expert teams— we provide everything you need to accelerate your
                 business growth in the digital age.
@@ -201,7 +200,7 @@ export default function ServicesPage() {
                       {service.title}
                     </h3>
 
-                    <p className="text-lg text-gray-400 leading-relaxed">
+                    <p className="text-lg text-gray-300 leading-relaxed">
                       {service.description}
                     </p>
 
@@ -209,14 +208,14 @@ export default function ServicesPage() {
                       {service.features.map((feature, i) => (
                         <div key={i} className="flex items-start gap-4">
                           <div
-                            className={`flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center`}
+                            className={`flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center animate-pulse`}
                           >
                             <feature.icon className="w-5 h-5 text-white" />
                           </div>
                           <div>
-                            <h4 className="font-semibold text-white mb-1">
+                            <h3 className="font-semibold text-white mb-1 text-lg">
                               {feature.title}
-                            </h4>
+                            </h3>
                             <p className="text-gray-400">
                               {feature.description}
                             </p>
@@ -224,16 +223,6 @@ export default function ServicesPage() {
                         </div>
                       ))}
                     </div>
-
-                    <motion.button
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.8 }}
-                      viewport={{ once: true }}
-                      className={`mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r ${service.color} text-white hover:opacity-90`}
-                    >
-                      Learn More <ArrowRight className="w-4 h-4" />
-                    </motion.button>
                   </div>
 
                   {/* Visual Section with Main Icon and Floating Icons */}
