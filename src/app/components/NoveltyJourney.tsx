@@ -1,18 +1,9 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, useMemo } from "react";
+import { motion } from "framer-motion";
+import { useMemo } from "react";
 
 export default function NoveltyJourney() {
-  const containerRef = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  });
-
-  // Simple, smooth parallax
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "-20%"]);
-
   // Generate particles once for consistency
   const particles = useMemo(() => {
     return Array.from({ length: 8 }, (_, i) => ({
@@ -60,13 +51,7 @@ export default function NoveltyJourney() {
   ];
 
   return (
-    <section
-      ref={containerRef}
-      className="relative px-6 py-12 md:px-20 lg:px-40 lg:py-16 overflow-hidden"
-    >
-      {/* Simple background with subtle parallax */}
-      <motion.div style={{ y: backgroundY }} className="absolute inset-0" />
-
+    <section className="relative px-6 py-12 md:px-20 lg:px-40 lg:py-16 overflow-hidden">
       {/* Minimal floating particles */}
       <div className="absolute inset-0 overflow-hidden">
         {particles.map((particle) => (
@@ -85,7 +70,7 @@ export default function NoveltyJourney() {
               duration: particle.duration,
               repeat: Infinity,
               delay: particle.delay,
-              ease: "easeInOut",
+              ease: "easeOut",
             }}
           />
         ))}
@@ -94,10 +79,10 @@ export default function NoveltyJourney() {
       <div className="relative z-10 max-w-5xl mx-auto">
         {/* Clean header animation */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, margin: "-200px" }}
-          transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
@@ -108,8 +93,8 @@ export default function NoveltyJourney() {
                 className="absolute -bottom-2 left-0 w-full h-1 bg-gradient-to-r from-[#09bbc8] to-purple-500 rounded-full"
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
-                viewport={{ once: false, margin: "-200px" }}
-                transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
               />
             </span>
           </h2>
@@ -124,13 +109,13 @@ export default function NoveltyJourney() {
           {storyBeats.map((beat, index) => (
             <motion.div
               key={beat.id}
-              initial={{ opacity: 0, y: 60 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: false, margin: "-150px" }}
+              viewport={{ once: true, margin: "-50px" }}
               transition={{
-                duration: 0.8,
-                delay: index * 0.1,
-                ease: [0.25, 0.1, 0.25, 1],
+                duration: 0.6,
+                delay: index * 0.05,
+                ease: "easeOut",
               }}
               className={`flex flex-col lg:flex-row items-center gap-16 ${
                 index % 2 === 1 ? "lg:flex-row-reverse" : ""
@@ -153,9 +138,10 @@ export default function NoveltyJourney() {
               {/* Clean Orb Animation */}
               <div className="flex-1 flex justify-center">
                 <motion.div
-                  whileInView={{ scale: [0.9, 1] }}
-                  viewport={{ once: false, margin: "-100px" }}
-                  transition={{ duration: 0.6, ease: "easeOut" }}
+                  initial={{ scale: 0.9, opacity: 0.8 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
                   className="relative"
                 >
                   {/* Outer glow */}
@@ -167,7 +153,7 @@ export default function NoveltyJourney() {
                     transition={{
                       duration: 4,
                       repeat: Infinity,
-                      ease: "easeInOut",
+                      ease: "easeOut",
                     }}
                     className="absolute inset-0 w-64 h-64 rounded-full bg-gradient-to-br from-[#09bbc8]/10 to-purple-500/10 blur-xl"
                   />
@@ -204,7 +190,7 @@ export default function NoveltyJourney() {
                       transition={{
                         duration: 3,
                         repeat: Infinity,
-                        ease: "easeInOut",
+                        ease: "easeOut",
                       }}
                     >
                       {beat.icon}
@@ -218,10 +204,10 @@ export default function NoveltyJourney() {
 
         {/* Simple CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false, margin: "-150px" }}
-          transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
           className="text-center mt-24"
         >
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 md:mb-8">
@@ -238,13 +224,14 @@ export default function NoveltyJourney() {
               y: -2,
             }}
             whileTap={{ scale: 0.98 }}
-            className="px-10 py-5 bg-gradient-to-r from-[#09bbc8] to-purple-500 text-white font-semibold rounded-full text-lg md:text-xl shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden"
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="px-10 py-5 bg-gradient-to-r from-[#09bbc8] to-purple-500 text-white font-semibold rounded-full text-lg md:text-xl shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden cursor-pointer"
           >
             <span className="relative z-10">Begin Your Journey</span>
             <motion.div
               className="absolute inset-0 bg-gradient-to-r from-purple-500 to-[#09bbc8] opacity-0"
               whileHover={{ opacity: 1 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
             />
           </motion.button>
         </motion.div>
