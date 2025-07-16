@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
@@ -20,6 +20,8 @@ import {
 
 export default function ServicesPage() {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [isClient, setIsClient] = useState(false);
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"],
@@ -27,6 +29,11 @@ export default function ServicesPage() {
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+
+  // Ensure client-side rendering
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const services = [
     {
@@ -114,6 +121,38 @@ export default function ServicesPage() {
     },
   ];
 
+  // Don't render motion components until client-side
+  if (!isClient) {
+    return (
+      <>
+        <Navbar />
+        <main className="min-h-screen text-white mt-16 relative">
+          <section className="max-w-7xl mx-auto px-6 py-12 md:py-20 md:px-12 text-center relative z-10">
+            <div className="relative">
+              <div className="relative inline-block">
+                <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-7 leading-snug">
+                  <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent animate-gradient-x">
+                    Our Laboratory of
+                  </span>
+                  <br />
+                  <span className="text-[#09bbc8] relative inline-block">
+                    Innovation
+                    <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#09bbc8] to-transparent animate-pulse"></div>
+                  </span>
+                </h1>
+                <p className="max-w-xl mx-auto text-gray-200 text-base sm:text-xl leading-relaxed">
+                  From intelligent websites to custom software solutions and
+                  expert teams— we provide everything you need to accelerate
+                  your business growth in the digital age.
+                </p>
+              </div>
+            </div>
+          </section>
+        </main>
+      </>
+    );
+  }
+
   return (
     <>
       <Navbar />
@@ -177,7 +216,11 @@ export default function ServicesPage() {
                   initial={{ opacity: 0, y: 100 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
-                  viewport={{ once: true, margin: "-100px" }}
+                  viewport={{
+                    once: true,
+                    margin: "-50px",
+                    amount: 0.1,
+                  }}
                   className={`relative flex flex-col md:flex-col lg:flex-row items-center gap-16`}
                 >
                   {/* Content Side */}
@@ -190,7 +233,7 @@ export default function ServicesPage() {
                       initial={{ scale: 0 }}
                       whileInView={{ scale: 1 }}
                       transition={{ duration: 0.5, delay: 0.3 }}
-                      viewport={{ once: true }}
+                      viewport={{ once: true, amount: 0.1 }}
                       className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-r ${service.color} text-white`}
                     >
                       <service.icon className="w-7 h-7" />
@@ -235,7 +278,7 @@ export default function ServicesPage() {
                       initial={{ opacity: 0, scale: 0.8 }}
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.8, delay: 0.4 }}
-                      viewport={{ once: true }}
+                      viewport={{ once: true, amount: 0.1 }}
                       className="relative w-64 sm:w-80 h-64 sm:h-80 flex items-center justify-center"
                     >
                       {/* Main rotating icon */}
