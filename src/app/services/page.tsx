@@ -1,40 +1,131 @@
 "use client";
 
-import Image from "next/image";
+import { useRef } from "react";
 import Navbar from "../components/Navbar";
+import { motion, useScroll, useTransform } from "framer-motion";
 import {
-  CheckCircle,
-  Sparkles,
+  Rocket,
   ArrowRight,
   Zap,
+  Smartphone,
+  Search,
+  Video,
+  Settings,
+  Database,
+  Code,
+  CheckCircle,
+  Brain,
+  Users,
   Lightbulb,
-  Rocket,
-  HandPlatter,
 } from "lucide-react";
 
 export default function ServicesPage() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  });
+
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+
+  const services = [
+    {
+      id: 1,
+      title: "Next-Generation Business Website",
+      subtitle: "Intelligent platforms that drive conversions",
+      description:
+        "We create websites that are more than just digital brochures—they're intelligent, integrated platforms that represent your brand and drive conversions. Our AI-powered agents can connect and manage your social media presence, while on-demand content keeps your message fresh and SEO-optimized.",
+      icon: Rocket,
+      color: "from-indigo-500 to-purple-500",
+      features: [
+        {
+          title: "AI-managed social media integration",
+          description:
+            "Automated posting, engagement tracking, and content optimization across all platforms",
+          icon: Smartphone,
+        },
+        {
+          title: "SEO-optimized by design",
+          description:
+            "Built-in SEO best practices with real-time optimization and performance monitoring",
+          icon: Search,
+        },
+        {
+          title: "On-demand video, animation, and written content",
+          description:
+            "Fresh content creation powered by AI and human creativity",
+          icon: Video,
+        },
+      ],
+    },
+    {
+      id: 2,
+      title: "On-Demand Tailored Solutions",
+      subtitle: "Custom software that solves real problems",
+      description:
+        "Whether it's a CRM system, eCommerce backend, or enterprise-grade workflow automation, we design, develop, and deploy software that solves real problems. Our solutions are fully customizable and scalable to meet your evolving needs.",
+      icon: Settings,
+      color: "from-teal-500 to-cyan-500",
+      features: [
+        {
+          title: "Custom application development",
+          description:
+            "Bespoke software solutions tailored to your specific business requirements",
+          icon: Code,
+        },
+        {
+          title: "Automate manual processes",
+          description:
+            "Streamline workflows and eliminate repetitive tasks with intelligent automation",
+          icon: Zap,
+        },
+        {
+          title: "CRM, eCommerce, and enterprise solutions",
+          description:
+            "Comprehensive business systems that scale with your growth",
+          icon: Database,
+        },
+      ],
+    },
+    {
+      id: 3,
+      title: "Human Resource as a Service (HRaaS)",
+      subtitle: "Top-tier professionals without the hiring hassle",
+      description:
+        "Expand your capabilities with top-tier professionals—without the hassle of hiring. We provide you with experienced software engineers, QA specialists, product managers, and AI experts who integrate seamlessly with your workflows.",
+      icon: Users,
+      color: "from-yellow-500 to-orange-500",
+      features: [
+        {
+          title: "Dedicated software engineering teams",
+          description:
+            "Full-stack developers, frontend specialists, and backend architects",
+          icon: Code,
+        },
+        {
+          title: "QA engineers & product/project managers",
+          description:
+            "Quality assurance experts and experienced project leadership",
+          icon: CheckCircle,
+        },
+        {
+          title: "AI engineers & data scientists",
+          description: "Machine learning experts and data analysis specialists",
+          icon: Brain,
+        },
+      ],
+    },
+  ];
+
   return (
     <>
       <Navbar />
-      <main className="min-h-screen text-white mt-15 relative overflow-hidden">
-        {/* Animated Background Elements */}
-        <div className="fixed inset-0 pointer-events-none">
-          <div className="absolute top-20 left-10 w-32 h-32 bg-purple-500/10 rounded-full blur-xl animate-pulse"></div>
-          <div
-            className="absolute top-40 right-20 w-48 h-48 bg-cyan-500/10 rounded-full blur-2xl animate-bounce"
-            style={{ animationDuration: "3s" }}
-          ></div>
-          <div
-            className="absolute bottom-40 left-1/4 w-24 h-24 bg-pink-500/10 rounded-full blur-lg animate-ping"
-            style={{ animationDuration: "4s" }}
-          ></div>
-          <div
-            className="absolute top-1/3 right-1/3 w-16 h-16 bg-yellow-500/10 rounded-full blur-md animate-pulse"
-            style={{ animationDelay: "1s" }}
-          ></div>
-        </div>
-
-        {/* Hero Section with Experimental Design */}
+      <main
+        ref={containerRef}
+        className="min-h-screen text-white mt-15 relative overflow-hidden bg-gradient-to-br from-slate-950 to-slate-900"
+      >
+        {/* Heading Section */}
         <section className="max-w-7xl mx-auto px-6 py-20 md:px-12 text-center relative z-10">
           <div className="relative">
             {/* Floating Lab Elements */}
@@ -54,263 +145,160 @@ export default function ServicesPage() {
               <Zap className="w-5 h-5 text-cyan-400 opacity-60" />
             </div>
 
-            <h1 className="text-4xl md:text-6xl font-extrabold mb-10 relative">
-              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent animate-gradient-x">
-                Our Laboratory of
-              </span>
-              <br />
-              <span className="text-[#09bbc8] relative">
-                Innovation
-                <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#09bbc8] to-transparent animate-pulse"></div>
-              </span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mt-5">
-              Where cutting-edge technology meets creative experimentation.
-              <span className="text-cyan-400 font-semibold">
-                {" "}
-                Supercharge your business
-              </span>{" "}
-              with intelligent solutions, custom applications, and a world-class
-              team—ready on demand.
-            </p>
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative inline-block"
+            >
+              <h1 className="text-4xl md:text-6xl font-extrabold mb-6">
+                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent animate-gradient-x">
+                  Our Laboratory of
+                </span>
+                <br />
+                <span className="text-[#09bbc8] relative inline-block">
+                  Innovation
+                  <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#09bbc8] to-transparent animate-pulse"></div>
+                </span>
+              </h1>
+              <p className="max-w-xl mx-auto text-gray-300 text-lg leading-relaxed">
+                From intelligent websites to custom software solutions and
+                expert teams— we provide everything you need to accelerate your
+                business growth in the digital age.
+              </p>
+            </motion.div>
           </div>
         </section>
 
-        {/* Service Cards with Experimental Layout */}
-        <div className="relative z-10 mt-[-10]">
-          {/* Service 1 - Tilted Card */}
-          <section className="relative px-6 md:px-12 max-w-6xl mx-auto mb-16 md:mb-24 cursor-pointer">
-            <div className="transform hover:scale-105 transition-all duration-700 hover:-rotate-1">
-              <div className="bg-gradient-to-br from-white/10 via-white/5 to-transparent backdrop-blur-md rounded-3xl border border-white/20 shadow-2xl relative z-20 p-8 md:p-16 overflow-hidden">
-                {/* Animated Border Glow */}
-                <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/20 via-purple-500/20 to-pink-500/20 rounded-3xl animate-pulse"></div>
-                <div className="absolute inset-1 bg-gray-900/80 rounded-3xl"></div>
+        {/* Services Section */}
+        <section className="px-6 py-12 md:px-20 lg:px-40 lg:py-16 w-[90%] mx-auto">
+          <div className="space-y-40">
+            {services.map((service, index) => {
+              const isEven = index % 2 === 1;
+              return (
+                <motion.div
+                  key={service.id}
+                  initial={{ opacity: 0, y: 100 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  className={`relative flex flex-col lg:flex-row items-center gap-12`}
+                >
+                  {/* Content Left or Right */}
+                  <div
+                    className={`flex-1 w-[60%] space-y-8 z-99 ${
+                      isEven ? "lg:order-2" : "lg:order-1"
+                    }`}
+                  >
+                    <motion.div
+                      initial={{ scale: 0 }}
+                      whileInView={{ scale: 1 }}
+                      transition={{ duration: 0.5, delay: 0.3 }}
+                      viewport={{ once: true }}
+                      className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} text-white`}
+                    >
+                      <service.icon className="w-8 h-8" />
+                    </motion.div>
 
-                <div className="relative z-10 flex flex-col md:flex-row gap-12 items-center">
-                  <div className="w-full md:w-1/2 relative">
-                    {/* Floating Elements Around Image */}
-                    <div className="absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full opacity-30 animate-bounce"></div>
-                    <div className="absolute -bottom-6 -right-6 w-8 h-8 bg-gradient-to-r from-pink-400 to-rose-400 rounded-full opacity-40 animate-pulse"></div>
+                    <h3 className="text-3xl md:text-4xl font-bold">
+                      {service.title}
+                    </h3>
 
-                    <Image
-                      src="/service1NoBg.png"
-                      alt="Next-Gen Website Illustration"
-                      width={800}
-                      height={600}
-                      className="rounded-2xl object-cover w-full h-auto transform hover:scale-105 transition-transform duration-500"
-                      priority
-                    />
-                  </div>
-                  <div className="w-full md:w-1/2">
-                    <div className="flex items-center gap-4 mb-8">
-                      <div className="p-3 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-xl">
-                        <Rocket className="w-6 h-6 text-white" />
-                      </div>
-                      <h2 className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-                        Next-Generation Business Website
-                      </h2>
-                    </div>
-                    <p className="text-gray-300 mb-8 text-lg leading-relaxed">
-                      We create websites that are more than just digital
-                      brochures—they&apos;re
-                      <span className="text-purple-400 font-semibold">
-                        {" "}
-                        intelligent, integrated platforms
-                      </span>{" "}
-                      that represent your brand and drive conversions. Our
-                      AI-powered agents can connect and manage your social media
-                      presence, while on-demand content keeps your message fresh
-                      and SEO-optimized.
+                    <p className="text-xl text-gray-300 font-medium">
+                      {service.subtitle}
                     </p>
-                    <div className="space-y-6 text-gray-300">
-                      {[
-                        "AI-managed social media integration",
-                        "SEO-optimized by design",
-                        "On-demand video, animation, and written content",
-                      ].map((feature, idx) => (
-                        <div key={idx} className="flex items-start gap-4 group">
-                          <div className="p-2 bg-indigo-500/20 rounded-lg group-hover:bg-indigo-500/30 transition-colors">
-                            <CheckCircle className="w-5 h-5 text-indigo-400 animate-pulse" />
+
+                    <p className="text-lg text-gray-400 leading-relaxed">
+                      {service.description}
+                    </p>
+
+                    <div className="space-y-6">
+                      {service.features.map((feature, i) => (
+                        <div key={i} className="flex items-start gap-4">
+                          <div
+                            className={`flex-shrink-0 w-10 h-10 rounded-lg bg-gradient-to-r ${service.color} flex items-center justify-center`}
+                          >
+                            <feature.icon className="w-5 h-5 text-white" />
                           </div>
-                          <span className="group-hover:text-white transition-colors">
-                            {feature}
-                          </span>
+                          <div>
+                            <h4 className="font-semibold text-white mb-1">
+                              {feature.title}
+                            </h4>
+                            <p className="text-gray-400">
+                              {feature.description}
+                            </p>
+                          </div>
                         </div>
                       ))}
                     </div>
+
+                    <motion.button
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.8 }}
+                      viewport={{ once: true }}
+                      className={`mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r ${service.color} text-white hover:opacity-90`}
+                    >
+                      Learn More <ArrowRight className="w-4 h-4" />
+                    </motion.button>
                   </div>
-                </div>
-              </div>
-            </div>
-          </section>
 
-          {/* Service 2 - Floating Card */}
-          <section className="relative px-6 md:px-12 max-w-6xl mx-auto mb-16 md:mb-24 cursor-pointer">
-            <div className="transform hover:scale-105 transition-all duration-700 hover:rotate-1">
-              <div className="bg-gradient-to-bl from-white/10 via-white/5 to-transparent backdrop-blur-md rounded-3xl border border-white/20 shadow-2xl relative z-20 p-8 md:p-16 overflow-hidden">
-                {/* Animated Border Glow */}
-                <div
-                  className="absolute inset-0 bg-gradient-to-r from-teal-500/20 via-cyan-500/20 to-sky-500/20 rounded-3xl animate-pulse"
-                  style={{ animationDelay: "1s" }}
-                ></div>
-                <div className="absolute inset-1 bg-gray-900/80 rounded-3xl"></div>
+                  {/* Visual Section with Main Icon and Floating Icons */}
+                  <div
+                    className={`relative flex flex-col items-center flex-1 ${
+                      isEven ? "lg:order-1" : "lg:order-2"
+                    }`}
+                  >
+                    <motion.div
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      whileInView={{ opacity: 1, scale: 1 }}
+                      transition={{ duration: 0.8, delay: 0.4 }}
+                      viewport={{ once: true }}
+                      className="relative w-80 h-80 flex items-center justify-center"
+                    >
+                      {/* Main rotating icon */}
+                      <motion.div
+                        animate={{ rotate: 360 }}
+                        transition={{
+                          duration: 20,
+                          repeat: Infinity,
+                          ease: "linear",
+                        }}
+                        className={`w-32 h-32 rounded-full bg-gradient-to-r ${service.color} flex items-center justify-center z-10`}
+                      >
+                        <service.icon className="w-16 h-16 text-white" />
+                      </motion.div>
 
-                <div className="relative z-10 flex flex-col md:flex-row-reverse gap-12 items-center">
-                  <div className="w-full md:w-1/2 relative">
-                    {/* Floating Elements Around Image */}
-                    <div
-                      className="absolute -top-6 -right-6 w-10 h-10 bg-gradient-to-r from-teal-400 to-cyan-400 rounded-full opacity-30 animate-spin"
-                      style={{ animationDuration: "8s" }}
-                    ></div>
-                    <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-gradient-to-r from-sky-400 to-blue-400 rounded-full opacity-40 animate-ping"></div>
-
-                    <Image
-                      src="/service2NoBg.png"
-                      alt="Custom Solutions Illustration"
-                      width={800}
-                      height={600}
-                      className="rounded-2xl object-cover w-full h-auto transform hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="w-full md:w-1/2">
-                    <div className="flex items-center gap-4 mb-8">
-                      <div className="p-3 bg-gradient-to-r from-teal-500 to-cyan-500 rounded-xl">
-                        <Sparkles className="w-6 h-6 text-white" />
-                      </div>
-                      <h2 className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-teal-400 via-cyan-400 to-sky-400 bg-clip-text text-transparent">
-                        On-Demand Tailored Solutions
-                      </h2>
-                    </div>
-                    <p className="text-gray-300 mb-8 text-lg leading-relaxed">
-                      Whether it&apos;s a CRM system, eCommerce backend, or
-                      enterprise-grade workflow automation, we{" "}
-                      <span className="text-cyan-400 font-semibold">
-                        design, develop, and deploy
-                      </span>{" "}
-                      software that solves real problems. Our solutions are
-                      fully customizable and scalable to meet your evolving
-                      needs.
-                    </p>
-                    <div className="space-y-6 text-gray-300">
-                      {[
-                        "Custom application development",
-                        "Automate manual processes",
-                        "CRM, eCommerce, and enterprise solutions",
-                      ].map((feature, idx) => (
-                        <div key={idx} className="flex items-start gap-4 group">
-                          <div className="p-2 bg-teal-500/20 rounded-lg group-hover:bg-teal-500/30 transition-colors">
-                            <Sparkles className="w-5 h-5 text-teal-400 animate-pulse" />
-                          </div>
-                          <span className="group-hover:text-white transition-colors">
-                            {feature}
-                          </span>
-                        </div>
+                      {/* Floating feature icons positioned around the main icon */}
+                      {service.features.map((feature, i) => (
+                        <motion.div
+                          key={i}
+                          className={`absolute w-12 h-12 rounded-full bg-gradient-to-r ${service.color} flex items-center justify-center`}
+                          style={{
+                            top: `${20 + i * 25}%`,
+                            left: i % 2 === 0 ? "-10%" : "100%",
+                          }}
+                          animate={{
+                            y: [0, -10, 0],
+                            rotate: [0, 5, -5, 0],
+                          }}
+                          transition={{
+                            duration: 3,
+                            repeat: Infinity,
+                            delay: i * 0.5,
+                          }}
+                        >
+                          <feature.icon className="w-6 h-6 text-white" />
+                        </motion.div>
                       ))}
-                    </div>
+                    </motion.div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Service 3 - Morphing Card */}
-          <section className="relative px-6 md:px-12 max-w-6xl mx-auto mb-8 md:mb-16 cursor-pointer">
-            <div className="transform hover:scale-105 transition-all duration-700 hover:-rotate-1">
-              <div className="bg-gradient-to-tr from-white/10 via-white/5 to-transparent backdrop-blur-md rounded-3xl border border-white/20 shadow-2xl relative z-20 p-8 md:p-16 overflow-hidden">
-                {/* Animated Border Glow */}
-                <div
-                  className="absolute inset-0 bg-gradient-to-r from-yellow-500/20 via-orange-500/20 to-rose-500/20 rounded-3xl animate-pulse"
-                  style={{ animationDelay: "2s" }}
-                ></div>
-                <div className="absolute inset-1 bg-gray-900/80 rounded-3xl"></div>
-
-                <div className="relative z-10 flex flex-col md:flex-row gap-12 items-center">
-                  <div className="w-full md:w-1/2 relative">
-                    {/* Floating Elements Around Image */}
-                    <div
-                      className="absolute -top-8 -left-8 w-14 h-14 bg-gradient-to-r from-yellow-400 to-orange-400 rounded-full opacity-20 animate-bounce"
-                      style={{ animationDelay: "0.5s" }}
-                    ></div>
-                    <div className="absolute -bottom-8 -right-8 w-10 h-10 bg-gradient-to-r from-orange-400 to-rose-400 rounded-full opacity-30 animate-pulse"></div>
-
-                    <Image
-                      src="/service3NoBg.png"
-                      alt="HRaaS Illustration"
-                      width={800}
-                      height={600}
-                      className="rounded-2xl object-cover w-full h-auto transform hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-                  <div className="w-full md:w-1/2">
-                    <div className="flex items-center gap-4 mb-8">
-                      <div className="p-3 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-xl">
-                        <HandPlatter className="w-6 h-6 text-white" />
-                      </div>
-                      <h2 className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-rose-400 bg-clip-text text-transparent">
-                        Human Resource as a Service (HRaaS)
-                      </h2>
-                    </div>
-                    <p className="text-gray-300 mb-8 text-lg leading-relaxed">
-                      Expand your capabilities with{" "}
-                      <span className="text-orange-400 font-semibold">
-                        top-tier professionals
-                      </span>
-                      —without the hassle of hiring. We provide you with
-                      experienced software engineers, QA specialists, product
-                      managers, and AI experts who integrate seamlessly with
-                      your workflows.
-                    </p>
-                    <div className="space-y-6 text-gray-300">
-                      {[
-                        "Dedicated software engineering teams",
-                        "QA engineers & product/project managers",
-                        "AI engineers & data scientists",
-                      ].map((feature, idx) => (
-                        <div key={idx} className="flex items-start gap-4 group">
-                          <div className="p-2 bg-yellow-500/20 rounded-lg group-hover:bg-yellow-500/30 transition-colors">
-                            <ArrowRight className="w-5 h-5 text-yellow-400 animate-pulse" />
-                          </div>
-                          <span className="group-hover:text-white transition-colors">
-                            {feature}
-                          </span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
+                </motion.div>
+              );
+            })}
+          </div>
+        </section>
       </main>
-
-      <style jsx>{`
-        @keyframes float {
-          0%,
-          100% {
-            transform: translateY(0px) rotate(0deg);
-          }
-          50% {
-            transform: translateY(-20px) rotate(180deg);
-          }
-        }
-        @keyframes gradient-x {
-          0%,
-          100% {
-            background-position: 0% 50%;
-          }
-          50% {
-            background-position: 100% 50%;
-          }
-        }
-        .animate-float {
-          animation: float 6s ease-in-out infinite;
-        }
-        .animate-gradient-x {
-          background-size: 200% 200%;
-          animation: gradient-x 3s ease infinite;
-        }
-      `}</style>
     </>
   );
 }

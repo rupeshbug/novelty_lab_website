@@ -56,7 +56,7 @@ export default function Navbar() {
           <div className="ml-auto flex items-center">
             {/* Desktop CTA */}
             <button className="hidden md:block cursor-pointer border border-[#09bbc8] px-5 py-2 rounded-lg text-base font-medium hover:bg-[#09bbc8] transition text-white">
-              Connect With Us
+              Get Started
             </button>
 
             {/* Mobile Icon */}
@@ -90,7 +90,7 @@ export default function Navbar() {
                 </Link>
               ))}
               <button className="mt-2 cursor-pointer border border-[#09bbc8] px-4 py-2 rounded-lg text-lg font-medium hover:bg-[#09bbc8] transition text-white ">
-                Connect With Us
+                Get Started
               </button>
             </div>
           </div>

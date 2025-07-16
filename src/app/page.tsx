@@ -5,14 +5,16 @@ import BringingValue from "./components/BringingValue";
 import GetInTouch from "./components/GetInTouch";
 import Footer from "./components/Footer";
 import FromOurLab from "./components/FromOurLab";
+import StorytellingParallax from "./components/storytelling-services";
 
 export default function Home() {
   return (
     <div>
       <Navbar />
       <HeroSection />
-      <ProblemSection />
       <BringingValue />
+      <StorytellingParallax />
+      <ProblemSection />
       <FromOurLab />
       <GetInTouch />
       <Footer />
