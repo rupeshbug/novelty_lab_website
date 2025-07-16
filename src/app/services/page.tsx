@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
   Rocket,
+  ArrowRight,
   Zap,
   Smartphone,
   Search,
@@ -32,7 +33,6 @@ export default function ServicesPage() {
     {
       id: 1,
       title: "Next-Generation Business Website",
-      subtitle: "Intelligent platforms that drive conversions",
       description:
         "We create websites that are more than just digital brochures—they're intelligent, integrated platforms that represent your brand and drive conversions. Our AI-powered agents can connect and manage your social media presence, while on-demand content keeps your message fresh and SEO-optimized.",
       icon: Rocket,
@@ -61,7 +61,6 @@ export default function ServicesPage() {
     {
       id: 2,
       title: "On-Demand Tailored Solutions",
-      subtitle: "Custom software that solves real problems",
       description:
         "Whether it's a CRM system, eCommerce backend, or enterprise-grade workflow automation, we design, develop, and deploy software that solves real problems. Our solutions are fully customizable and scalable to meet your evolving needs.",
       icon: Settings,
@@ -90,7 +89,6 @@ export default function ServicesPage() {
     {
       id: 3,
       title: "Human Resource as a Service (HRaaS)",
-      subtitle: "Top-tier professionals without the hiring hassle",
       description:
         "Expand your capabilities with top-tier professionals—without the hassle of hiring. We provide you with experienced software engineers, QA specialists, product managers, and AI experts who integrate seamlessly with your workflows.",
       icon: Users,
@@ -203,10 +201,6 @@ export default function ServicesPage() {
                       {service.title}
                     </h3>
 
-                    <p className="text-xl text-gray-300 font-medium">
-                      {service.subtitle}
-                    </p>
-
                     <p className="text-lg text-gray-400 leading-relaxed">
                       {service.description}
                     </p>
@@ -230,6 +224,16 @@ export default function ServicesPage() {
                         </div>
                       ))}
                     </div>
+
+                    <motion.button
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.6, delay: 0.8 }}
+                      viewport={{ once: true }}
+                      className={`mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r ${service.color} text-white hover:opacity-90`}
+                    >
+                      Learn More <ArrowRight className="w-4 h-4" />
+                    </motion.button>
                   </div>
 
                   {/* Visual Section with Main Icon and Floating Icons */}
@@ -265,7 +269,7 @@ export default function ServicesPage() {
                           className={`absolute w-12 h-12 rounded-full bg-gradient-to-r ${service.color} flex items-center justify-center`}
                           style={{
                             top: `${20 + i * 25}%`,
-                            left: i % 2 === 0 ? "-10%" : "100%",
+                            left: i % 2 === 0 ? "-10%" : "110%",
                           }}
                           animate={{
                             y: [0, -10, 0],
