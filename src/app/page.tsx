@@ -5,7 +5,7 @@ import BringingValue from "./components/BringingValue";
 import GetInTouch from "./components/GetInTouch";
 import Footer from "./components/Footer";
 import FromOurLab from "./components/FromOurLab";
-import StorytellingParallax from "./components/storytelling-services";
+import NoveltyJourney from "./components/NoveltyJourney";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <Navbar />
       <HeroSection />
       <BringingValue />
-      <StorytellingParallax />
+      <NoveltyJourney />
       <ProblemSection />
       <FromOurLab />
       <GetInTouch />
