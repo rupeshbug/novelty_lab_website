@@ -222,7 +222,7 @@ export default function NoveltyJourney() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, margin: "-150px" }}
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-          className="text-center mt-40 md:mt-48"
+          className="text-center mt-24"
         >
           <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 md:mb-8">
             Your Story Starts Here
