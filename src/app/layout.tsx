@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
 import "./globals.css";
-import { AnimatedBackground } from "@/components/ui/AnimatedBackground";
 
 const notoSans = Noto_Sans({
   variable: "--font-noto-sans",
@@ -20,8 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${notoSans.className} font-sans antialiased`}>
-        <AnimatedBackground>{children}</AnimatedBackground>
+      <body
+        className={`${notoSans.className} font-sans antialiased bg-[#0f1115]`}
+      >
+        {children}
       </body>
     </html>
   );
