@@ -5,7 +5,6 @@ import Navbar from "../components/Navbar";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
   Rocket,
-  ArrowRight,
   Zap,
   Smartphone,
   Search,
@@ -231,16 +230,6 @@ export default function ServicesPage() {
                         </div>
                       ))}
                     </div>
-
-                    <motion.button
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: 0.8 }}
-                      viewport={{ once: true }}
-                      className={`mt-4 inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r ${service.color} text-white hover:opacity-90`}
-                    >
-                      Learn More <ArrowRight className="w-4 h-4" />
-                    </motion.button>
                   </div>
 
                   {/* Visual Section with Main Icon and Floating Icons */}
