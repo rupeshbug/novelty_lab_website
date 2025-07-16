@@ -126,19 +126,19 @@ export default function ServicesPage() {
           <div className="relative">
             {/* Floating Lab Elements */}
             <div className="absolute -top-8 left-1/4 animate-float hidden sm:block">
-              <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-60"></div>
+              <div className="w-4 h-4 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full animate-ping opacity-60"></div>
             </div>
             <div
               className="absolute -top-12 right-1/3 animate-float hidden sm:block"
               style={{ animationDelay: "1s" }}
             >
-              <Lightbulb className="w-6 h-6 text-yellow-400 opacity-70" />
+              <Lightbulb className="w-6 h-6 text-yellow-400 opacity-70 animate-bounce" />
             </div>
             <div
               className="absolute -top-6 right-1/4 animate-float hidden sm:block"
               style={{ animationDelay: "2s" }}
             >
-              <Zap className="w-5 h-5 text-cyan-400 opacity-60" />
+              <Zap className="w-5 h-5 text-cyan-400 opacity-60 animate-spin" />
             </div>
 
             <motion.div
