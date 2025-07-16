@@ -98,9 +98,9 @@ export default function NoveltyJourney() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, margin: "-200px" }}
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
-          className="text-center mb-20 md:mb-28 lg:mb-36"
+          className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 md:mb-8">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             The Journey Behind{" "}
             <span className="text-[#09bbc8] relative">
               Novelty Lab
@@ -120,7 +120,7 @@ export default function NoveltyJourney() {
         </motion.div>
 
         {/* Timeline with clean animations */}
-        <div className="space-y-32 md:space-y-40">
+        <div className="space-y-32 md:space-y-40 p-5">
           {storyBeats.map((beat, index) => (
             <motion.div
               key={beat.id}
