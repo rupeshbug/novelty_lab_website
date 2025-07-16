@@ -122,20 +122,20 @@ export default function ServicesPage() {
         className="min-h-screen text-white mt-16 relative overflow-hidden bg-gradient-to-br from-slate-950 to-slate-900"
       >
         {/* Heading Section */}
-        <section className="max-w-7xl mx-auto px-6 py-20 md:px-12 text-center relative z-10">
+        <section className="max-w-7xl mx-auto px-6 py-12 md:py-20 md:px-12 text-center relative z-10">
           <div className="relative">
             {/* Floating Lab Elements */}
-            <div className="absolute -top-8 left-1/4 animate-float">
+            <div className="absolute -top-8 left-1/4 animate-float hidden sm:block">
               <div className="w-8 h-8 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full opacity-60"></div>
             </div>
             <div
-              className="absolute -top-12 right-1/3 animate-float"
+              className="absolute -top-12 right-1/3 animate-float hidden sm:block"
               style={{ animationDelay: "1s" }}
             >
               <Lightbulb className="w-6 h-6 text-yellow-400 opacity-70" />
             </div>
             <div
-              className="absolute -top-6 right-1/4 animate-float"
+              className="absolute -top-6 right-1/4 animate-float hidden sm:block"
               style={{ animationDelay: "2s" }}
             >
               <Zap className="w-5 h-5 text-cyan-400 opacity-60" />
@@ -147,7 +147,7 @@ export default function ServicesPage() {
               transition={{ duration: 0.8 }}
               className="relative inline-block"
             >
-              <h1 className="text-4xl md:text-6xl font-extrabold mb-7">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-7 leading-snug">
                 <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent animate-gradient-x">
                   Our Laboratory of
                 </span>
@@ -157,7 +157,7 @@ export default function ServicesPage() {
                   <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#09bbc8] to-transparent animate-pulse"></div>
                 </span>
               </h1>
-              <p className="max-w-xl mx-auto text-gray-200 text-xl leading-relaxed">
+              <p className="max-w-xl mx-auto text-gray-200 text-base sm:text-xl leading-relaxed">
                 From intelligent websites to custom software solutions and
                 expert teams— we provide everything you need to accelerate your
                 business growth in the digital age.
@@ -167,8 +167,8 @@ export default function ServicesPage() {
         </section>
 
         {/* Services Section */}
-        <section className="px-6 py-12 md:px-20 lg:px-40 lg:py-16 w-[90%] mx-auto">
-          <div className="space-y-40">
+        <section className="px-6 py-12 md:px-20 lg:px-40 lg:py-16 w-full md:w-[90%] mx-auto">
+          <div className="space-y-16 md:space-y-32">
             {services.map((service, index) => {
               const isEven = index % 2 === 1;
               return (
@@ -178,11 +178,11 @@ export default function ServicesPage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true, margin: "-100px" }}
-                  className={`relative flex flex-col lg:flex-row items-center gap-12`}
+                  className={`relative flex flex-col md:flex-col lg:flex-row items-center gap-16`}
                 >
-                  {/* Content Left or Right */}
+                  {/* Content Side */}
                   <div
-                    className={`flex-1 w-[60%] space-y-8 z-99 ${
+                    className={`flex-1 w-full space-y-8 z-99 ${
                       isEven ? "lg:order-2" : "lg:order-1"
                     }`}
                   >
@@ -191,16 +191,16 @@ export default function ServicesPage() {
                       whileInView={{ scale: 1 }}
                       transition={{ duration: 0.5, delay: 0.3 }}
                       viewport={{ once: true }}
-                      className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} text-white`}
+                      className={`inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gradient-to-r ${service.color} text-white`}
                     >
-                      <service.icon className="w-8 h-8" />
+                      <service.icon className="w-7 h-7" />
                     </motion.div>
 
-                    <h3 className="text-3xl md:text-4xl font-bold">
+                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold">
                       {service.title}
                     </h3>
 
-                    <p className="text-lg text-gray-300 leading-relaxed">
+                    <p className="text-base sm:text-lg text-gray-300 leading-relaxed">
                       {service.description}
                     </p>
 
@@ -213,10 +213,10 @@ export default function ServicesPage() {
                             <feature.icon className="w-5 h-5 text-white" />
                           </div>
                           <div>
-                            <h3 className="font-semibold text-white mb-1 text-lg">
+                            <h3 className="font-semibold text-white mb-1 text-base sm:text-lg">
                               {feature.title}
                             </h3>
-                            <p className="text-gray-400">
+                            <p className="text-gray-400 text-sm sm:text-base">
                               {feature.description}
                             </p>
                           </div>
@@ -225,7 +225,7 @@ export default function ServicesPage() {
                     </div>
                   </div>
 
-                  {/* Visual Section with Main Icon and Floating Icons */}
+                  {/* Visual Side */}
                   <div
                     className={`relative flex flex-col items-center flex-1 ${
                       isEven ? "lg:order-1" : "lg:order-2"
@@ -236,7 +236,7 @@ export default function ServicesPage() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.8, delay: 0.4 }}
                       viewport={{ once: true }}
-                      className="relative w-80 h-80 flex items-center justify-center"
+                      className="relative w-64 sm:w-80 h-64 sm:h-80 flex items-center justify-center"
                     >
                       {/* Main rotating icon */}
                       <motion.div
@@ -246,19 +246,20 @@ export default function ServicesPage() {
                           repeat: Infinity,
                           ease: "linear",
                         }}
-                        className={`w-32 h-32 rounded-full bg-gradient-to-r ${service.color} flex items-center justify-center z-10`}
+                        className={`w-28 h-28 sm:w-32 sm:h-32 rounded-full bg-gradient-to-r ${service.color} flex items-center justify-center z-10`}
                       >
-                        <service.icon className="w-16 h-16 text-white" />
+                        <service.icon className="w-12 h-12 text-white" />
                       </motion.div>
 
-                      {/* Floating feature icons positioned around the main icon */}
+                      {/* Floating feature icons */}
                       {service.features.map((feature, i) => (
                         <motion.div
                           key={i}
-                          className={`absolute w-12 h-12 rounded-full bg-gradient-to-r ${service.color} flex items-center justify-center`}
+                          className={`absolute w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-r ${service.color} flex items-center justify-center`}
                           style={{
                             top: `${20 + i * 25}%`,
-                            left: i % 2 === 0 ? "-10%" : "110%",
+                            left: i % 2 === 0 ? "5%" : "80%",
+                            transform: "translateX(-50%)",
                           }}
                           animate={{
                             y: [0, -10, 0],
@@ -270,7 +271,7 @@ export default function ServicesPage() {
                             delay: i * 0.5,
                           }}
                         >
-                          <feature.icon className="w-6 h-6 text-white" />
+                          <feature.icon className="w-5 h-5 text-white" />
                         </motion.div>
                       ))}
                     </motion.div>
