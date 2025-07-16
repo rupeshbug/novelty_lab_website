@@ -119,7 +119,7 @@ export default function ServicesPage() {
       <Navbar />
       <main
         ref={containerRef}
-        className="min-h-screen text-white mt-16 relative overflow-hidden bg-gradient-to-br from-slate-950 to-slate-900"
+        className="min-h-screen text-white mt-16 relative "
       >
         {/* Heading Section */}
         <section className="max-w-7xl mx-auto px-6 py-12 md:py-20 md:px-12 text-center relative z-10">
