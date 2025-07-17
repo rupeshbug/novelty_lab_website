@@ -181,7 +181,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
-              className="text-6xl md:text-7xl font-bold mb-6"
+              className="text-5xl md:text-7xl font-bold mb-6"
             >
               About{" "}
               <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
@@ -195,11 +195,9 @@ export default function AboutPage() {
               transition={{ duration: 0.8, delay: 0.9 }}
               className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto"
             >
-              We are a team of technologists, designers, and builders dedicated
-              to helping visionary founders transform bold ideas into impactful,
-              AI-powered products. At Novelty Lab, we combine innovation, craft,
-              and execution to bring the future to life—one breakthrough at a
-              time.
+              We&apos;re a team of technologists, designers, and builders
+              helping early-stage founders turn novel ideas into AI-powered
+              products that change the world.
             </motion.p>
 
             <motion.div
@@ -243,10 +241,12 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-              className="text-center mb-20"
+              className="text-center mb-12 md:mb-20"
             >
-              <h2 className="text-5xl md:text-6xl font-bold mb-6">Our Story</h2>
-              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                Our Story
+              </h2>
+              <p className="text-lg md:text-xl text-slate-300 max-w-3xl mx-auto">
                 Every great company has a story. Ours is about turning
                 frustration into innovation, challenges into opportunities, and
                 dreams into reality.
@@ -254,22 +254,30 @@ export default function AboutPage() {
             </motion.div>
 
             <div className="relative">
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-400 to-blue-500 rounded-full" />
+              {/* Desktop Timeline Line */}
+              <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-400 to-blue-500 rounded-full" />
+
+              {/* Mobile Timeline Line */}
+              <div className="md:hidden absolute left-8 top-0 w-1 h-full bg-gradient-to-b from-cyan-400 to-blue-500 rounded-full" />
 
               {storyChapters.map((chapter, index) => {
                 const Icon = chapter.icon;
                 return (
                   <motion.div
                     key={chapter.id}
-                    initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: index * 0.2 }}
                     viewport={{ once: true, margin: "-100px" }}
-                    className={`relative flex items-center mb-32 ${
-                      index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+                    className={`relative mb-16 md:mb-32 ${
+                      // Desktop layout
+                      index % 2 === 0
+                        ? "md:flex md:items-center md:flex-row"
+                        : "md:flex md:items-center md:flex-row-reverse"
                     }`}
                   >
-                    <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
+                    {/* Desktop Icon */}
+                    <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 z-10">
                       <motion.div
                         initial={{ scale: 0 }}
                         whileInView={{ scale: 1 }}
@@ -281,10 +289,25 @@ export default function AboutPage() {
                       </motion.div>
                     </div>
 
+                    {/* Mobile Icon */}
+                    <div className="md:hidden absolute left-8 transform -translate-x-1/2 z-10">
+                      <motion.div
+                        initial={{ scale: 0 }}
+                        whileInView={{ scale: 1 }}
+                        transition={{ duration: 0.5, delay: index * 0.2 + 0.3 }}
+                        viewport={{ once: true }}
+                        className={`w-12 h-12 rounded-full bg-gradient-to-r ${chapter.color} flex items-center justify-center shadow-xl`}
+                      >
+                        <Icon className="w-6 h-6 text-white" />
+                      </motion.div>
+                    </div>
+
+                    {/* Content Card */}
                     <div
-                      className={`w-5/12 ${
-                        index % 2 === 0 ? "pr-16" : "pl-16"
-                      }`}
+                      className={`
+                      pl-20 md:pl-0 md:w-5/12 
+                      ${index % 2 === 0 ? "md:pr-16" : "md:pl-16"}
+                    `}
                     >
                       <motion.div
                         whileHover={{ scale: 1.02 }}
@@ -306,14 +329,14 @@ export default function AboutPage() {
                         {/* Inner glow */}
                         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-2xl" />
 
-                        <div className="relative p-8">
-                          <h3 className="text-2xl md:text-3xl font-bold mb-2 text-white">
+                        <div className="relative p-6 md:p-8">
+                          <h3 className="text-xl md:text-2xl lg:text-3xl font-bold mb-2 text-white">
                             {chapter.title}
                           </h3>
-                          <p className="text-base md:text-lg font-medium text-slate-300 mb-4">
+                          <p className="text-sm md:text-base lg:text-lg font-medium text-slate-300 mb-4">
                             {chapter.subtitle}
                           </p>
-                          <p className="text-slate-300 leading-relaxed">
+                          <p className="text-sm md:text-base text-slate-300 leading-relaxed">
                             {chapter.content}
                           </p>
                         </div>
@@ -326,8 +349,8 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Values Section with Gradient Transition */}
-        <section className="relative py-32 overflow-hidden bg-gradient-to-br from-slate-900 to-blue-900">
+        {/* Values Section with Better Gradient Flow */}
+        <section className="relative py-32 overflow-hidden bg-gradient-to-b from-slate-900 via-blue-900 to-cyan-600">
           <motion.div className="absolute inset-0 opacity-10">
             {[...Array(40)].map((_, i) => (
               <motion.div
@@ -400,8 +423,8 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Enhanced CTA Section with Smooth Transition */}
-        <section className="relative bg-gradient-to-br from-blue-900 via-cyan-600 to-blue-600 text-white py-32 px-6 text-center overflow-hidden">
+        {/* Enhanced CTA Section with Perfect Blend */}
+        <section className="relative bg-gradient-to-b from-cyan-600 to-blue-600 text-white py-32 px-6 text-center overflow-hidden">
           <motion.div className="absolute inset-0">
             {[...Array(30)].map((_, i) => (
               <motion.div
