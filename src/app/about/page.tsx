@@ -1,239 +1,461 @@
 "use client";
 
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { useRef } from "react";
+import {
+  BrainCircuit,
+  Lightbulb,
+  Rocket,
+  Heart,
+  Users,
+  Globe,
+  Zap,
+  ArrowRight,
+  Quote,
+} from "lucide-react";
 import Navbar from "../components/Navbar";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef, useEffect, useState } from "react";
-import Image from "next/image";
-import { Lightbulb, User, Target, Rocket } from "lucide-react";
 
-const chapters = [
+const storyChapters = [
   {
     id: 1,
-    title: "Our Origin",
-    icon: <Lightbulb className="text-yellow-400 w-6 h-6" />,
+    title: "The Frustration",
+    subtitle: "Innovation Born of Necessity",
     content:
-      "It all began with a simple realization — most digital tools are over-engineered for flash and under-engineered for utility. We kept watching businesses pay more for clunkier solutions that didn’t quite fit. We knew there had to be a smarter, leaner way — something tailor-made, AI-powered, and human-aware. So we stopped waiting and started building.",
-    image: "/our-origin.png",
-    color: "from-yellow-500/20 to-orange-500/20",
+      "Like many great ideas, Novelty Lab began with a problem. Tired of traditional agencies and rigid development pipelines, we envisioned something new—an innovation-first lab for AI-first startups.",
+    icon: Lightbulb,
+    color: "from-amber-400 to-orange-500",
+    year: "2022",
   },
   {
     id: 2,
-    title: "Our Mission",
-    icon: <Target className="text-red-400 w-6 h-6" />,
+    title: "The Spark",
+    subtitle: "From Idea to Action",
     content:
-      "Our mission is to strip away the clutter and replace it with clarity. We help modern businesses scale intelligently — with tech that feels like a teammate, not a tangle of dashboards. Every experience we build is laser-focused on speed, intuition, and purpose. Because success today demands velocity — not just vision.",
-    image: "/our-mission.png",
-    color: "from-red-500/20 to-pink-500/20",
+      "We began experimenting with rapid prototyping tools, open-source AI models, and cross-functional teams. The result? A system that brings ideas to life faster and better.",
+    icon: BrainCircuit,
+    color: "from-blue-400 to-cyan-500",
+    year: "2023",
   },
   {
     id: 3,
-    title: "Our People",
-    icon: <User className="text-cyan-400 w-6 h-6" />,
+    title: "The Movement",
+    subtitle: "Empowering Founders",
     content:
-      "We’re a tight-knit group of software engineers, QA specialists, product managers, AI engineers, and data scientists — united by a shared obsession: turning complex ideas into elegant systems. We don’t just build for you — we build with you. From brainstorm to deployment, we sweat the small stuff, because the small stuff shapes the experience. We believe that a few people with a shared vision can outpace teams ten times their size.",
-    image: "/our-people.png",
-    color: "from-cyan-500/20 to-blue-500/20",
+      "Today, we help early-stage founders build AI-powered products from idea to MVP. We're not just building software—we're building momentum.",
+    icon: Rocket,
+    color: "from-purple-400 to-pink-500",
+    year: "2024",
+  },
+];
+
+const values = [
+  {
+    title: "AI-First Innovation",
+    description:
+      "We leverage cutting-edge AI to solve real problems, not just follow trends",
+    icon: BrainCircuit,
   },
   {
-    id: 4,
-    title: "Our Future",
-    icon: <Rocket className="text-green-400 w-6 h-6" />,
-    content:
-      "We’re not here to chase the next shiny thing. We’re here to build tools that last. Our future is rooted in responsible AI, design that empowers, and software that scales quietly in the background — while your brand moves boldly forward. Tomorrow’s companies won’t need more tools — they’ll need smarter ones. We’re already working on those.",
-    image: "/our-future.png",
-    color: "from-green-500/20 to-emerald-500/20",
+    title: "Rapid Prototyping",
+    description: "From concept to working prototype in days, not months",
+    icon: Zap,
+  },
+  {
+    title: "Founder-Focused",
+    description: "Every decision is made with early-stage founders in mind",
+    icon: Heart,
+  },
+  {
+    title: "Open Innovation",
+    description:
+      "We share knowledge, tools, and best practices with the community",
+    icon: Globe,
   },
 ];
 
 export default function AboutPage() {
   const containerRef = useRef(null);
-  const [activeSection, setActiveSection] = useState(0);
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"],
   });
 
-  // Safe: hook calls outside loops
-  // First card is fully visible initially
-  const y1 = useTransform(scrollYProgress, [0, 0.25], [0, -50]);
-  const s1 = useTransform(scrollYProgress, [0, 0.25], [1, 0.95]);
-
-  // Second card: starts as small preview, becomes active at 0.25
-  const y2 = useTransform(scrollYProgress, [0, 0.25, 0.5], [420, 0, -50]);
-  const s2 = useTransform(scrollYProgress, [0, 0.25, 0.5], [0.6, 1, 0.95]);
-
-  // Third card: hidden initially, shows as preview at 0.25, active at 0.5
-  const y3 = useTransform(
-    scrollYProgress,
-    [0, 0.25, 0.5, 0.75],
-    [500, 420, 0, -50]
-  );
-  const s3 = useTransform(
-    scrollYProgress,
-    [0, 0.25, 0.5, 0.75],
-    [0.4, 0.6, 1, 0.95]
-  );
-
-  // Fourth card: hidden until 0.5, shows as preview, active at 0.75
-  const y4 = useTransform(
-    scrollYProgress,
-    [0, 0.5, 0.75, 1],
-    [500, 420, 0, -50]
-  );
-  const s4 = useTransform(
-    scrollYProgress,
-    [0, 0.5, 0.75, 1],
-    [0.4, 0.6, 1, 0.95]
-  );
-
-  const yArray = [y1, y2, y3, y4];
-  const sArray = [s1, s2, s3, s4];
-
-  useEffect(() => {
-    const unsubscribe = scrollYProgress.on("change", (latest) => {
-      const index = Math.floor(latest * chapters.length);
-      setActiveSection(Math.min(index, chapters.length - 1));
-    });
-    return () => unsubscribe();
-  }, [scrollYProgress]);
+  const smoothProgress = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001,
+  });
+  const backgroundY = useTransform(smoothProgress, [0, 1], ["0%", "100%"]);
+  const midgroundY = useTransform(smoothProgress, [0, 1], ["0%", "50%"]);
 
   return (
     <>
       <Navbar />
+      <div ref={containerRef} className="relative">
+        {/* Enhanced Hero Section */}
+        <section className="relative flex flex-col items-center justify-center min-h-screen bg-[#0f1115] text-white overflow-hidden">
+          {/* Beautiful Background Gradient */}
+          <motion.div style={{ y: backgroundY }} className="absolute inset-0" />
 
-      <main className="pt-20 py-12 px-6 md:px-20 lg:px-40 lg:py-16 relative min-h-screen">
-        {/* Sidebar */}
-        <div className="fixed top-1/2 -translate-y-1/2 left-6 md:left-20 lg:left-40 z-40 hidden lg:block">
-          <div className="space-y-6 max-w-xs">
-            <h3 className="text-2xl font-semibold text-white mb-8">
-              Our Story
-            </h3>
-            {chapters.map((chapter, index) => (
-              <motion.div
-                key={chapter.id}
-                initial={{ opacity: 0.3, x: -20 }}
-                animate={{
-                  opacity: index <= activeSection ? 1 : 0.3,
-                  x: index <= activeSection ? 0 : -20,
-                }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="flex items-center gap-4 group cursor-pointer"
-              >
-                <div
-                  className={`p-2 rounded-lg transition-all duration-300 ${
-                    index <= activeSection
-                      ? "bg-gradient-to-r " +
-                        chapter.color +
-                        " ring-2 ring-white/20"
-                      : "bg-gray-800/50"
-                  }`}
-                >
-                  {chapter.icon}
-                </div>
-                <p
-                  className={`font-medium transition-colors duration-300 ${
-                    index <= activeSection ? "text-white" : "text-gray-500"
-                  }`}
-                >
-                  {String(index + 1).padStart(2, "0")}. {chapter.title}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+          {/* Enhanced Floating Particles */}
+          <motion.div
+            style={{ y: midgroundY }}
+            className="absolute inset-0 pointer-events-none"
+          >
+            {[...Array(60)].map((_, i) => {
+              const colors = [
+                "bg-blue-400/40",
+                "bg-purple-400/40",
+                "bg-cyan-400/40",
+                "bg-pink-400/40",
+                "bg-amber-400/40",
+                "bg-emerald-400/40",
+              ];
+              const sizes = ["w-2 h-2", "w-3 h-3", "w-4 h-4", "w-1 h-1"];
 
-        {/* Scrollable Section */}
-        <div
-          ref={containerRef}
-          className="relative"
-          style={{ height: `${chapters.length * 100}vh` }}
-        >
-          {/* Fixed centered container for cards */}
-          <div className="fixed inset-0 flex items-center justify-center z-30 pointer-events-none">
-            <div className="flex items-center justify-center w-full h-full">
-              {chapters.map((chapter, index) => (
+              return (
                 <motion.div
-                  key={chapter.id}
+                  key={i}
+                  className={`absolute ${colors[i % colors.length]} ${
+                    sizes[i % sizes.length]
+                  } rounded-full`}
                   style={{
-                    y: yArray[index],
-                    scale: sArray[index],
-                    zIndex: index + 10,
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
                   }}
-                  className="absolute"
-                >
-                  <div
-                    className={`relative mt-12 md:mt-0 w-[600px] min-h-[500px] max-w-[90vw] max-h-[80vh] bg-gradient-to-br ${chapter.color} 
-                      backdrop-blur-sm border border-white/20 rounded-2xl 
-                      shadow-2xl overflow-hidden bg-gray-900/95
-                    `}
-                    style={{ transform: `translateY(${index * 8}px)` }}
+                  animate={{
+                    y: [0, -40, 0],
+                    opacity: [0.3, 1, 0.3],
+                    scale: [1, 1.5, 1],
+                    rotate: [0, 360],
+                  }}
+                  transition={{
+                    duration: 4 + Math.random() * 3,
+                    repeat: Infinity,
+                    delay: Math.random() * 3,
+                    ease: "easeInOut",
+                  }}
+                />
+              );
+            })}
+          </motion.div>
+
+          {/* Additional decorative elements */}
+          <motion.div className="absolute inset-0 pointer-events-none">
+            {[...Array(20)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute w-px h-20 bg-gradient-to-b from-transparent via-blue-400/20 to-transparent"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  rotate: `${Math.random() * 360}deg`,
+                }}
+                animate={{
+                  opacity: [0, 0.5, 0],
+                  scaleY: [0.5, 1, 0.5],
+                }}
+                transition={{
+                  duration: 3 + Math.random() * 2,
+                  repeat: Infinity,
+                  delay: Math.random() * 2,
+                }}
+              />
+            ))}
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="relative z-10 px-6 pt-40 pb-24 text-center max-w-4xl"
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.3 }}
+              className="mb-8"
+            >
+              <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 flex items-center justify-center shadow-2xl">
+                <BrainCircuit className="w-12 h-12 text-white" />
+              </div>
+            </motion.div>
+
+            <motion.h1
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.6 }}
+              className="text-6xl md:text-7xl font-bold mb-6"
+            >
+              About{" "}
+              <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                Novelty Lab
+              </span>
+            </motion.h1>
+
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.9 }}
+              className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto"
+            >
+              We&apos;re a team of technologists, designers, and builders
+              helping early-stage founders turn novel ideas into AI-powered
+              products that change the world.
+            </motion.p>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 1.2 }}
+            >
+              <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-medium rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105">
+                Discover Our Journey
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </button>
+            </motion.div>
+          </motion.div>
+
+          {/* Scroll Indicator */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 1.5 }}
+            className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white"
+          >
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+              className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center"
+            >
+              <motion.div
+                animate={{ y: [0, 12, 0] }}
+                transition={{ duration: 2, repeat: Infinity }}
+                className="w-1 h-3 bg-white/60 rounded-full mt-2"
+              />
+            </motion.div>
+          </motion.div>
+        </section>
+
+        {/* Enhanced Story Timeline */}
+        <section className="relative py-32 bg-[#0f1115] text-white">
+          <div className="container px-4 md:px-6 mx-auto max-w-7xl">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-20"
+            >
+              <h2 className="text-5xl md:text-6xl font-bold mb-6">Our Story</h2>
+              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+                Every great company has a story. Ours is about turning
+                frustration into innovation, challenges into opportunities, and
+                dreams into reality.
+              </p>
+            </motion.div>
+
+            <div className="relative">
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-cyan-400 to-blue-500 rounded-full" />
+
+              {storyChapters.map((chapter, index) => {
+                const Icon = chapter.icon;
+                return (
+                  <motion.div
+                    key={chapter.id}
+                    initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8, delay: index * 0.2 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    className={`relative flex items-center mb-32 ${
+                      index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+                    }`}
                   >
-                    {/* Background */}
-                    <div className="absolute inset-0">
-                      <Image
-                        src={chapter.image}
-                        alt={chapter.title}
-                        fill
-                        className="object-cover opacity-20"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/30" />
+                    <div className="absolute left-1/2 transform -translate-x-1/2 z-10">
+                      <motion.div
+                        initial={{ scale: 0 }}
+                        whileInView={{ scale: 1 }}
+                        transition={{ duration: 0.5, delay: index * 0.2 + 0.3 }}
+                        viewport={{ once: true }}
+                        className={`w-16 h-16 rounded-full bg-gradient-to-r ${chapter.color} flex items-center justify-center shadow-xl`}
+                      >
+                        <Icon className="w-8 h-8 text-white" />
+                      </motion.div>
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5, delay: index * 0.2 + 0.5 }}
+                        viewport={{ once: true }}
+                        className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-slate-900 text-white px-3 py-1 rounded-full text-sm font-bold border border-slate-700"
+                      >
+                        {chapter.year}
+                      </motion.div>
                     </div>
 
-                    {/* Content */}
-                    <div className="relative z-10 p-8 h-full flex flex-col justify-between">
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-3">
-                          <div className="p-2 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20">
-                            {chapter.icon}
-                          </div>
-                          <p className="text-xs text-gray-400 font-medium">
-                            Chapter {String(index + 1).padStart(2, "0")}
+                    <div
+                      className={`w-5/12 ${
+                        index % 2 === 0 ? "pr-16" : "pl-16"
+                      }`}
+                    >
+                      <motion.div
+                        whileHover={{ scale: 1.02 }}
+                        transition={{ duration: 0.3 }}
+                        className="relative rounded-xl bg-slate-800/90 backdrop-blur-md border border-slate-700/50 p-8 shadow-2xl"
+                      >
+                        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-xl" />
+                        <div className="relative">
+                          <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                            {chapter.title}
+                          </h3>
+                          <p className="text-base md:text-lg font-medium text-slate-300 mb-4">
+                            {chapter.subtitle}
+                          </p>
+                          <p className="text-slate-300 leading-relaxed">
+                            {chapter.content}
                           </p>
                         </div>
-                      </div>
-
-                      <div className="space-y-6 mt-8">
-                        <h2 className="text-3xl md:text-4xl font-bold text-white">
-                          {chapter.title}
-                        </h2>
-                        <p className="text-lg text-gray-200 leading-relaxed">
-                          {chapter.content}
-                        </p>
-                      </div>
-
-                      <div className="flex items-center justify-between">
-                        <div className="flex items-center gap-2 text-sm text-gray-400 mt-8">
-                          <div className="w-8 h-0.5 bg-gradient-to-r from-white/50 to-transparent" />
-                          <span>Continue scrolling</span>
-                        </div>
-                        <div className="text-xs text-gray-500 mt-8">
-                          {index + 1} of {chapters.length}
-                        </div>
-                      </div>
+                      </motion.div>
                     </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
 
-                    <div className="absolute top-4 right-4 w-20 h-20 bg-white/5 rounded-full blur-xl" />
-                    <div className="absolute bottom-4 left-4 w-16 h-16 bg-white/5 rounded-full blur-lg" />
-                  </div>
+        {/* Values Section */}
+        <section className="relative py-32 overflow-hidden bg-gradient-to-br from-slate-900 to-blue-900">
+          <motion.div className="absolute inset-0 opacity-10">
+            {[...Array(40)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute w-2 h-2 bg-cyan-400 rounded-full"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                }}
+                animate={{
+                  opacity: [0.1, 0.6, 0.1],
+                  scale: [1, 2, 1],
+                }}
+                transition={{
+                  duration: 4 + Math.random() * 2,
+                  repeat: Infinity,
+                  delay: Math.random() * 2,
+                }}
+              />
+            ))}
+          </motion.div>
+
+          <div className="container px-4 md:px-6 mx-auto max-w-7xl relative z-10">
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-20"
+            >
+              <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
+                Our Values
+              </h2>
+              <p className="text-xl text-slate-300 max-w-3xl mx-auto">
+                These principles guide every decision, every line of code, and
+                every client interaction.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {values.map((value, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 50 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="group"
+                >
+                  <motion.div
+                    whileHover={{ scale: 1.05 }}
+                    className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-8 h-full hover:bg-white/20 transition-all duration-300"
+                  >
+                    <motion.div
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      className="w-16 h-16 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 flex items-center justify-center mb-6 shadow-xl"
+                    >
+                      <value.icon className="w-8 h-8 text-white" />
+                    </motion.div>
+                    <h3 className="text-2xl font-bold text-white mb-4">
+                      {value.title}
+                    </h3>
+                    <p className="text-slate-300 leading-relaxed">
+                      {value.description}
+                    </p>
+                  </motion.div>
                 </motion.div>
               ))}
             </div>
           </div>
-        </div>
-      </main>
+        </section>
 
-      {/* Mobile indicator */}
-      <div className="lg:hidden fixed bottom-8 left-1/2 -translate-x-1/2 z-40">
-        <div className="flex items-center gap-2 bg-black/80 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
-          {chapters.map((_, index) => (
-            <div
-              key={index}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                index <= activeSection ? "bg-white" : "bg-white/30"
-              }`}
-            />
-          ))}
-        </div>
+        {/* Enhanced CTA Section */}
+        <section className="relative bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-32 px-6 text-center overflow-hidden">
+          <motion.div className="absolute inset-0">
+            {[...Array(30)].map((_, i) => (
+              <motion.div
+                key={i}
+                className="absolute w-3 h-3 bg-white/20 rounded-full"
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                }}
+                animate={{
+                  y: [0, -30, 0],
+                  opacity: [0.2, 0.8, 0.2],
+                }}
+                transition={{
+                  duration: 3 + Math.random() * 2,
+                  repeat: Infinity,
+                  delay: Math.random() * 2,
+                }}
+              />
+            ))}
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="max-w-4xl mx-auto relative z-10"
+          >
+            <Quote className="w-16 h-16 mx-auto mb-8 opacity-50" />
+            <h2 className="text-5xl md:text-6xl font-bold mb-6">
+              Ready to write your story?
+            </h2>
+            <p className="text-xl mb-12 max-w-3xl mx-auto opacity-90">
+              Let&apos;s bring your idea to life—faster, better, smarter. Every
+              great partnership begins with a conversation.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-medium rounded-lg shadow-lg hover:bg-gray-50 transition-all duration-300"
+              >
+                Start Your Project
+                <Rocket className="ml-2 w-5 h-5" />
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
+              >
+                Meet the Team
+                <Users className="ml-2 w-5 h-5" />
+              </motion.button>
+            </div>
+          </motion.div>
+        </section>
       </div>
     </>
   );
