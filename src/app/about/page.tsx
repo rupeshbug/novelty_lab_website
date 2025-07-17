@@ -195,9 +195,11 @@ export default function AboutPage() {
               transition={{ duration: 0.8, delay: 0.9 }}
               className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto"
             >
-              We&apos;re a team of technologists, designers, and builders
-              helping early-stage founders turn novel ideas into AI-powered
-              products that change the world.
+              We are a team of technologists, designers, and builders dedicated
+              to helping visionary founders transform bold ideas into impactful,
+              AI-powered products. At Novelty Lab, we combine innovation, craft,
+              and execution to bring the future to life—one breakthrough at a
+              time.
             </motion.p>
 
             <motion.div
