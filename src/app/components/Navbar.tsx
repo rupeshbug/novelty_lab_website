@@ -4,6 +4,13 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
+import {
+  SignedIn,
+  SignedOut,
+  SignInButton,
+  SignUpButton,
+  UserButton,
+} from "@clerk/nextjs";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -55,9 +62,18 @@ export default function Navbar() {
           {/* Right: CTA or Menu Icon */}
           <div className="ml-auto flex items-center">
             {/* Desktop CTA */}
-            <button className="hidden md:block cursor-pointer border border-[#09bbc8] px-5 py-2 rounded-lg text-base font-medium hover:bg-[#09bbc8] transition text-white">
-              Get Started
-            </button>
+
+            <SignedOut>
+              <SignInButton />
+              <SignUpButton>
+                <button className="hidden md:block cursor-pointer border border-[#09bbc8] px-5 py-2 rounded-lg text-base font-medium hover:bg-[#09bbc8] transition text-white">
+                  Get Started
+                </button>
+              </SignUpButton>
+            </SignedOut>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
 
             {/* Mobile Icon */}
             <div className="md:hidden">
