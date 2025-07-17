@@ -12,7 +12,7 @@ import {
   ArrowRight,
   Quote,
 } from "lucide-react";
-import Navbar from "../../components/Navbar";
+import Navbar from "../components/Navbar";
 
 const storyChapters = [
   {
