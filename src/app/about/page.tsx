@@ -7,7 +7,6 @@ import {
   Lightbulb,
   Rocket,
   Heart,
-  Users,
   Globe,
   Zap,
   ArrowRight,
@@ -93,7 +92,7 @@ export default function AboutPage() {
       <Navbar />
       <div ref={containerRef} className="relative">
         {/* Enhanced Hero Section */}
-        <section className="relative flex flex-col items-center justify-center min-h-screen bg-[#0f1115] text-white overflow-hidden">
+        <section className="relative flex flex-col items-center justify-center min-h-screen bg-[#0f1115] text-white overflow-hidden mt-[-12]">
           {/* Beautiful Background Gradient */}
           <motion.div style={{ y: backgroundY }} className="absolute inset-0" />
 
@@ -210,7 +209,7 @@ export default function AboutPage() {
               transition={{ duration: 0.8, delay: 1.2 }}
             >
               <button className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-medium rounded-lg shadow-lg transition-all duration-300 transform hover:scale-105">
-                Discover Our Journey
+                Get Started
                 <ArrowRight className="ml-2 w-5 h-5" />
               </button>
             </motion.div>
@@ -238,7 +237,7 @@ export default function AboutPage() {
         </section>
 
         {/* Enhanced Story Timeline */}
-        <section className="relative py-32 bg-[#0f1115] text-white">
+        <section className="relative py-16 md:py-24 bg-[#0f1115] text-white">
           <div className="container px-4 md:px-6 mx-auto max-w-7xl">
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -440,18 +439,10 @@ export default function AboutPage() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 bg-white text-blue-600 font-medium rounded-lg shadow-lg hover:bg-gray-50 transition-all duration-300"
+                className="inline-flex items-center px-8 py-4 bg-white text-slate-800 font-medium rounded-lg shadow-lg hover:bg-gray-50 transition-all duration-300 cursor-pointer"
               >
                 Start Your Project
                 <Rocket className="ml-2 w-5 h-5" />
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="inline-flex items-center px-8 py-4 border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
-              >
-                Meet the Team
-                <Users className="ml-2 w-5 h-5" />
               </motion.button>
             </div>
           </motion.div>
