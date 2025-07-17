@@ -23,7 +23,6 @@ const storyChapters = [
       "Like many great ideas, Novelty Lab began with a problem. Tired of traditional agencies and rigid development pipelines, we envisioned something new—an innovation-first lab for AI-first startups.",
     icon: Lightbulb,
     color: "from-amber-400 to-orange-500",
-    year: "2022",
   },
   {
     id: 2,
@@ -33,7 +32,6 @@ const storyChapters = [
       "We began experimenting with rapid prototyping tools, open-source AI models, and cross-functional teams. The result? A system that brings ideas to life faster and better.",
     icon: BrainCircuit,
     color: "from-blue-400 to-cyan-500",
-    year: "2023",
   },
   {
     id: 3,
@@ -43,7 +41,6 @@ const storyChapters = [
       "Today, we help early-stage founders build AI-powered products from idea to MVP. We're not just building software—we're building momentum.",
     icon: Rocket,
     color: "from-purple-400 to-pink-500",
-    year: "2024",
   },
 ];
 
@@ -198,9 +195,11 @@ export default function AboutPage() {
               transition={{ duration: 0.8, delay: 0.9 }}
               className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto"
             >
-              We&apos;re a team of technologists, designers, and builders
-              helping early-stage founders turn novel ideas into AI-powered
-              products that change the world.
+              We are a team of technologists, designers, and builders dedicated
+              to helping visionary founders transform bold ideas into impactful,
+              AI-powered products. At Novelty Lab, we combine innovation, craft,
+              and execution to bring the future to life—one breakthrough at a
+              time.
             </motion.p>
 
             <motion.div
@@ -280,15 +279,6 @@ export default function AboutPage() {
                       >
                         <Icon className="w-8 h-8 text-white" />
                       </motion.div>
-                      <motion.div
-                        initial={{ opacity: 0, scale: 0 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5, delay: index * 0.2 + 0.5 }}
-                        viewport={{ once: true }}
-                        className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-slate-900 text-white px-3 py-1 rounded-full text-sm font-bold border border-slate-700"
-                      >
-                        {chapter.year}
-                      </motion.div>
                     </div>
 
                     <div
@@ -299,11 +289,25 @@ export default function AboutPage() {
                       <motion.div
                         whileHover={{ scale: 1.02 }}
                         transition={{ duration: 0.3 }}
-                        className="relative rounded-xl bg-slate-800/90 backdrop-blur-md border border-slate-700/50 p-8 shadow-2xl"
+                        className="relative rounded-2xl backdrop-blur-xl border shadow-2xl overflow-hidden"
+                        style={{
+                          background: "rgba(255, 255, 255, 0.05)",
+                          backdropFilter: "blur(20px)",
+                          borderImage:
+                            "linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05)) 1",
+                          border: "1px solid rgba(255,255,255,0.1)",
+                          boxShadow:
+                            "0 25px 50px -12px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.1)",
+                        }}
                       >
-                        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-xl" />
-                        <div className="relative">
-                          <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                        {/* Glass reflection effect */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-transparent pointer-events-none" />
+
+                        {/* Inner glow */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-blue-500/5 rounded-2xl" />
+
+                        <div className="relative p-8">
+                          <h3 className="text-2xl md:text-3xl font-bold mb-2 text-white">
                             {chapter.title}
                           </h3>
                           <p className="text-base md:text-lg font-medium text-slate-300 mb-4">
@@ -322,7 +326,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Values Section */}
+        {/* Values Section with Gradient Transition */}
         <section className="relative py-32 overflow-hidden bg-gradient-to-br from-slate-900 to-blue-900">
           <motion.div className="absolute inset-0 opacity-10">
             {[...Array(40)].map((_, i) => (
@@ -396,8 +400,8 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Enhanced CTA Section */}
-        <section className="relative bg-gradient-to-r from-cyan-600 to-blue-600 text-white py-32 px-6 text-center overflow-hidden">
+        {/* Enhanced CTA Section with Smooth Transition */}
+        <section className="relative bg-gradient-to-br from-blue-900 via-cyan-600 to-blue-600 text-white py-32 px-6 text-center overflow-hidden">
           <motion.div className="absolute inset-0">
             {[...Array(30)].map((_, i) => (
               <motion.div
