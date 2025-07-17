@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 
 const notoSans = Noto_Sans({
