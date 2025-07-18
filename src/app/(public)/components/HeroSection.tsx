@@ -1,6 +1,8 @@
 import { Cpu, Settings, BarChart } from "lucide-react";
 import { SplineScene } from "@/components/ui/splite";
 import { Spotlight } from "@/components/ui/spotlight";
+import Link from "next/link";
+import { SignedOut, SignUpButton } from "@clerk/nextjs";
 
 export default function Hero() {
   return (
@@ -52,12 +54,19 @@ export default function Hero() {
             </div>
           </div>
           <div className="flex gap-4 justify-center items-center lg:justify-start">
-            <button className="bg-[#08a4af] text-white px-5 py-3 cursor-pointer rounded-lg text-base font-medium hover:bg-[#07a5b0] transition">
-              Get Started
-            </button>
-            <button className="text-white border border-gray-600 hover:border-yellow-400 px-6 py-3.5 cursor-pointer rounded-lg text-base font-medium hover:bg-yellow-400/10 transition-all duration-200">
-              Learn More
-            </button>
+            <SignedOut>
+              <SignUpButton>
+                <button className="bg-[#08a4af] text-white px-5 py-3 cursor-pointer rounded-lg text-base font-medium hover:bg-[#07a5b0] transition">
+                  Get Started
+                </button>
+              </SignUpButton>
+            </SignedOut>
+
+            <Link href="/about">
+              <button className="text-white border border-gray-600 hover:border-yellow-400 px-6 py-3.5 cursor-pointer rounded-lg text-base font-medium hover:bg-yellow-400/10 transition-all duration-200">
+                Learn More
+              </button>
+            </Link>
           </div>
         </div>
 
