@@ -105,9 +105,17 @@ export default function Navbar() {
                   {label}
                 </Link>
               ))}
-              <button className="mt-2 cursor-pointer border border-[#09bbc8] px-4 py-2 rounded-lg text-lg font-medium hover:bg-[#09bbc8] transition text-white ">
-                Get Started
-              </button>
+              <SignedOut>
+                <SignInButton />
+                <SignUpButton>
+                  <button className="cursor-pointer border border-[#09bbc8] px-4 py-2 rounded-lg text-lg font-medium hover:bg-[#09bbc8] transition text-white mt-[-8]">
+                    Get Started
+                  </button>
+                </SignUpButton>
+              </SignedOut>
+              <SignedIn>
+                <UserButton />
+              </SignedIn>
             </div>
           </div>
         )}
