@@ -4,13 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
-import {
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  SignUpButton,
-  UserButton,
-} from "@clerk/nextjs";
+import { SignedIn, SignedOut, SignUpButton, UserButton } from "@clerk/nextjs";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -64,7 +58,6 @@ export default function Navbar() {
             {/* Desktop CTA */}
 
             <SignedOut>
-              <SignInButton />
               <SignUpButton>
                 <button className="hidden md:block cursor-pointer border border-[#09bbc8] px-5 py-2 rounded-lg text-base font-medium hover:bg-[#09bbc8] transition text-white">
                   Get Started
@@ -106,9 +99,8 @@ export default function Navbar() {
                 </Link>
               ))}
               <SignedOut>
-                <SignInButton />
                 <SignUpButton>
-                  <button className="cursor-pointer border border-[#09bbc8] px-4 py-2 rounded-lg text-lg font-medium hover:bg-[#09bbc8] transition text-white mt-[-8]">
+                  <button className="cursor-pointer border border-[#09bbc8] px-4 py-2 rounded-lg text-lg font-medium hover:bg-[#09bbc8] transition text-white">
                     Get Started
                   </button>
                 </SignUpButton>
