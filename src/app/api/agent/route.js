@@ -18,9 +18,10 @@ export async function POST(request) {
     }
 
     const modelResponse = await model.invoke(prompt);
-    console.log(modelResponse.content);
+    const response = modelResponse.content;
+    console.log(response);
 
-    return NextResponse.json({ modelResponse });
+    return NextResponse.json({ response });
   } catch (error) {
     console.error("Agent error:", error);
     return NextResponse.json(
