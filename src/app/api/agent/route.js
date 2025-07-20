@@ -1,10 +1,14 @@
 import { NextResponse } from "next/server";
 import { ChatGroq } from "@langchain/groq";
+import { ChatMessageHistory } from "langchain/memory";
+import { AIMessage, HumanMessage } from "@langchain/core/messages";
 
 const model = new ChatGroq({
   model: "llama3-70b-8192",
   apiKey: process.env.GROQ_API_KEY,
 });
+
+const memory = new ChatMessageHistory();
 
 export async function POST(request) {
   try {
@@ -17,11 +21,14 @@ export async function POST(request) {
       );
     }
 
-    const modelResponse = await model.invoke(prompt);
-    const response = modelResponse.content;
-    console.log(response);
+    await memory.addMessage(new HumanMessage(prompt));
+    const messages = await memory.getMessages();
 
-    return NextResponse.json({ response });
+    const modelResponse = await model.invoke(messages);
+
+    await memory.addMessage(new AIMessage(modelResponse.content));
+
+    return NextResponse.json({ response: modelResponse.content });
   } catch (error) {
     console.error("Agent error:", error);
     return NextResponse.json(
