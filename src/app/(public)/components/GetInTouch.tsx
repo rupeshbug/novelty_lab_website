@@ -24,7 +24,7 @@ export default function GetInTouch() {
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 border-2 border-[#09bbc8] text-[#09bbc8] px-6 py-3 rounded-full font-semibold hover:bg-[#09bbc8]/10 transition"
+              className="inline-flex items-center gap-2 border-2 border-[#09bbc8] text-gray-200 px-6 py-3 rounded-full font-semibold hover:bg-[#09bbc8]/10 transition"
             >
               <Rocket size={20} />
               Let’s Collaborate
