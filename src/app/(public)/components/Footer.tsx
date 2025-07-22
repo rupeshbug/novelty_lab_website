@@ -12,7 +12,7 @@ export default function FooterExperiment() {
       <div className="relative mx-auto grid grid-cols-1 md:grid-cols-4 gap-14 text-slate-100">
         {/* Brand */}
         <div className="space-y-4">
-          <h2 className="text-3xl font-black">Novelty Lab</h2>
+          <h2 className="text-3xl font-black text-[#09bbc8]">Novelty Lab</h2>
           <p className="text-md max-w-xs">
             Contact us so we can help you grow.
           </p>
@@ -27,7 +27,7 @@ export default function FooterExperiment() {
             />
             <button
               type="submit"
-              className="bg-yellow-400 text-slate-50 px-5 py-3 cursor-pointer font-semibold rounded-r-md"
+              className="bg-yellow-400 opacity-90 text-slate-50 px-5 py-3 cursor-pointer font-semibold rounded-r-md"
             >
               Subscribe
             </button>
