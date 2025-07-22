@@ -1,6 +1,6 @@
 export default function FooterExperiment() {
   return (
-    <footer className="relative overflow-hidden bg-gradient-to-br from-[#899fd4] to-[#023549] text-gray-800 py-16 px-6 md:px-20 lg:px-40 mt-40">
+    <footer className="relative overflow-hidden bg-gradient-to-r from-cyan-500/5 to-blue-500/5 text-gray-800 py-16 px-6 md:px-20 lg:px-40 mt-40">
       {/* Large, faint background label - hidden on small screens */}
       <span className="pointer-events-none select-none absolute inset-0 hidden sm:flex justify-center items-center md:justify-start md:pl-24 overflow-hidden">
         <span className="whitespace-nowrap font-extrabold text-[14vw] sm:text-[12vw] md:text-[10vw] leading-none text-gray-100 opacity-20 uppercase mx-auto">
