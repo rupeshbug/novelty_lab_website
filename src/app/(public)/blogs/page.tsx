@@ -371,7 +371,7 @@ export default function BlogLandingPage() {
 
                               {/* Read More Button */}
                               <motion.div
-                                className="flex items-center gap-2 text-cyan-400 font-medium text-sm group-hover:gap-3 transition-all mt-auto"
+                                className="flex items-center gap-2 text-[#09bbc8] font-medium text-sm group-hover:gap-3 transition-all mt-auto"
                                 animate={{
                                   x: hoveredCard === blog.id ? 5 : 0,
                                 }}
