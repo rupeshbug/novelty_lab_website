@@ -9,14 +9,8 @@ import {
   Clock,
   ArrowRight,
   Lightbulb,
-  Zap,
   Brain,
-  Code,
   Rocket,
-  Users,
-  ChevronRight,
-  Eye,
-  Heart,
 } from "lucide-react";
 import Link from "next/link";
 import Navbar from "../components/Navbar";
