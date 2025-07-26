@@ -155,7 +155,7 @@ const OnboardingFlow = () => {
                 Welcome to Your AI Journey
               </h1>
               <p className="text-gray-300 text-lg">
-                Let's start by learning about your business so our AI agent can
+                Lets start by learning about your business so our AI agent can
                 provide personalized assistance
               </p>
             </div>
