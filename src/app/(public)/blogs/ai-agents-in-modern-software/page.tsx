@@ -20,6 +20,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "../../components/Navbar";
+import styles from "../blog.module.css";
 
 export default function AIAgentsBlogPage() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -36,17 +37,15 @@ export default function AIAgentsBlogPage() {
     title: "AI Agents in Modern Software Systems",
     description:
       "A comprehensive deep dive into the role of AI agents in modern software systems.",
-    author: "Dr. Sarah Chen",
-    publishedDate: "2024-12-15",
+    author: "Rupesh Chaulagain",
+    publishedDate: "2025-7-26",
     readTime: "8 min read",
-    views: "2.3k",
-    likes: 147,
     tags: [
-      "AI",
-      "LangChain",
-      "Pinecone",
-      "Vector Databases",
+      "AI Agents",
       "Machine Learning",
+      "Automation",
+      "Customer Experience",
+      "Enterprise AI",
     ],
     category: "Engineering & Technology",
     image: "/images/ai-agents-hero.jpg",
@@ -186,11 +185,11 @@ export default function AIAgentsBlogPage() {
             </div>
 
             {/* Article Content */}
-            <div className="space-y-6 text-gray-200 leading-relaxed">
-              <h2 className="text-2xl font-bold text-white mb-4">
+            <div className="space-y-6 text-gray-200 leading-relaxed text-justify">
+              <h2 className="text-2xl font-bold text-slate-200 mb-4">
                 Introduction
               </h2>
-              <p>
+              <p className="text-slate-300">
                 With the advent of large language models (LLMs), the field of AI
                 has been revolutionized. Remember when chatbots could only
                 handle simple user queries and provide information based solely
@@ -208,8 +207,10 @@ export default function AIAgentsBlogPage() {
                 that they enable software to perform complex tasks with a level
                 of autonomy and adaptability that was once thought impossible.
               </p>
-              <h3>Defining AI agents and Their Core Capabilities</h3>
-              <p>
+              <h3 className="text-xl font-bold text-slate-200 mb-4">
+                Defining AI agents and Their Core Capabilities
+              </h3>
+              <p className="text-slate-300">
                 An AI agent can be broadly defined as a program designed to
                 perform tasks autonomously, learning from data and user
                 interactions to refine its performance. Unlike traditional
@@ -219,7 +220,7 @@ export default function AIAgentsBlogPage() {
                 and make decisions. As a result, these agents can adapt to
                 changing circumstances and improve over time.
               </p>
-              <p>
+              <p className="text-slate-300">
                 The emergence of agentic AI has generated significant interest
                 in the field of artificial intelligence. Traditional AI systems,
                 often referred to as non-agentic AI, are more common and operate
@@ -236,7 +237,7 @@ export default function AIAgentsBlogPage() {
                 processes available resources, and leverages context to bridge
                 gaps in information or functionality.
               </p>
-              <p>
+              <p className="text-slate-300">
                 The capabilities of AI agents vary widely, from simple tasks
                 like answering customer inquiries to more complex functions like
                 detecting fraud or optimizing supply chains. For instance,
@@ -248,10 +249,10 @@ export default function AIAgentsBlogPage() {
                 users and systems in a highly contextual and dynamic manner.
               </p>
 
-              <h3 className="text-2xl font-bold text-white mt-8 mb-4">
+              <h3 className="text-xl font-bold text-slate-200 mb-4">
                 Enhancing User Experience in Customer Service and Support
               </h3>
-              <p>
+              <p className="text-slate-300">
                 Think of AI agents like employees who can work 24/7 in the
                 background. Worried about job loss? Well, the opportunities they
                 bring are even greater. One of the most prominent applications
@@ -267,7 +268,7 @@ export default function AIAgentsBlogPage() {
                 but also predict additional information the user may need,
                 creating a proactive and satisfying customer experience.
               </p>
-              <p>
+              <p className="text-slate-300">
                 In the healthcare sector, AI agents are used to provide patient
                 support by scheduling appointments, answering frequently asked
                 questions, and even offering preliminary advice based on symptom
@@ -278,8 +279,10 @@ export default function AIAgentsBlogPage() {
                 fosters engagement, and helps healthcare providers manage
                 resources more efficiently.
               </p>
-              <h3>AI agents in Automation and Operational Efficiency</h3>
-              <p>
+              <h3 className="text-xl font-bold text-slate-200 mb-4">
+                AI agents in Automation and Operational Efficiency
+              </h3>
+              <p className="text-slate-300">
                 Beyond customer interaction, AI agents excel at performing
                 repetitive and time-sensitive tasks autonomously, making them
                 invaluable for automation. By automating tasks that would
@@ -288,7 +291,7 @@ export default function AIAgentsBlogPage() {
                 creative endeavors. This not only boosts productivity but also
                 enhances overall efficiency.
               </p>
-              <p>
+              <p className="text-slate-300">
                 In industries like logistics and supply chain management, AI
                 agents are particularly useful. They can monitor stock levels,
                 predict inventory needs, and optimize shipping routes based on
@@ -298,7 +301,7 @@ export default function AIAgentsBlogPage() {
                 capability reduces the need for constant human oversight and
                 significantly improves operational efficiency.
               </p>
-              <p>
+              <p className="text-slate-300">
                 E-commerce is another domain where AI agents shine. They can
                 interact with customers, place orders, assist with queries, and
                 provide personalized recommendations, all while streamlining the
@@ -308,8 +311,10 @@ export default function AIAgentsBlogPage() {
                 you won’t miss a customer, offering timely and consistent
                 support 24/7.
               </p>
-              <h3>AI Agents in Personalization and Adaptive Learning</h3>
-              <p>
+              <h3 className="text-xl font-bold text-slate-200 mb-4">
+                AI Agents in Personalization and Adaptive Learning
+              </h3>
+              <p className="text-slate-300">
                 One of the most transformative capabilities of AI agents in
                 software systems is their ability to personalize user
                 experiences. Through adaptive learning, AI agents can analyze
@@ -321,7 +326,7 @@ export default function AIAgentsBlogPage() {
                 the platform more engaging and enjoyable for each user,
                 enhancing customer satisfaction and retention.
               </p>
-              <p>
+              <p className="text-slate-300">
                 In educational software, AI agents create customized learning
                 paths based on student performance, strengths, and areas that
                 need improvement. An AI-driven tutor can adjust lesson plans,
@@ -331,10 +336,10 @@ export default function AIAgentsBlogPage() {
                 makes the educational process more interactive and supportive,
                 adapting in real-time to the student’s progress.
               </p>
-              <h3>
+              <h3 className="text-xl font-bold text-slate-200 mb-4">
                 Real-World Applications: AI Agents in Social Media and Marketing
               </h3>
-              <p>
+              <p className="text-slate-300">
                 In social media and marketing, AI agents play a crucial role by
                 analyzing user interactions and providing insights that drive
                 targeted advertising and customer engagement. For instance, on
@@ -346,13 +351,13 @@ export default function AIAgentsBlogPage() {
                 in real-time, offering product suggestions or answering
                 questions to enhance the purchasing journey.
               </p>
-              <p>
+              <p className="text-slate-300">
                 For example, a user might comment on a brand's Instagram post
                 asking about the availability of a particular product. An AI
                 agent can automatically respond to the comment, check inventory
                 levels, and guide the user through the purchase process.
               </p>
-              <p>
+              <p className="text-slate-300">
                 Conclusively, AI agents have become fundamental to modern
                 software systems, offering solutions that are intelligent,
                 responsive, and capable of continuous operation. Through
