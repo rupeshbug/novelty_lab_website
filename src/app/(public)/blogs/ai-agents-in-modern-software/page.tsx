@@ -226,7 +226,7 @@ export default function AIAgentsBlogPage() {
                 often referred to as non-agentic AI, are more common and operate
                 within predefined boundaries. For instance, traditional chatbots
                 respond to user queries based solely on their training data.
-                When asked with unique questions that they haven't seen in
+                When asked with unique questions that they haven&apos;t seen in
                 training data, they perform poorly. Their scope is limited, and
                 the responses have short-term objectives as they have no memory
                 and cannot adapt as per the context. In contrast, agentic AI
@@ -263,10 +263,10 @@ export default function AIAgentsBlogPage() {
                 troubleshoot common issues without human intervention. This is
                 particularly beneficial in retail and e-commerce, where
                 customers expect quick responses. They can answer questions like
-                “What are the specifications of this product?” or “When will my
-                order be delivered?” These agents not only respond accurately
-                but also predict additional information the user may need,
-                creating a proactive and satisfying customer experience.
+                What are the specifications of this product? or When will my
+                order be delivered? These agents not only respond accurately but
+                also predict additional information the user may need, creating
+                a proactive and satisfying customer experience.
               </p>
               <p className="text-slate-300">
                 In the healthcare sector, AI agents are used to provide patient
@@ -334,7 +334,7 @@ export default function AIAgentsBlogPage() {
                 offering a more individualized learning experience. This
                 personalization not only improves learning outcomes but also
                 makes the educational process more interactive and supportive,
-                adapting in real-time to the student's progress.
+                adapting in real-time to the student&apos;s progress.
               </p>
               <h3 className="text-xl font-bold text-slate-200 mb-4">
                 Real-World Applications: AI Agents in Social Media and Marketing
@@ -352,10 +352,11 @@ export default function AIAgentsBlogPage() {
                 questions to enhance the purchasing journey.
               </p>
               <p className="text-slate-300">
-                For example, a user might comment on a brand's Instagram post
-                asking about the availability of a particular product. An AI
-                agent can automatically respond to the comment, check inventory
-                levels, and guide the user through the purchase process.
+                For example, a user might comment on a brand&apos;s Instagram
+                post asking about the availability of a particular product. An
+                AI agent can automatically respond to the comment, check
+                inventory levels, and guide the user through the purchase
+                process.
               </p>
               <p className="text-slate-300">
                 Conclusively, AI agents have become fundamental to modern
