@@ -18,16 +18,30 @@ import {
   Sparkles,
 } from "lucide-react";
 
+// Define proper types
+interface BusinessData {
+  name: string;
+  domain: string;
+  location: string;
+}
+
+interface SoftwareOption {
+  id: string;
+  name: string;
+  icon: React.ComponentType<{ className?: string }>;
+  description: string;
+}
+
 const OnboardingFlow = () => {
-  const [currentStep, setCurrentStep] = useState(1);
-  const [businessData, setBusinessData] = useState({
+  const [currentStep, setCurrentStep] = useState<number>(1);
+  const [businessData, setBusinessData] = useState<BusinessData>({
     name: "",
     domain: "",
     location: "",
   });
-  const [selectedSoftware, setSelectedSoftware] = useState([]);
+  const [selectedSoftware, setSelectedSoftware] = useState<string[]>([]);
 
-  const softwareOptions = [
+  const softwareOptions: SoftwareOption[] = [
     {
       id: "web-dev",
       name: "Web Development",
@@ -84,10 +98,10 @@ const OnboardingFlow = () => {
     }
   };
 
-  const toggleSoftware = (softwareId: any) => {
-    setSelectedSoftware((prev: any) =>
+  const toggleSoftware = (softwareId: string) => {
+    setSelectedSoftware((prev: string[]) =>
       prev.includes(softwareId)
-        ? prev.filter((id: any) => id !== softwareId)
+        ? prev.filter((id: string) => id !== softwareId)
         : [...prev, softwareId]
     );
   };
@@ -236,7 +250,7 @@ const OnboardingFlow = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 mb-8">
-              {softwareOptions.map((option: any) => {
+              {softwareOptions.map((option: SoftwareOption) => {
                 const IconComponent = option.icon;
                 const isSelected = selectedSoftware.includes(option.id);
 
