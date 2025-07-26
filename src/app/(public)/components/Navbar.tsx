@@ -42,6 +42,7 @@ export default function Navbar() {
               { label: "Our Approach", href: "/approach" },
               { label: "Services", href: "/services" },
               { label: "About", href: "/about" },
+              { label: "Blogs", href: "/blogs" },
             ].map(({ label, href }) => (
               <Link
                 key={label}
@@ -88,6 +89,7 @@ export default function Navbar() {
                 { label: "Our Approach", href: "/approach" },
                 { label: "Services", href: "/services" },
                 { label: "About", href: "/about" },
+                { label: "Blogs", href: "/blogs" },
               ].map(({ label, href }) => (
                 <Link
                   key={label}
