@@ -308,8 +308,8 @@ export default function AIAgentsBlogPage() {
                 customer experience and ensuring that orders are processed
                 efficiently. And perhaps most importantly, if you own a business
                 that deals with thousands of users daily, AI agents ensure that
-                you won’t miss a customer, offering timely and consistent
-                support 24/7.
+                you wont miss a customer, offering timely and consistent support
+                24/7.
               </p>
               <h3 className="text-xl font-bold text-slate-200 mb-4">
                 AI Agents in Personalization and Adaptive Learning
@@ -334,7 +334,7 @@ export default function AIAgentsBlogPage() {
                 offering a more individualized learning experience. This
                 personalization not only improves learning outcomes but also
                 makes the educational process more interactive and supportive,
-                adapting in real-time to the student’s progress.
+                adapting in real-time to the student's progress.
               </p>
               <h3 className="text-xl font-bold text-slate-200 mb-4">
                 Real-World Applications: AI Agents in Social Media and Marketing
