@@ -149,7 +149,7 @@ export default function AIAgentLongTermMemoryBlogPage() {
               </code>{" "}
               file:
             </p>
-            <div className="bg-gray-900 rounded-lg p-4 my-4 border border-gray-700">
+            <div className="bg-gray-900 rounded-lg p-4 my-6 border border-gray-700">
               <pre className="text-green-400 text-sm">
                 <code>GOOGLE_API_KEY=your_google_api_key</code>
               </pre>
