@@ -128,7 +128,8 @@ export default function AIAgentsBlogPage() {
               users through basic options, or executing simple tasks like
               checking store hours or resetting passwords. Many chatbots are
               powered by lighter natural language models that process text but
-              don't truly understand context or reason beyond a limited scope.
+              don&apos;t truly understand context or reason beyond a limited
+              scope.
               <br />
               <br />
               AI agents, on the other hand, are far more advanced. They leverage
