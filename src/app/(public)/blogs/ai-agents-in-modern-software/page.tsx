@@ -47,6 +47,14 @@ export default function AIAgentsBlogPage() {
 
   return (
     <>
+      <Head>
+        <title>{blogData.title} | Novelty Lab</title>
+        <meta name="description" content={blogData.description} />
+        <meta property="og:title" content={blogData.title} />
+        <meta property="og:description" content={blogData.description} />
+        <meta property="og:image" content={blogData.image} />
+        <meta property="og:type" content="article" />
+      </Head>
       <Navbar />
       <main ref={containerRef} className="min-h-screen text-white mt-16">
         {/* Hero Section with Parallax */}
