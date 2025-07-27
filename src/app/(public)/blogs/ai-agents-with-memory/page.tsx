@@ -90,7 +90,7 @@ export default function AIAgentLongTermMemoryBlogPage() {
             </p>
 
             <p className="text-slate-300">
-              We'll build a terminal-based chatbot that remembers important
+              We&apos;ll build a terminal-based chatbot that remembers important
               details using a vector database (FAISS) for persistent memory. The
               agent uses LangGraph, Gemini (via LangChain), and Google
               embeddings to manage conversations across sessions.
@@ -109,8 +109,8 @@ export default function AIAgentLongTermMemoryBlogPage() {
               the next conversation.
             </p>
             <p className="text-slate-300">
-              This way, when you tell the AI your name today, it'll remember it
-              tomorrow.
+              This way, when you tell the AI your name today, it&apos;ll
+              remember it tomorrow.
             </p>
 
             <hr className="border-gray-600 my-8" />
@@ -130,7 +130,7 @@ export default function AIAgentLongTermMemoryBlogPage() {
             </div>
 
             <p className="text-slate-300">
-              We'll need an API key from{" "}
+              We&apos;ll need an API key from{" "}
               <a
                 href="https://makersuite.google.com/app"
                 className="text-cyan-400 hover:text-cyan-300 underline"
@@ -139,7 +139,7 @@ export default function AIAgentLongTermMemoryBlogPage() {
               >
                 Google AI Studio
               </a>
-              . It's free to sign up and lets us use LLMs like Gemini.
+              . It&apos;s free to sign up and lets us use LLMs like Gemini.
             </p>
 
             <p className="text-slate-300">
@@ -196,7 +196,7 @@ GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")`}
               <code className="bg-gray-800 px-2 py-1 rounded text-cyan-300">
                 langchain_google_genai
               </code>
-              ) and Google's embedding model.
+              ) and Google&apos;s embedding model.
             </p>
             <div className="bg-gray-900 rounded-lg p-4 my-6 border border-gray-700">
               <pre className="text-green-400 text-sm overflow-x-auto">
@@ -314,7 +314,7 @@ def search_recall_memories(query: str, config: RunnableConfig) -> List[str]:
               <code className="bg-gray-800 px-2 py-1 rounded text-cyan-300">
                 @tool
               </code>
-              . This is required by LangChain to generate the tool's
+              . This is required by LangChain to generate the tool&apos;s
               description.
             </p>
 
@@ -536,7 +536,7 @@ graph = builder.compile(checkpointer=MemorySaver())`}</code>
               Final Thoughts
             </h2>
             <p className="text-slate-300">
-              We've built a terminal-based AI assistant that remembers past
+              We&apos;ve built a terminal-based AI assistant that remembers past
               interactions — a step closer to truly personalized AI experiences.
               Unlike typical chatbots that forget everything after a session
               ends, this agent recalls meaningful details, adapts over time, and
