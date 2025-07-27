@@ -21,7 +21,6 @@ interface BlogData {
   publishedDate: string;
   readTime: string;
   category: string;
-  image: string;
 }
 
 export default function BlogHero({ blogData }: { blogData: BlogData }) {
@@ -32,7 +31,6 @@ export default function BlogHero({ blogData }: { blogData: BlogData }) {
         <meta name="description" content={blogData.description} />
         <meta property="og:title" content={blogData.title} />
         <meta property="og:description" content={blogData.description} />
-        <meta property="og:image" content={blogData.image} />
         <meta property="og:type" content="article" />
       </Head>
       <Navbar />

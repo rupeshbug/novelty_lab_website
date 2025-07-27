@@ -33,7 +33,6 @@ export default function AIAgentsBlogPage() {
       "Business Automation",
     ],
     category: "Product & Business Innovation",
-    image: "/images/ai-agents-hero.jpg",
   };
 
   return (
