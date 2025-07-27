@@ -14,7 +14,7 @@ import {
   Megaphone,
 } from "lucide-react";
 
-export default function AIAgentsBlogPage() {
+export default function AIAgentsInModernSoftwareBlogPage() {
   const containerRef = useRef<HTMLDivElement>(null);
 
   // Blog metadata
