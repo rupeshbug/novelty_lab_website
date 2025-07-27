@@ -1,9 +1,8 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import {
-  BadgeCheck,
   BookOpen,
   Calendar,
   Clock,
@@ -27,17 +26,24 @@ export default function BlogLandingPage() {
       blogs: [
         {
           id: 1,
-          title: "The Future of Human-AI Collaboration",
+          title:
+            "How AI Bots and Agents Are Transforming Social Media for Businesses",
           description:
-            "Exploring how teams can leverage AI tools to enhance creativity, productivity, and innovation in the workplace.",
-          image: "/two.png",
+            "An insightful look into how AI bots and agents are transforming social media engagement for businesses.",
+          image: "/ai-agents-social-media.png",
           author: "Rupesh Chaulagain",
-          date: "2024-12-14",
+          date: "2025-7-28",
           readTime: "5 min read",
           views: "1.9k",
           likes: 89,
-          tags: ["Innovation", "Collaboration", "Future"],
-          href: "/blogs/ai-agents-in-modern-software",
+          tags: [
+            "AI Agents",
+            "Chatbots",
+            "Social Media",
+            "Customer Engagement",
+            "Business Automation",
+          ],
+          href: "/blogs/ai-agents-in-social-media",
           featured: true,
         },
         {
@@ -100,7 +106,13 @@ export default function BlogLandingPage() {
           readTime: "8 min read",
           views: "2.3k",
           likes: 147,
-          tags: ["AI", "LangChain", "Pinecone"],
+          tags: [
+            "AI Agents",
+            "Machine Learning",
+            "Automation",
+            "Customer Experience",
+            "Enterprise AI",
+          ],
           href: "/blogs/ai-agents-in-modern-software",
           featured: true,
         },
