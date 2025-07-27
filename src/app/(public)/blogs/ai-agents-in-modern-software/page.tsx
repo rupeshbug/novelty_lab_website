@@ -70,7 +70,7 @@ export default function AIAgentsBlogPage() {
           {/* Featured Image */}
           <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 flex items-center justify-center">
             <Image
-              src="/our-future.png"
+              src="/ai-modern-software.png"
               alt="AI detective bot"
               fill
               className="opacity-90 drop-shadow-2xl"
