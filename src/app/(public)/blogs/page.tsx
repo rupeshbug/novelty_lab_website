@@ -108,15 +108,16 @@ export default function BlogLandingPage() {
         },
         {
           id: 6,
-          title: "LangGraph Workflows Explained",
+          title:
+            "Building an AI Agent with Long-Term Memory Using Vector Database",
           description:
-            "Understand how LangGraph helps orchestrate complex multi-step AI pipelines with persistent state management and error handling.",
+            "Learn how to build an AI assistant that remembers use input across sessons by using LangGraph and FAISS vector store.",
           image: "/images/blog-6.jpg",
-          author: "Marcus Rodriguez",
+          author: "Rupesh Chaulagain",
           date: "2024-12-10",
           readTime: "6 min read",
-          tags: ["LangGraph", "Workflows", "Python"],
-          href: "/blogs/ai-agents-in-modern-software",
+          tags: ["LangGraph", "Agentic AI", "Vector Database", "LLM", "FAISS"],
+          href: "/blogs/ai-agents-with-memory",
         },
         {
           id: 7,

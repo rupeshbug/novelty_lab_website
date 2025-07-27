@@ -39,7 +39,7 @@ export default function ProblemSection() {
           <div className="flex items-center justify-center relative">
             <div className="relative">
               <Image
-                src="/det_bot_1.png"
+                src="/detective_bot.png"
                 alt="AI detective bot"
                 width={120}
                 height={120}
