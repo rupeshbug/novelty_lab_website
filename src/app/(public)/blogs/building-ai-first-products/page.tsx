@@ -99,18 +99,18 @@ export default function AIFirstProductsBlogPage() {
             </h2>
             <p className="text-slate-300">
               The era of retrofitting AI into existing products is ending.
-              Today's most successful companies are building AI-first
+              Today&apos;s most successful companies are building AI-first
               products—solutions designed from the ground up with artificial
               intelligence as the core foundation rather than an afterthought.
               This fundamental shift in approach is creating unprecedented
               competitive advantages and redefining entire industries.
             </p>
             <p className="text-slate-300">
-              AI-first products don't just use AI; they are AI. Every feature,
-              user interaction, and business process is designed to leverage
-              machine learning, natural language processing, and intelligent
-              automation. This approach enables companies to create products
-              that learn, adapt, and improve automatically, delivering
+              AI-first products don&apos;t just use AI; they are AI. Every
+              feature, user interaction, and business process is designed to
+              leverage machine learning, natural language processing, and
+              intelligent automation. This approach enables companies to create
+              products that learn, adapt, and improve automatically, delivering
               increasingly personalized experiences that traditional software
               simply cannot match.
             </p>
@@ -120,7 +120,7 @@ export default function AIFirstProductsBlogPage() {
               Understanding AI-First vs. AI-Enhanced
             </h2>
             <p className="text-slate-300">
-              Before diving into strategy, it's crucial to understand the
+              Before diving into strategy, it&apos;s crucial to understand the
               distinction between AI-first and AI-enhanced products:
             </p>
 
@@ -278,7 +278,7 @@ export default function AIFirstProductsBlogPage() {
               </li>
               <li>
                 <strong>Error Handling:</strong> Graceful degradation when AI
-                doesn't understand
+                doesn&apos;t understand
               </li>
               <li>
                 <strong>Progressive Disclosure:</strong> Revealing capabilities
@@ -579,7 +579,7 @@ export default function AIFirstProductsBlogPage() {
               Building successful AI-first products requires a fundamental shift
               in thinking—from feature-driven development to intelligence-driven
               experiences. The companies that master this transition will create
-              products that don't just serve users but understand them,
+              products that don&apos;t just serve users but understand them,
               anticipate their needs, and evolve alongside them.
             </p>
             <p className="text-slate-300">
@@ -591,9 +591,10 @@ export default function AIFirstProductsBlogPage() {
             </p>
             <p className="text-slate-300">
               The future belongs to products that harness AI not as a feature,
-              but as their fundamental operating principle. The question isn't
-              whether AI will transform your industry—it's whether you'll be
-              leading that transformation or responding to it.
+              but as their fundamental operating principle. The question
+              isn&apos;t whether AI will transform your industry—it&apos;s
+              whether you&apos;ll be leading that transformation or responding
+              to it.
             </p>
           </div>
         </motion.article>
