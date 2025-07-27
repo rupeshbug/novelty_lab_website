@@ -323,7 +323,7 @@ def search_recall_memories(query: str, config: RunnableConfig) -> List[str]:
                 <span className="text-yellow-400 font-bold">❓</span>
                 <span>
                   <strong>Common Question</strong>:{" "}
-                  <em>"What does the agent decide to remember?"</em>
+                  <em>&quot;What does the agent decide to remember?&quot;</em>
                   <br />
                   That depends on the model. When the prompt tells the model it
                   has a memory-saving tool, it decides what to save via tool
@@ -492,7 +492,7 @@ graph = builder.compile(checkpointer=MemorySaver())`}</code>
 
             <div className="relative h-48 md:h-64 rounded-2xl overflow-hidden my-8 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 flex items-center justify-center">
               <Image
-                src="/assets/images/agent_workflow.png"
+                src="/agent_workflow.png"
                 alt="Agent workflow diagram"
                 fill
                 className="opacity-90 drop-shadow-2xl object-contain"
