@@ -22,7 +22,7 @@ export default function AIAgentsBlogPage() {
     description:
       "Learn how to build an AI assistant that remembers use input across sessons by using LangGraph and FAISS vector store.",
     author: "Rupesh Chaulagain",
-    publishedDate: "2025-7-28",
+    publishedDate: "2025-7-27",
     readTime: "8 min read",
     tags: ["LangGraph", "Agentic AI", "Vector Database", "LLM", "Memory"],
     category: "Engineering & Technology",

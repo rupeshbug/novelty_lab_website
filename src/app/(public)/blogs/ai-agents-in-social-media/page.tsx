@@ -24,7 +24,7 @@ export default function AIAgentsBlogPage() {
       "An insightful look into how AI bots and agents are transforming social media engagement for businesses.",
     author: "Rupesh Chaulagain",
     publishedDate: "2025-7-28",
-    readTime: "8 min read",
+    readTime: "6 min read",
     tags: [
       "AI Agents",
       "Chatbots",
