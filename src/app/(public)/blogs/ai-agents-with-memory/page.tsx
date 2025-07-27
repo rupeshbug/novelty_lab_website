@@ -18,21 +18,14 @@ export default function AIAgentsBlogPage() {
 
   // Blog metadata
   const blogData = {
-    title:
-      "How AI Bots and Agents Are Transforming Social Media for Businesses",
+    title: "Building an AI Agent with Long-Term Memory Using Vector Database",
     description:
-      "An insightful look into how AI bots and agents are transforming social media engagement for businesses.",
+      "Learn how to build an AI assistant that remembers use input across sessons by using LangGraph and FAISS vector store.",
     author: "Rupesh Chaulagain",
     publishedDate: "2025-7-28",
     readTime: "8 min read",
-    tags: [
-      "AI Agents",
-      "Chatbots",
-      "Social Media",
-      "Customer Engagement",
-      "Business Automation",
-    ],
-    category: "Product & Business Innovation",
+    tags: ["LangGraph", "Agentic AI", "Vector Database", "LLM", "Memory"],
+    category: "Engineering & Technology",
   };
 
   return (
