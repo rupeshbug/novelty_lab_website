@@ -71,7 +71,7 @@ export default function AIAgentLongTermMemoryBlogPage() {
           className="prose prose-invert prose-lg max-w-none"
         >
           {/* Featured Image */}
-          <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 flex items-center justify-center">
+          <div className="relative h-64 md:h-85 rounded-2xl overflow-hidden mb-8 bg-gradient-to-br from-purple-500/20 to-cyan-500/20 flex items-center justify-center">
             <Image
               src="/ai_agent_memory.png"
               alt="Illustration of an AI chatbot in a terminal with memory recall features"
