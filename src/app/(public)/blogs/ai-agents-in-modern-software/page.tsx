@@ -1,10 +1,18 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import BlogHero from "../../components/BlogHero";
 import Link from "next/link";
+import {
+  DoorOpen,
+  Bot,
+  Headphones,
+  Settings,
+  Brain,
+  Megaphone,
+} from "lucide-react";
 
 export default function AIAgentsBlogPage() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -80,9 +88,12 @@ export default function AIAgentsBlogPage() {
 
           {/* Article Content */}
           <div className="space-y-6 text-gray-200 leading-relaxed text-justify">
-            <h2 className="text-2xl font-bold text-slate-200 mb-4">
-              Introduction
-            </h2>
+            <div className="flex gap-2 items-center mb-4">
+              <DoorOpen className="text-red-400 h-7 w-7" />
+              <h2 className="text-2xl font-bold text-slate-200">
+                Introduction
+              </h2>
+            </div>
             <p className="text-slate-300">
               With the advent of large language models (LLMs), the field of AI
               has been revolutionized. Remember when chatbots could only handle
@@ -101,9 +112,12 @@ export default function AIAgentsBlogPage() {
               tasks with a level of autonomy and adaptability that was once
               thought impossible.
             </p>
-            <h3 className="text-xl font-bold text-slate-200 mb-4">
-              Defining AI agents and Their Core Capabilities
-            </h3>
+            <div className="flex items-center gap-2 mb-4">
+              <Bot className="text-cyan-400 h-7 w-7" />
+              <h3 className="text-xl font-bold text-slate-200">
+                Defining AI agents and Their Core Capabilities
+              </h3>
+            </div>
             <p className="text-slate-300">
               An AI agent can be broadly defined as a program designed to
               perform tasks autonomously, learning from data and user
@@ -142,10 +156,12 @@ export default function AIAgentsBlogPage() {
               assistants, capable of interacting with users and systems in a
               highly contextual and dynamic manner.
             </p>
-
-            <h3 className="text-xl font-bold text-slate-200 mb-4">
-              Enhancing User Experience in Customer Service and Support
-            </h3>
+            <div className="flex gap-2 items-center mb-4">
+              <Headphones className="text-purple-400 h-7 w-7" />
+              <h3 className="text-xl font-bold text-slate-200">
+                Enhancing User Experience in Customer Service and Support
+              </h3>
+            </div>
             <p className="text-slate-300">
               Think of AI agents like employees who can work 24/7 in the
               background. Worried about job loss? Well, the opportunities they
@@ -173,9 +189,12 @@ export default function AIAgentsBlogPage() {
               fosters engagement, and helps healthcare providers manage
               resources more efficiently.
             </p>
-            <h3 className="text-xl font-bold text-slate-200 mb-4">
-              AI agents in Automation and Operational Efficiency
-            </h3>
+            <div className="flex items-center gap-2 mb-4">
+              <Settings className="text-indigo-400 h-6 w-6" />
+              <h3 className="text-xl font-bold text-slate-200">
+                AI agents in Automation and Operational Efficiency
+              </h3>
+            </div>
             <p className="text-slate-300">
               Beyond customer interaction, AI agents excel at performing
               repetitive and time-sensitive tasks autonomously, making them
@@ -205,9 +224,12 @@ export default function AIAgentsBlogPage() {
               you wont miss a customer, offering timely and consistent support
               24/7.
             </p>
-            <h3 className="text-xl font-bold text-slate-200 mb-4">
-              AI Agents in Personalization and Adaptive Learning
-            </h3>
+            <div className="flex items-center gap-2 mb-4">
+              <Brain className="text-pink-400 h-6 w-6" />
+              <h3 className="text-xl font-bold text-slate-200">
+                AI Agents in Personalization and Adaptive Learning
+              </h3>
+            </div>
             <p className="text-slate-300">
               One of the most transformative capabilities of AI agents in
               software systems is their ability to personalize user experiences.
@@ -230,9 +252,12 @@ export default function AIAgentsBlogPage() {
               more interactive and supportive, adapting in real-time to the
               student&apos;s progress.
             </p>
-            <h3 className="text-xl font-bold text-slate-200 mb-4">
-              Real-World Applications: AI Agents in Social Media and Marketing
-            </h3>
+            <div className="flex items-center gap-2 mb-4">
+              <Megaphone className="text-emerald-400 h-6 w-6" />
+              <h3 className="text-xl font-bold text-slate-200">
+                Real-World Applications: AI Agents in Social Media and Marketing
+              </h3>
+            </div>
             <p className="text-slate-300">
               In social media and marketing, AI agents play a crucial role by
               analyzing user interactions and providing insights that drive
