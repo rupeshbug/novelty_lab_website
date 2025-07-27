@@ -1,31 +1,13 @@
 "use client";
 
 import { useRef } from "react";
-import Head from "next/head";
 import { motion, useScroll, useTransform } from "framer-motion";
-import {
-  Calendar,
-  Clock,
-  User,
-  ChevronRight,
-  Code,
-  Database,
-  Brain,
-} from "lucide-react";
-import Link from "next/link";
 import Image from "next/image";
-import Navbar from "../../components/Navbar";
 import BlogHero from "../../components/BlogHero";
+import Link from "next/link";
 
 export default function AIAgentsBlogPage() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end start"],
-  });
-
-  const headerY = useTransform(scrollYProgress, [0, 1], [0, -200]);
-  const headerOpacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
 
   // Blog metadata
   const blogData = {
@@ -52,6 +34,15 @@ export default function AIAgentsBlogPage() {
 
       {/* Article Content */}
       <section className="max-w-4xl mx-auto px-6 py-16">
+        {/* Go Back Button */}
+        <div className="mb-8 text-lg">
+          <Link
+            href="/blogs"
+            className="inline-block text-[#09bbc8] hover:text-cyan-600 font-semibold"
+          >
+            ← Back to Blogs
+          </Link>
+        </div>
         {/* Tags */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -277,6 +268,15 @@ export default function AIAgentsBlogPage() {
             </p>
           </div>
         </motion.article>
+        {/* Go Back Button */}
+        <div className="mt-8 text-lg">
+          <Link
+            href="/blogs"
+            className="inline-block text-[#09bbc8] hover:text-[#07a5b0] font-semibold"
+          >
+            ← Back to Blogs
+          </Link>
+        </div>
       </section>
     </main>
   );
