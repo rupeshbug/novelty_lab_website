@@ -1,26 +1,20 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
+import Head from "next/head";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
   Calendar,
   Clock,
   User,
-  ArrowLeft,
-  Share2,
-  Bookmark,
-  Eye,
-  Heart,
   ChevronRight,
   Code,
   Database,
   Brain,
-  Zap,
 } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import Navbar from "../../components/Navbar";
-import styles from "../blog.module.css";
 
 export default function AIAgentsBlogPage() {
   const containerRef = useRef<HTMLDivElement>(null);
