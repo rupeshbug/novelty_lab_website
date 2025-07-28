@@ -17,28 +17,28 @@ import Navbar from "../components/Navbar";
 const storyChapters = [
   {
     id: 1,
-    title: "The Frustration",
-    subtitle: "Innovation Born of Necessity",
+    title: "Why We Started",
+    subtitle: "Tailored software meets the new age of AI",
     content:
-      "Like many great ideas, Novelty Lab began with a problem. Tired of traditional agencies and rigid development pipelines, we envisioned something new—an innovation-first lab for AI-first startups.",
+      "We noticed a gap—businesses wanted smarter, more adaptive tools, but off-the-shelf solutions couldn't keep up. So we set out to build personalized software powered by the latest in AI, helping businesses grow faster and smarter.",
     icon: Lightbulb,
     color: "from-amber-400 to-orange-500",
   },
   {
     id: 2,
-    title: "The Spark",
-    subtitle: "From Idea to Action",
+    title: "What Drives Us",
+    subtitle: "A lean, collaborative mindset",
     content:
-      "We began experimenting with rapid prototyping tools, open-source AI models, and cross-functional teams. The result? A system that brings ideas to life faster and better.",
+      "We don't believe in bloated roadmaps or one-size-fits-all platforms. We're builders at heart—designing, iterating, and validating ideas alongside founders to create what actually matters for their users.",
     icon: BrainCircuit,
     color: "from-blue-400 to-cyan-500",
   },
   {
     id: 3,
-    title: "The Movement",
-    subtitle: "Empowering Founders",
+    title: "Where We're Going",
+    subtitle: "AI-native products for ambitious teams",
     content:
-      "Today, we help early-stage founders build AI-powered products from idea to MVP. We're not just building software—we're building momentum.",
+      "Novelty Lab is evolving into a home for AI-driven product development. Whether you're starting from scratch or refining a vision, we’re here to help you move fast, adapt confidently, and stay ahead of the curve.",
     icon: Rocket,
     color: "from-purple-400 to-pink-500",
   },
@@ -48,23 +48,25 @@ const values = [
   {
     title: "AI-First Innovation",
     description:
-      "We leverage cutting-edge AI to solve real problems, not just follow trends",
+      "We use AI where it matters—solving real problems, not just chasing hype.",
     icon: BrainCircuit,
   },
   {
     title: "Rapid Prototyping",
-    description: "From concept to working prototype in days, not months",
+    description:
+      "Ideas shouldn't wait. We move from concept to prototype in days, not months.",
     icon: Zap,
   },
   {
     title: "Founder-Focused",
-    description: "Every decision is made with early-stage founders in mind",
+    description:
+      "Our work starts with your vision. We build like your business depends on it—because it does.",
     icon: Heart,
   },
   {
     title: "Open Innovation",
     description:
-      "We share knowledge, tools, and best practices with the community",
+      "We believe in sharing—tools, learnings, and momentum. Progress grows faster when it’s open.",
     icon: Globe,
   },
 ];
