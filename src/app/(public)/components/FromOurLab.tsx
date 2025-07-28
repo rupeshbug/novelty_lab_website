@@ -30,6 +30,7 @@ export default function BlogSection() {
       readTime: "8 min read",
       gradient: "from-blue-400 to-purple-600",
       icon: Bot,
+      href: "/blogs/ai-agents-in-modern-software",
       image: (
         <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-purple-600/20 rounded-2xl">
           <div className="absolute top-8 left-8 w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
@@ -50,6 +51,7 @@ export default function BlogSection() {
       readTime: "6 min read",
       gradient: "from-emerald-400 to-teal-600",
       icon: Share2,
+      href: "/blogs/ai-agents-in-social-media",
       image: (
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/20 to-teal-600/20 rounded-2xl">
           <div className="absolute top-8 left-8 w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
@@ -68,6 +70,7 @@ export default function BlogSection() {
       category: "AI Strategy",
       readTime: "8 min read",
       gradient: "from-orange-400 to-red-600",
+      href: "/blogs/building-ai-first-products",
       icon: Zap,
       image: (
         <div className="absolute inset-0 bg-gradient-to-br from-orange-400/20 to-red-600/20 rounded-2xl">
@@ -88,6 +91,7 @@ export default function BlogSection() {
       readTime: "10 min read",
       gradient: "from-violet-400 to-purple-600",
       icon: Brain,
+      href: "/blogs/ai-agents-with-memory",
       image: (
         <div className="absolute inset-0 bg-gradient-to-br from-violet-400/20 to-purple-600/20 rounded-2xl">
           <div className="absolute top-8 left-8 w-16 h-16 bg-white/20 rounded-xl flex items-center justify-center backdrop-blur-sm">
