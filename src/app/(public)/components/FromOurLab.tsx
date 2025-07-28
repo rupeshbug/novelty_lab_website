@@ -25,7 +25,7 @@ export default function BlogSection() {
       id: 1,
       title: "AI Agents in Modern Software Systems",
       description:
-        "A comprehensive deep dive into the role of AI agents in modern software systems.",
+        "A comprehensive deep dive into the pivotal role of AI agents in enhancing intelligence, automation, and adaptability within modern software systems.",
       category: "AI Development",
       readTime: "8 min read",
       gradient: "from-blue-400 to-purple-600",
@@ -81,11 +81,11 @@ export default function BlogSection() {
     },
     {
       id: 4,
-      title: "The Future of Machine Learning in Business Intelligence",
+      title: "Building an AI Agent with Long-Term Memory Using Vector Database",
       description:
-        "Understand how ML algorithms are transforming data analysis and decision-making processes in modern enterprises.",
-      category: "Machine Learning",
-      readTime: "12 min read",
+        "Learn how to build an AI assistant that remembers use input across sessons by using LangGraph and FAISS vector store.",
+      category: "AI Engineering",
+      readTime: "10 min read",
       gradient: "from-violet-400 to-purple-600",
       icon: Brain,
       image: (
