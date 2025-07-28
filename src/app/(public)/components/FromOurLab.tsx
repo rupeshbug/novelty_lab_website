@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { TextParticle } from "@/components/ui/text-particle";
+import Link from "next/link";
 
 export default function BlogSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -43,8 +44,7 @@ export default function BlogSection() {
     },
     {
       id: 2,
-      title:
-        "How AI Bots and Agents Are Transforming Social Media for Businesses",
+      title: "AI Agents In Social Media Businesses",
       description:
         "An insightful look into how AI bots and agents are transforming social media engagement for businesses.",
       category: "Social Media AI",
@@ -84,7 +84,7 @@ export default function BlogSection() {
     },
     {
       id: 4,
-      title: "Building an AI Agent with Long-Term Memory Using Vector Database",
+      title: "Building an AI Agent with Long-Term Memory",
       description:
         "Learn how to build an AI assistant that remembers use input across sessons by using LangGraph and FAISS vector store.",
       category: "AI Engineering",
@@ -204,35 +204,34 @@ export default function BlogSection() {
             }}
           >
             {blogPosts.map((post) => (
-              <div
-                key={post.id}
-                className="blog-card w-full sm:w-[90%] md:w-[400px] flex-shrink-0 group bg-white/5 border border-gray-200/20 rounded-2xl overflow-hidden backdrop-blur-sm transition-all duration-300 transform hover:scale-[1.03] hover:bg-white/10 hover:border-gray-200/40"
-              >
-                <div className="relative h-48">{post.image}</div>
-                <div className="p-6 space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-sm text-[#09bbc8] font-medium bg-[#09bbc8]/10 px-3 py-1 rounded-full">
-                      {post.category}
-                    </span>
-                    <span className="text-sm text-slate-400">
-                      {post.readTime}
-                    </span>
+              <Link href={post.href} key={post.id}>
+                <div className="blog-card w-full sm:w-[90%] md:w-[400px] flex-shrink-0 group bg-white/5 border border-gray-200/20 rounded-2xl overflow-hidden backdrop-blur-sm transition-all duration-300 transform hover:scale-[1.03] hover:bg-white/10 hover:border-gray-200/40">
+                  <div className="relative h-48">{post.image}</div>
+                  <div className="p-6 space-y-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-sm text-[#09bbc8] font-medium bg-[#09bbc8]/10 px-3 py-1 rounded-full">
+                        {post.category}
+                      </span>
+                      <span className="text-sm text-slate-400">
+                        {post.readTime}
+                      </span>
+                    </div>
+                    <h3 className="text-xl font-bold text-[#f5f5f5] group-hover:text-white transition-colors">
+                      {post.title}
+                    </h3>
+                    <p className="text-slate-300 text-sm leading-relaxed">
+                      {post.description}
+                    </p>
+                    <button className="inline-flex items-center gap-2 text-[#09bbc8] hover:text-[#07a3af] font-medium group/btn transition-colors pt-2">
+                      Read more
+                      <ArrowRight
+                        size={16}
+                        className="group-hover/btn:translate-x-1 transition-transform"
+                      />
+                    </button>
                   </div>
-                  <h3 className="text-xl font-bold text-[#f5f5f5] group-hover:text-white transition-colors">
-                    {post.title}
-                  </h3>
-                  <p className="text-slate-300 text-sm leading-relaxed">
-                    {post.description}
-                  </p>
-                  <button className="inline-flex items-center gap-2 text-[#09bbc8] hover:text-[#07a3af] font-medium group/btn transition-colors pt-2">
-                    Read more
-                    <ArrowRight
-                      size={16}
-                      className="group-hover/btn:translate-x-1 transition-transform"
-                    />
-                  </button>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
