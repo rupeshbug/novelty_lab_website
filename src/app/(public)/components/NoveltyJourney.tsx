@@ -21,7 +21,7 @@ export default function NoveltyJourney() {
       title: "The Spark",
       subtitle: "It started with a question",
       description:
-        "What if we could harness the power of AI to transform how software is built and used? That question sparked our mission to build smarter, adaptive systems that truly support how people and businesses work.",
+        "Modern software needs to adapt, learn, and feel more human. We felt the growing need for smarter systems—tools that evolve with users, not just serve static workflows. That’s the spark behind Novelty Lab.",
       icon: "💡",
     },
     {
@@ -34,10 +34,10 @@ export default function NoveltyJourney() {
     },
     {
       id: 3,
-      title: "The First Steps",
-      subtitle: "Building with intent",
+      title: "Where We Begin",
+      subtitle: "Starting with what matters",
       description:
-        "We began by prototyping, testing, and listening—crafting tools that adapt to people, not the other way around. Step by step, we’re shaping systems that feel more like partners than platforms.",
+        "We’re focused on building meaningful foundations—clear experiences, adaptable systems, and intelligent interfaces that actually help businesses grow from day one.",
       icon: "🏗️",
     },
     {
