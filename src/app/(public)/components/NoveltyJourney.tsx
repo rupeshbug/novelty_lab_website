@@ -19,34 +19,34 @@ export default function NoveltyJourney() {
     {
       id: 1,
       title: "The Spark",
-      subtitle: "It all started with a question",
+      subtitle: "It started with a question",
       description:
-        "What if we could make intelligent systems more human? More creative? More useful? That question launched our journey into building tools that empower creators and businesses alike.",
+        "What if we could harness the power of AI to transform how software is built and used? That question sparked our mission to build smarter, adaptive systems that truly support how people and businesses work.",
       icon: "💡",
     },
     {
       id: 2,
-      title: "The Struggle",
-      subtitle: "Great ideas met friction",
+      title: "The Friction",
+      subtitle: "One-size-fits-none",
       description:
-        "We saw people with powerful ideas get stuck—juggling tools, frameworks, and dead ends. The path from thought to product was broken. So we set out to fix it.",
-      icon: "⚙️",
+        "Too often, software forces businesses to adapt to rigid systems. We saw the cost of limited personalization—where unique needs were overlooked, and potential was left untapped.",
+      icon: "🧩",
     },
     {
       id: 3,
-      title: "The Breakthrough",
-      subtitle: "Clarity from complexity",
+      title: "The First Steps",
+      subtitle: "Building with intent",
       description:
-        "By combining AI, design, and smart automation, we created workflows where creativity flows, ideas ship faster, and teams stay focused on what matters.",
-      icon: "🚀",
+        "We began by prototyping, testing, and listening—crafting tools that adapt to people, not the other way around. Step by step, we’re shaping systems that feel more like partners than platforms.",
+      icon: "🏗️",
     },
     {
       id: 4,
       title: "The Mission",
-      subtitle: "To empower innovation at the edges",
+      subtitle: "Helping your business grow—smarter and faster",
       description:
-        "From solo creators to global teams, we build tools that help you go from zero to magic—with speed, clarity, and joy. That's the Novelty Lab promise.",
-      icon: "✨",
+        "At Novelty Lab, we build intelligent tools that empower businesses to move with clarity, adapt with confidence, and grow with less friction. We're just getting started.",
+      icon: "🚀",
     },
   ];
 
@@ -83,9 +83,9 @@ export default function NoveltyJourney() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="text-center mb-20"
+          className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
             The Journey Behind{" "}
             <span className="text-[#09bbc8] relative">
               Novelty Lab
@@ -123,7 +123,7 @@ export default function NoveltyJourney() {
             >
               {/* Text Section */}
               <div className="flex-1 text-center lg:text-left">
-                <div className="text-5xl md:text-6xl mb-6">{beat.icon}</div>
+                <div className="text-4xl md:text-5xl mb-6">{beat.icon}</div>
                 <h3 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-white mb-3">
                   {beat.title}
                 </h3>
