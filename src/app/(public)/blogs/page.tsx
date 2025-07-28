@@ -97,7 +97,7 @@ export default function BlogLandingPage() {
           id: 5,
           title: "AI Agents in Modern Software Systems",
           description:
-            "A comprehensive deep dive into how long-term memory is implemented in AI agents using LangChain and Pinecone vector databases.",
+            "A comprehensive deep dive into the role of AI agents in modern software systems.",
           image: "/images/blog-5.jpg",
           author: "Dr. Sarah Chen",
           date: "2025-7-26",

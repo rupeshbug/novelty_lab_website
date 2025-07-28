@@ -23,9 +23,9 @@ export default function BlogSection() {
   const blogPosts = [
     {
       id: 1,
-      title: "The Role of AI Agents in Modern Software Systems",
+      title: "AI Agents in Modern Software Systems",
       description:
-        "Explore how AI agents are revolutionizing software architecture and transforming the way we build intelligent applications for the future.",
+        "A comprehensive deep dive into the role of AI agents in modern software systems.",
       category: "AI Development",
       readTime: "8 min read",
       gradient: "from-blue-400 to-purple-600",
@@ -42,9 +42,10 @@ export default function BlogSection() {
     },
     {
       id: 2,
-      title: "AI Bots and Agents in Social Media for Businesses",
+      title:
+        "How AI Bots and Agents Are Transforming Social Media for Businesses",
       description:
-        "Discover how businesses are leveraging AI-powered social media bots to enhance customer engagement and drive growth.",
+        "An insightful look into how AI bots and agents are transforming social media engagement for businesses.",
       category: "Social Media AI",
       readTime: "6 min read",
       gradient: "from-emerald-400 to-teal-600",
