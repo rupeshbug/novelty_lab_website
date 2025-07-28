@@ -62,11 +62,11 @@ export default function BlogSection() {
     },
     {
       id: 3,
-      title: "Building Scalable Web Applications with Modern Frameworks",
+      title: "Building AI-First Products: A Strategic Guide",
       description:
-        "Learn how Next.js, React, and modern development practices are shaping the future of web application development.",
-      category: "Web Development",
-      readTime: "10 min read",
+        "How to design and develop products that leverage AI from the ground up, creating competitive advantages and user value.",
+      category: "AI Strategy",
+      readTime: "8 min read",
       gradient: "from-orange-400 to-red-600",
       icon: Zap,
       image: (
