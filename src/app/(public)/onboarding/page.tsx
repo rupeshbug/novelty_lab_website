@@ -387,8 +387,8 @@ export default function EnhancedOnboarding() {
               : "Welcome to the Future! 🚀"}
           </h1>
           <p className="text-xl text-gray-200 leading-relaxed">
-            Let's build something extraordinary together. We'll customize AI
-            solutions that transform your business.
+            Let&apos;s build something extraordinary together. We&apos;ll
+            customize AI solutions that transform your business.
           </p>
         </motion.div>
 
@@ -443,7 +443,7 @@ export default function EnhancedOnboarding() {
                 <div className="space-y-6">
                   <div>
                     <label className="block text-md font-medium text-gray-200 mb-2">
-                      What's your business called?
+                      What&apos;s your business called?
                     </label>
                     <input
                       className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all backdrop-blur-sm"
