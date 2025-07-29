@@ -289,13 +289,84 @@ export default function EnhancedOnboarding() {
     businessInfo.location.trim();
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-700"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 animate-pulse delay-1000"></div>
+    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 relative overflow-hidden">
+      {/* Animated grid background */}
+      <div className="absolute inset-0 opacity-30">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: `
+            linear-gradient(rgba(59, 130, 246, 0.5) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(59, 130, 246, 0.5) 1px, transparent 1px)
+          `,
+            backgroundSize: "50px 50px",
+            animation: "grid-move 20s ease-in-out infinite",
+          }}
+        ></div>
       </div>
+
+      {/* Floating geometric elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-2xl opacity-20 animate-float"></div>
+        <div className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-emerald-400 to-cyan-500 rounded-full opacity-25 animate-float-delayed"></div>
+        <div className="absolute bottom-32 left-1/4 w-28 h-28 bg-gradient-to-r from-violet-400 to-purple-500 rounded-2xl opacity-20 animate-float-slow"></div>
+        <div className="absolute bottom-40 right-20 w-36 h-36 bg-gradient-to-r from-pink-400 to-rose-500 rounded-full opacity-15 animate-float"></div>
+        <div className="absolute top-1/2 left-10 w-20 h-20 bg-gradient-to-r from-orange-400 to-yellow-500 rounded-2xl opacity-25 animate-float-delayed"></div>
+      </div>
+
+      <style jsx>{`
+        @keyframes grid-move {
+          0%,
+          100% {
+            transform: translate(0, 0);
+          }
+          25% {
+            transform: translate(10px, 5px);
+          }
+          50% {
+            transform: translate(-5px, 10px);
+          }
+          75% {
+            transform: translate(5px, -5px);
+          }
+        }
+        @keyframes float {
+          0%,
+          100% {
+            transform: translateY(0px) rotate(0deg);
+          }
+          50% {
+            transform: translateY(-20px) rotate(180deg);
+          }
+        }
+        @keyframes float-delayed {
+          0%,
+          100% {
+            transform: translateY(0px) rotate(0deg);
+          }
+          50% {
+            transform: translateY(-15px) rotate(-180deg);
+          }
+        }
+        @keyframes float-slow {
+          0%,
+          100% {
+            transform: translateY(0px) rotate(0deg);
+          }
+          50% {
+            transform: translateY(-10px) rotate(90deg);
+          }
+        }
+        .animate-float {
+          animation: float 6s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+          animation: float-delayed 8s ease-in-out infinite;
+        }
+        .animate-float-slow {
+          animation: float-slow 10s ease-in-out infinite;
+        }
+      `}</style>
 
       <div className="relative z-10 px-4 py-8 flex flex-col items-center min-h-screen">
         {/* Header */}
@@ -305,8 +376,8 @@ export default function EnhancedOnboarding() {
           className="text-center mb-8 max-w-2xl"
         >
           <div className="flex items-center justify-center gap-2 mb-4">
-            <Sparkles className="w-8 h-8 text-purple-400" />
-            <span className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <Sparkles className="w-8 h-8 text-cyan-400" />
+            <span className="text-3xl font-bold bg-gradient-to-r from-yellow-400 via-purple-500 to-teal-400 bg-clip-text text-transparent">
               Novelty Lab
             </span>
           </div>
@@ -315,9 +386,9 @@ export default function EnhancedOnboarding() {
               ? `Welcome aboard, ${user.firstName}! 🚀`
               : "Welcome to the Future! 🚀"}
           </h1>
-          <p className="text-xl text-gray-300 leading-relaxed">
-            Let&apos;s build something extraordinary together. We&apos;ll
-            customize AI solutions that transform your business.
+          <p className="text-xl text-gray-200 leading-relaxed">
+            Let's build something extraordinary together. We'll customize AI
+            solutions that transform your business.
           </p>
         </motion.div>
 
@@ -326,7 +397,7 @@ export default function EnhancedOnboarding() {
           {[1, 2].map((stepNumber) => (
             <div key={stepNumber} className="flex items-center">
               <div
-                className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 ${
+                className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 ${
                   step >= stepNumber
                     ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white"
                     : "bg-gray-700 text-gray-400"
@@ -369,13 +440,13 @@ export default function EnhancedOnboarding() {
                   </p>
                 </div>
 
-                <div className="space-y-8">
+                <div className="space-y-6">
                   <div>
-                    <label className="block text-sm font-medium text-gray-200 mb-2">
-                      Your Business Name
+                    <label className="block text-md font-medium text-gray-200 mb-2">
+                      What's your business called?
                     </label>
                     <input
-                      className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all backdrop-blur-sm"
                       value={businessInfo.name}
                       onChange={(e) =>
                         setBusinessInfo({
@@ -388,7 +459,7 @@ export default function EnhancedOnboarding() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-200 mb-3">
+                    <label className="block text-md font-medium text-gray-200 mb-3">
                       Which industry best describes your business?
                     </label>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -425,12 +496,12 @@ export default function EnhancedOnboarding() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium text-gray-200 mb-2">
+                    <label className="block text-md font-medium text-gray-200 mb-2">
                       <MapPin className="w-4 h-4 inline mr-1" />
                       Where are you located?
                     </label>
                     <input
-                      className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                      className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all backdrop-blur-sm"
                       value={businessInfo.location}
                       onChange={(e) =>
                         setBusinessInfo({
@@ -463,8 +534,7 @@ export default function EnhancedOnboarding() {
                     <span className="text-purple-400 font-semibold">
                       {businessInfo.domain}
                     </span>
-                    , here are some of the best solutions that drive real
-                    results.
+                    , here are proven solutions that drive real results
                   </p>
                 </div>
 
@@ -518,7 +588,7 @@ export default function EnhancedOnboarding() {
                     Have something specific in mind? Tell us!
                   </label>
                   <input
-                    className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+                    className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent transition-all backdrop-blur-sm"
                     value={customTemplate}
                     onChange={(e) => setCustomTemplate(e.target.value)}
                     placeholder="e.g. Automated supplier onboarding, Custom analytics dashboard..."
@@ -533,9 +603,9 @@ export default function EnhancedOnboarding() {
             <button
               onClick={handleBack}
               disabled={step === 1}
-              className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all ${
+              className={`flex items-center gap-2 px-6 py-3 rounded-xl cursor-pointer font-semibold transition-all ${
                 step === 1
-                  ? "opacity-50 cursor-not-allowed bg-gray-600"
+                  ? "opacity-40 cursor-not-allowed bg-gray-300"
                   : "bg-white/10 hover:bg-white/20 text-white"
               }`}
             >
@@ -553,7 +623,7 @@ export default function EnhancedOnboarding() {
               className={`flex items-center gap-2 px-8 py-3 rounded-xl font-semibold transition-all ${
                 step === 1 && !isStep1Valid
                   ? "opacity-50 cursor-not-allowed bg-gray-600"
-                  : "bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white shadow-lg"
+                  : "bg-gradient-to-r from-purple-500 to-yellow-500 text-white shadow-lg cursor-pointer"
               }`}
             >
               {step === 1 ? "Continue" : "Launch AI Assistant"}
