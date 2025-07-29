@@ -369,7 +369,7 @@ export default function EnhancedOnboarding() {
                   </p>
                 </div>
 
-                <div className="space-y-6">
+                <div className="space-y-8">
                   <div>
                     <label className="block text-sm font-medium text-gray-200 mb-2">
                       Your Business Name
@@ -463,7 +463,8 @@ export default function EnhancedOnboarding() {
                     <span className="text-purple-400 font-semibold">
                       {businessInfo.domain}
                     </span>
-                    , here are proven solutions that drive real results
+                    , here are some of the best solutions that drive real
+                    results.
                   </p>
                 </div>
 
