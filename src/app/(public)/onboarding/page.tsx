@@ -526,7 +526,7 @@ export default function EnhancedOnboarding() {
               >
                 <div className="text-center mb-8">
                   <Zap className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-                  <h2 className="text-2xl font-bold text-white mb-2">
+                  <h2 className="text-3xl font-bold text-white mb-2">
                     Choose your AI superpowers
                   </h2>
                   <p className="text-gray-300">
@@ -584,7 +584,7 @@ export default function EnhancedOnboarding() {
                 </div>
 
                 <div className="mt-8">
-                  <label className="block text-sm font-medium text-gray-200 mb-2">
+                  <label className="block text-md font-medium text-gray-200 mb-2">
                     Have something specific in mind? Tell us!
                   </label>
                   <input
@@ -603,10 +603,10 @@ export default function EnhancedOnboarding() {
             <button
               onClick={handleBack}
               disabled={step === 1}
-              className={`flex items-center gap-2 px-6 py-3 rounded-xl cursor-pointer font-semibold transition-all ${
+              className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all ${
                 step === 1
-                  ? "opacity-40 cursor-not-allowed bg-gray-300"
-                  : "bg-white/10 hover:bg-white/20 text-white"
+                  ? "opacity-50 cursor-not-allowed bg-gray-400"
+                  : "bg-white/10 hover:bg-white/20 text-white cursor-pointer"
               }`}
             >
               <ArrowLeft className="w-4 h-4" />
