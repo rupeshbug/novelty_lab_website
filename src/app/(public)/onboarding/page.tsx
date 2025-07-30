@@ -376,8 +376,8 @@ export default function OnboardingPage() {
           className="text-center mb-8 max-w-2xl"
         >
           <div className="flex items-center justify-center gap-2 mb-4">
-            <Sparkles className="w-8 h-8 text-cyan-400" />
-            <span className="text-3xl font-bold bg-gradient-to-r from-yellow-400 via-purple-500 to-teal-400 bg-clip-text text-transparent">
+            <Sparkles className="w-8 h-8 text-yellow-400" />
+            <span className="text-3xl font-bold text-cyan-400 bg-clip-text">
               Novelty Lab
             </span>
           </div>
@@ -397,10 +397,10 @@ export default function OnboardingPage() {
           {[1, 2].map((stepNumber) => (
             <div key={stepNumber} className="flex items-center">
               <div
-                className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 ${
+                className={`w-10 h-10 rounded-full flex items-center justify-center text-md font-bold transition-all duration-300 ${
                   step >= stepNumber
-                    ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white"
-                    : "bg-gray-600 text-gray-300"
+                    ? "bg-gray-600 text-white"
+                    : "bg-gray-700 text-gray-300"
                 }`}
               >
                 {step > stepNumber ? <Check className="w-4 h-4" /> : stepNumber}
@@ -408,9 +408,7 @@ export default function OnboardingPage() {
               {stepNumber < 2 && (
                 <div
                   className={`w-12 h-1 mx-2 rounded-full transition-all duration-300 ${
-                    step > stepNumber
-                      ? "bg-gradient-to-r from-purple-500 to-pink-500"
-                      : "bg-gray-700"
+                    step > stepNumber ? "bg-gray-200" : "bg-gray-300"
                   }`}
                 />
               )}
@@ -606,7 +604,7 @@ export default function OnboardingPage() {
               className={`flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all ${
                 step === 1
                   ? "opacity-50 cursor-not-allowed bg-gray-400"
-                  : "bg-white/10 hover:bg-white/20 text-white cursor-pointer"
+                  : "bg-white/20 hover:bg-white/30 text-white cursor-pointer"
               }`}
             >
               <ArrowLeft className="w-4 h-4" />
@@ -623,7 +621,7 @@ export default function OnboardingPage() {
               className={`flex items-center gap-2 px-8 py-3 rounded-xl font-semibold transition-all ${
                 step === 1 && !isStep1Valid
                   ? "opacity-50 cursor-not-allowed bg-gray-600"
-                  : "bg-gradient-to-r from-purple-500 to-yellow-500 text-white shadow-lg cursor-pointer"
+                  : "bg-white/30 hover:bg-white/40 text-white cursor-pointer"
               }`}
             >
               {step === 1 ? "Continue" : "Launch AI Assistant"}
