@@ -265,20 +265,6 @@ export default function OnboardingPage() {
     );
   };
 
-  const handleNext = () => {
-    if (step === 1 && businessInfo.name && businessInfo.domain) {
-      setStep(2);
-    } else if (step === 2) {
-      const finalData = {
-        ...businessInfo,
-        selectedTemplates,
-        customTemplate: customTemplate.trim(),
-      };
-      console.log("Submit to AI Agent:", finalData);
-      // Here you would typically navigate to the chat interface
-    }
-  };
-
   const handleBack = () => {
     if (step === 2) setStep(1);
   };
@@ -287,6 +273,46 @@ export default function OnboardingPage() {
     businessInfo.name.trim() &&
     businessInfo.domain.trim() &&
     businessInfo.location.trim();
+
+  // user should either select the template or type something custom before launching the agent
+  const isTemplateValid =
+    selectedTemplates.length > 0 || customTemplate.trim().length > 0;
+
+  const handleAgentSubmit = async () => {
+    try {
+      const payload: any = {
+        businessInfo,
+      };
+
+      if (selectedTemplates.length > 0) {
+        payload.selectedTemplates = selectedTemplates;
+      }
+
+      if (customTemplate.trim() !== "") {
+        payload.customTemplate = customTemplate.trim();
+      }
+
+      const res = await fetch("/api/agent", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json();
+      console.log("Agent Response:", data);
+      // Optionally show response to user or store it
+    } catch (error) {
+      console.error("Agent Error:", error);
+    }
+  };
+
+  const handleNext = async () => {
+    if (step === 1 && isStep1Valid) {
+      setStep(2);
+    } else if (step === 2) {
+      await handleAgentSubmit();
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900 relative overflow-hidden">
@@ -617,10 +643,14 @@ export default function OnboardingPage() {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={handleNext}
-              disabled={step === 1 && !isStep1Valid}
+              disabled={
+                (step === 1 && !isStep1Valid) ||
+                (step === 2 && !isTemplateValid)
+              }
               className={`flex items-center gap-2 px-8 py-3 rounded-xl font-semibold transition-all ${
-                step === 1 && !isStep1Valid
-                  ? "opacity-50 cursor-not-allowed bg-gray-600"
+                (step === 1 && !isStep1Valid) ||
+                (step === 2 && !isTemplateValid)
+                  ? "opacity-50 cursor-not-allowed bg-white/30"
                   : "bg-white/30 hover:bg-white/40 text-white cursor-pointer"
               }`}
             >
