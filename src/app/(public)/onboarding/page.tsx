@@ -509,7 +509,7 @@ export default function OnboardingPage() {
                           location: e.target.value,
                         })
                       }
-                      placeholder="e.g. San Francisco, CA • London, UK • Tokyo, Japan"
+                      placeholder="e.g. Kathmandu, Nepal • London, UK • Tokyo, Japan"
                     />
                   </div>
                 </div>
@@ -530,11 +530,11 @@ export default function OnboardingPage() {
                     Choose your AI superpowers
                   </h2>
                   <p className="text-gray-300">
-                    Based on{" "}
+                    Here are some best solutions that drive real results in{" "}
                     <span className="text-purple-400 font-semibold">
                       {businessInfo.domain}
-                    </span>
-                    , here are proven solutions that drive real results
+                    </span>{" "}
+                    domain.
                   </p>
                 </div>
 
@@ -560,10 +560,10 @@ export default function OnboardingPage() {
                       <div className="flex items-start gap-4">
                         <div className="text-2xl">{template.icon}</div>
                         <div className="flex-1">
-                          <h3 className="font-semibold text-white text-lg mb-1">
+                          <h3 className="font-semibold text-white text-xl mb-1">
                             {template.title}
                           </h3>
-                          <p className="text-gray-300 text-sm leading-relaxed">
+                          <p className="text-gray-300 text-md leading-relaxed">
                             {template.description}
                           </p>
                         </div>
