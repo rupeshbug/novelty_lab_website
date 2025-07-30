@@ -236,7 +236,7 @@ const industryOptions = [
   },
 ];
 
-export default function EnhancedOnboarding() {
+export default function OnboardingPage() {
   // Mock user data
   const user = { firstName: "Alex" };
 
@@ -400,7 +400,7 @@ export default function EnhancedOnboarding() {
                 className={`w-10 h-10 rounded-full flex items-center justify-center text-sm font-bold transition-all duration-300 ${
                   step >= stepNumber
                     ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white"
-                    : "bg-gray-700 text-gray-400"
+                    : "bg-gray-600 text-gray-300"
                 }`}
               >
                 {step > stepNumber ? <Check className="w-4 h-4" /> : stepNumber}
