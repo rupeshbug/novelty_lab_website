@@ -386,7 +386,7 @@ export default function OnboardingPage() {
               ? `Welcome aboard, ${user.firstName}! 🚀`
               : "Welcome to the Future! 🚀"}
           </h1>
-          <p className="text-xl text-gray-200 leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-200 leading-relaxed">
             Let&apos;s build something extraordinary together. We&apos;ll
             customize AI solutions that transform your business.
           </p>
@@ -427,7 +427,7 @@ export default function OnboardingPage() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
-                className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl"
+                className="bg-white/10 backdrop-blur-xl rounded-3xl px-5 py-8 md:px-8 md:py-8 border border-white/20 shadow-2xl"
               >
                 <div className="text-center mb-8">
                   <Building2 className="w-12 h-12 text-purple-400 mx-auto mb-4" />
@@ -522,11 +522,11 @@ export default function OnboardingPage() {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
-                className="bg-white/10 backdrop-blur-xl rounded-3xl p-8 border border-white/20 shadow-2xl"
+                className="bg-white/10 backdrop-blur-xl rounded-3xl px-5 py-8 md:px-8 md:py-8 border border-white/20 shadow-2xl"
               >
                 <div className="text-center mb-8">
                   <Zap className="w-12 h-12 text-purple-400 mx-auto mb-4" />
-                  <h2 className="text-3xl font-bold text-white mb-2">
+                  <h2 className="text-3xl font-bold text-white mb-3">
                     Choose your AI superpowers
                   </h2>
                   <p className="text-gray-300">
